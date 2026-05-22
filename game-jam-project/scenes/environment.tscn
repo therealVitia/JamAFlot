@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bmdye2ltdkgkn"]
+
+[ext_resource type="PackedScene" uid="uid://rov8fqa8eyi3" path="res://scenes/objects/floor.tscn" id="1_bc5iu"]
+[ext_resource type="PackedScene" uid="uid://dluvc51jn4g87" path="res://scenes/objects/table.tscn" id="2_fm4en"]
+
+[sub_resource type="Environment" id="Environment_y44tv"]
+
+[node name="Environment" type="Node3D" unique_id=1852985595]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2098331190]
+environment = SubResource("Environment_y44tv")
+
+[node name="Floor" parent="." unique_id=1793124290 instance=ExtResource("1_bc5iu")]
+
+[node name="Table" parent="." unique_id=72821643 instance=ExtResource("2_fm4en")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.53313017, 0)

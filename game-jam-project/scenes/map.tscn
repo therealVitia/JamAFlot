@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://4kvap2f1ug86"]
+
+[ext_resource type="PackedScene" uid="uid://cb0ur3vdf28xq" path="res://scenes/player.tscn" id="1_paxxb"]
+[ext_resource type="PackedScene" uid="uid://bmdye2ltdkgkn" path="res://scenes/environment.tscn" id="2_gldc4"]
+[ext_resource type="PackedScene" uid="uid://dcg2kb8m4bvkj" path="res://scenes/camera.tscn" id="3_gldc4"]
+
+[node name="map" type="Node3D" unique_id=1199345111]
+
+[node name="Player" parent="." unique_id=1807533549 instance=ExtResource("1_paxxb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.6080112, 0)
+
+[node name="Environment" parent="." unique_id=1852985595 instance=ExtResource("2_gldc4")]
+
+[node name="Camera" parent="." unique_id=1114856204 instance=ExtResource("3_gldc4")]
+transform = Transform3D(1, 0, 0, 0, 0.96875226, 0.24803048, 0, -0.24803048, 0.96875226, 0.11177254, 2.2917075, 2.020853)
+fov = 81.56249
+size = 4.277194
