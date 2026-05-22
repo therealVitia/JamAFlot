@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://dcg2kb8m4bvkj"]
+
+[node name="Camera" type="Camera3D" unique_id=1114856204]
