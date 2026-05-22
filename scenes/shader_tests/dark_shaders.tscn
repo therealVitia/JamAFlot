@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://djwjbalwd6o2i"]
+
+[ext_resource type="Shader" uid="uid://dbvdex1w1lghg" path="res://scenes/shader_tests/dark.gdshader" id="1_otq7w"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_gapkg"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_otq7w"]
+points = PackedVector3Array(-1, 0, -1, -1, 0, 1, 1, 0, -1, 1, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4ij36"]
+render_priority = 0
+shader = ExtResource("1_otq7w")
+shader_parameter/silhouette_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4ij36"]
+material = SubResource("ShaderMaterial_4ij36")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2eluo"]
+points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5)
+
+[node name="DarkShaders" type="Node3D" unique_id=203322902]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1393773081]
+transform = Transform3D(1, 0, 0, 0, 0.9252693, 0.37931082, 0, -0.37931082, 0.9252693, 0, 1.0688672, 1.7087858)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Camera3D" unique_id=1939057969]
+transform = Transform3D(1, 0, 0, 0, 0.9909621, 0.13414189, 0, -0.13414189, 0.9909621, 0, 0, 0)
+
+[node name="Ground" type="StaticBody3D" parent="." unique_id=1092998785]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground" unique_id=1835136547]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+mesh = SubResource("PlaneMesh_gapkg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground" unique_id=761623464]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_otq7w")
+
+[node name="Box" type="StaticBody3D" parent="." unique_id=1708537723]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7667381, 0.407373, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Box" unique_id=187283040]
+transform = Transform3D(0.5684474, 0, 0, 0, 0.8041891, 0, 0, 0, 0.7302792, 0, 0, 0)
+mesh = SubResource("BoxMesh_4ij36")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Box" unique_id=1362161912]
+transform = Transform3D(0.5684474, 0, 0, 0, 0.8041891, 0, 0, 0, 0.7302792, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_2eluo")
