@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://7oijiowfiod7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0hih1"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_0hih1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tkj0g"]
+albedo_color = Color(0.32941177, 0.9764706, 0.050980393, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_re4db"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fvfks"]
+albedo_color = Color(0.9654699, 0.4709006, 7.70092e-07, 1)
+
+[node name="Plant" type="StaticBody3D" unique_id=72821643]
+transform = Transform3D(0.6016622, 0, 0, 0, 0.5710031, 0, 0, 0, 0.6362677, 0, 0, 0)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=2117710676]
+transform = Transform3D(2.814283, 0, 0, 0, 3.18575, 0, 0, 0, 0.8902098, 0, 1.9222131, 0)
+shape = SubResource("BoxShape3D_0hih1")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=86973318]
+transform = Transform3D(2.994145, 0, 0, 0, 2.993228, 0, 0, 0, 1.107501, 0.024598578, 1.9989773, 0)
+mesh = SubResource("BoxMesh_0hih1")
+surface_material_override/0 = SubResource("StandardMaterial3D_tkj0g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=571242318]
+transform = Transform3D(3.027243, 0, 0, 0, 1.416539, 0, 0, 0, 1.4755956, -0.0010779811, -0.21438166, 0)
+shape = SubResource("BoxShape3D_0hih1")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1337825739]
+transform = Transform3D(2.9755273, 0, 0, 0, 1.416539, 0, 0, 0, 1.4866349, 0, -0.2143816, 0)
+mesh = SubResource("BoxMesh_re4db")
+surface_material_override/0 = SubResource("StandardMaterial3D_fvfks")

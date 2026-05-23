@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://crdfgci1ewd7r"]
+
+[ext_resource type="Texture2D" uid="uid://bef2s6ct3plih" path="res://icon.svg" id="1_emt41"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_emt41"]
+size = Vector3(1.0908203, 2.9249268, 0.19067383)
+
+[node name="Silhouette" type="Node3D" unique_id=602552750]
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=557528727]
+transform = Transform3D(0.79737115, 0, 0, 0, 2.4922779, 0, 0, 0, 1, 0.0016949056, -0.0007795623, 0)
+texture = ExtResource("1_emt41")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=305065825]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1905392290]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=57563272]
+transform = Transform3D(1, 0, 0, 0, 1.1457478, 0, 0, 0, 1.0448589, 0.031792462, 0.08953929, -0.0042542443)
+shape = SubResource("BoxShape3D_emt41")
+debug_color = Color(1, 1, 1, 1)
