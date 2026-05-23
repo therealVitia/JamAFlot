@@ -1,73 +1,41 @@
 [gd_scene format=3 uid="uid://cb0ur3vdf28xq"]
 
 [ext_resource type="Script" uid="uid://b3se0ako6c2sq" path="res://scripts/player.gd" id="1_g2els"]
-[ext_resource type="Texture2D" uid="uid://cmu7ls4dl8ug0" path="res://resources/fakeshadow/Ombre_0016.png" id="2_qfm1y"]
-[ext_resource type="Texture2D" uid="uid://cv05grgqkndkj" path="res://resources/fakeshadow/Ombre_0015.png" id="3_fulsm"]
-[ext_resource type="Texture2D" uid="uid://bn3jhlkyjqt3c" path="res://resources/fakeshadow/Ombre_0014.png" id="4_4r5pv"]
-[ext_resource type="Texture2D" uid="uid://dh4l0h1brvlv1" path="res://resources/fakeshadow/Ombre_0013.png" id="5_60mlk"]
-[ext_resource type="Texture2D" uid="uid://beaqeedmoapj3" path="res://resources/fakeshadow/Ombre_0012.png" id="6_i4ail"]
-[ext_resource type="Texture2D" uid="uid://c1dfvftv6dwg1" path="res://resources/fakeshadow/Ombre_0011.png" id="7_a38lo"]
-[ext_resource type="Texture2D" uid="uid://xkacvftw4dw4" path="res://resources/fakeshadow/Ombre_0010.png" id="8_4ni07"]
-[ext_resource type="Texture2D" uid="uid://bq41mywwqnq0n" path="res://resources/fakeshadow/Ombre_0009.png" id="9_l71n6"]
-[ext_resource type="Texture2D" uid="uid://bwuur6balgmds" path="res://resources/fakeshadow/Ombre_0008.png" id="10_ke2ow"]
-[ext_resource type="Texture2D" uid="uid://bx85htkfd3qdc" path="res://resources/fakeshadow/Ombre_0007.png" id="11_ujl30"]
-[ext_resource type="Texture2D" uid="uid://7nyrd0uu0tvs" path="res://resources/fakeshadow/Ombre_0006.png" id="12_31cv2"]
-[ext_resource type="Texture2D" uid="uid://bbcqbma8rv2tc" path="res://resources/fakeshadow/Ombre_0005.png" id="13_pf23h"]
-[ext_resource type="Texture2D" uid="uid://bbsd5mpdapt4a" path="res://resources/fakeshadow/Ombre_0004.png" id="14_dt7fs"]
-[ext_resource type="Texture2D" uid="uid://bkmgxxxpe6ifg" path="res://resources/fakeshadow/Ombre_0003.png" id="15_wqfne"]
-[ext_resource type="Texture2D" uid="uid://ck2rh2pppshh1" path="res://resources/fakeshadow/Ombre_0002.png" id="16_wnwbv"]
-[ext_resource type="Texture2D" uid="uid://c8bo72nxpoj83" path="res://resources/fakeshadow/Ombre_0001.png" id="17_gl8cc"]
+[ext_resource type="Texture2D" uid="uid://dwyoa4f15tov7" path="res://resources/character/Marche_0001.png" id="2_ur7pv"]
+[ext_resource type="Texture2D" uid="uid://dho32yx6asdnx" path="res://resources/character/Marche_0002.png" id="3_y4r1p"]
+[ext_resource type="Texture2D" uid="uid://d4j2blb88j335" path="res://resources/character/Marche_0003.png" id="4_d2wvv"]
+[ext_resource type="Texture2D" uid="uid://bxrklu0d8av5c" path="res://resources/character/Marche_0004.png" id="5_3v2ag"]
+[ext_resource type="Texture2D" uid="uid://cktbcco2aa5i4" path="res://resources/character/Marche_0005.png" id="6_jej6c"]
+[ext_resource type="Texture2D" uid="uid://dqimbr5fvoxtb" path="res://resources/character/Marche_0006.png" id="7_f1ej7"]
+[ext_resource type="Texture2D" uid="uid://bl7mgrk5fci8o" path="res://resources/character/Marche_0007.png" id="8_oprun"]
+[ext_resource type="Texture2D" uid="uid://bbpa6oobqpycf" path="res://resources/character/Marche_0008.png" id="9_a8ls1"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_md1ol"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_qfm1y")
+"duration": 4.0,
+"texture": ExtResource("2_ur7pv")
 }, {
-"duration": 1.0,
-"texture": ExtResource("3_fulsm")
+"duration": 4.0,
+"texture": ExtResource("3_y4r1p")
 }, {
-"duration": 1.0,
-"texture": ExtResource("4_4r5pv")
+"duration": 4.0,
+"texture": ExtResource("4_d2wvv")
 }, {
-"duration": 1.0,
-"texture": ExtResource("5_60mlk")
+"duration": 4.0,
+"texture": ExtResource("5_3v2ag")
 }, {
-"duration": 1.0,
-"texture": ExtResource("6_i4ail")
+"duration": 4.0,
+"texture": ExtResource("6_jej6c")
 }, {
-"duration": 1.0,
-"texture": ExtResource("7_a38lo")
+"duration": 4.0,
+"texture": ExtResource("7_f1ej7")
 }, {
-"duration": 1.0,
-"texture": ExtResource("8_4ni07")
+"duration": 4.0,
+"texture": ExtResource("8_oprun")
 }, {
-"duration": 1.0,
-"texture": ExtResource("9_l71n6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_ke2ow")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_ujl30")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_31cv2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_pf23h")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_dt7fs")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_wqfne")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_wnwbv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_gl8cc")
+"duration": 4.0,
+"texture": ExtResource("9_a8ls1")
 }],
 "loop": true,
 "name": &"walk",
@@ -90,7 +58,7 @@ script = ExtResource("1_g2els")
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.13990784, 0.9123713, -0.004543066)
 sprite_frames = SubResource("SpriteFrames_md1ol")
 animation = &"walk"
-frame_progress = 0.3916574
+frame_progress = 0.55970746
 speed_scale = 2.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1402576687]

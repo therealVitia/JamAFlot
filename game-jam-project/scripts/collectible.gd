@@ -6,4 +6,5 @@ signal collected
 func _on_body_entered(body: Node3D) -> void:
 	if body is Player:
 		collected.emit()
+		AutoBus.collectible_found.emit()
 		queue_free()

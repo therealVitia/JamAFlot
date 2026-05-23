@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://ct544gvy01nkd"]
+[gd_scene format=3 uid="uid://bhbckfgk57uac"]
 
 [ext_resource type="Script" uid="uid://bl4maggj1t623" path="res://scripts/collectible.gd" id="1_bkg8t"]
 [ext_resource type="Material" uid="uid://ic2frtbuhdgn" path="res://resources/particules_material_override.tres" id="2_1pg6c"]

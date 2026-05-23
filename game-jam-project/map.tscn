@@ -44,6 +44,6 @@ grow_vertical = 2
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1883096313]
 navigation_mesh = SubResource("NavigationMesh_71pa8")
 
-[node name="Enemy" parent="." unique_id=528756262 node_paths=PackedStringArray("player") instance=ExtResource("6_iw27f")]
+[node name="Enemy" parent="." unique_id=528756262 instance=ExtResource("6_iw27f")]
 script = ExtResource("7_71pa8")
-player = NodePath("../Player")
+timer = 5.0
