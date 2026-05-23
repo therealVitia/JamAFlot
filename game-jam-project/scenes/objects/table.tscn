@@ -1,18 +1,35 @@
 [gd_scene format=3 uid="uid://dluvc51jn4g87"]
 
+[ext_resource type="Script" uid="uid://dj6cgyrtfq0u7" path="res://scripts/swap_world.gd" id="1_mju53"]
+[ext_resource type="Shader" uid="uid://dcqmslmsnw3wq" path="res://scenes/objects/shad2.gdshader" id="4_mju53"]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_0hih1"]
 size = Vector3(2.6521606, 1.8458252, 0.5067749)
 
-[sub_resource type="BoxMesh" id="BoxMesh_0hih1"]
-size = Vector3(2.64, 1.84, 0.505)
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ygku1"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ym3ej"]
+material = SubResource("ShaderMaterial_ygku1")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mju53"]
+render_priority = 0
+shader = ExtResource("4_mju53")
+shader_parameter/albedo = Color(0.2, 0.4, 0.8, 1)
 
 [node name="Table" type="StaticBody3D" unique_id=72821643]
+transform = Transform3D(12, 0, 0, 0, 12, 0, 0, 0, 12, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=571242318]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.005, 0.92, 0.004)
 shape = SubResource("BoxShape3D_0hih1")
 debug_color = Color(1, 1, 1, 1)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1337825739]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92, 0)
-mesh = SubResource("BoxMesh_0hih1")
+[node name="MeshWorld" type="MeshInstance3D" parent="." unique_id=1337825739]
+transform = Transform3D(2.5130415, 0, 0.009065367, 0, 1.7953981, 0, -0.04671718, 0, 0.48765022, -0.004351735, 0.92, 0)
+mesh = SubResource("BoxMesh_ym3ej")
+surface_material_override/0 = SubResource("ShaderMaterial_mju53")
+
+[node name="MeshImagine" type="MeshInstance3D" parent="." unique_id=177428719]
+transform = Transform3D(6.3149543, 0, 0.027202372, 0, 3.2234545, 0, -0.14018387, 0, 0.23737922, -0.015287826, 2.5717664, 0.0002033008)
+mesh = SubResource("BoxMesh_ym3ej")
+surface_material_override/0 = SubResource("ShaderMaterial_mju53")

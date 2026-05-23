@@ -9,10 +9,12 @@ extends Node3D
 var visibility_points: Node3D
 var hidden_timer: float = 0.0
 var transition_started: bool = false
+var transition_finish: bool = false
 var current_tween: Tween = null
 
 func _ready() -> void:
 	visibility_points = player.get_node("visibilityPoints")
+
 
 func _physics_process(delta: float) -> void:
 	if is_player_fully_hidden():
@@ -21,17 +23,15 @@ func _physics_process(delta: float) -> void:
 			start_transition()
 	else:
 		hidden_timer = 0.0
-		if transition_started:
+		if transition_started and not transition_finish:
 			cancel_transition()
 
 func start_transition() -> void:
 	transition_started = true
 	var mat = color_rect.material as ShaderMaterial
 	current_tween = create_tween()
-	current_tween.tween_method(
-		func(value: float): mat.set_shader_parameter("progress", value),
-		0.0, 1.0, transition_duration
-	)
+	AutoBus.swap.emit()
+	transition_finish = true;
 
 func cancel_transition() -> void:
 	transition_started = false

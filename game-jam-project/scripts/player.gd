@@ -1,10 +1,11 @@
 class_name Player
 extends CharacterBody3D
 
+signal hit
+
 const grav = -9.81
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
-
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -27,3 +28,12 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+
+func _on_detection_zone_body_entered(body: Node3D) -> void:
+	if body.name == "Enemy":
+		hit.emit()
+		print("touché !")
+
+
+func start(pos: Vector3) -> void:
+	position = pos
