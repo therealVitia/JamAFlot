@@ -13,4 +13,3 @@ environment = SubResource("Environment_y44tv")
 [node name="Floor" parent="." unique_id=1793124290 instance=ExtResource("1_bc5iu")]
 
 [node name="Table" parent="." unique_id=72821643 instance=ExtResource("2_fm4en")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.53313017, 0)
