@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://crdfgci1ewd7r"]
 
-[ext_resource type="Texture2D" uid="uid://bef2s6ct3plih" path="res://icon.svg" id="1_emt41"]
+[ext_resource type="Texture2D" uid="uid://0pi02r4ggne8" path="res://scenes/icon.svg" id="1_emt41"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_emt41"]
 size = Vector3(1.0908203, 2.9249268, 0.19067383)
@@ -14,6 +14,7 @@ texture = ExtResource("1_emt41")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=305065825]
 
 [node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1905392290]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 5.359532, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=57563272]
 transform = Transform3D(1, 0, 0, 0, 1.1457478, 0, 0, 0, 1.0448589, 0.031792462, 0.08953929, -0.0042542443)

@@ -10,10 +10,10 @@
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6710453, 1.6694946)
 
 [node name="Environment" parent="." unique_id=1852985595 instance=ExtResource("2_gldc4")]
+transform = Transform3D(0.99999064, 0.0020808566, -0.0037912927, -0.0020815257, 0.99999785, -0.00017272872, 0.0037909253, 0.00018061064, 0.9999928, -0.043426514, -9.536743e-07, -0.0010261536)
 
 [node name="Camera" parent="." unique_id=1114856204 node_paths=PackedStringArray("target", "env") instance=ExtResource("3_gldc4")]
-transform = Transform3D(1, 0, 0, 0, 0.92610127, 0.37727514, 0, -0.37727514, 0.92610127, 0.11177254, 5.2656074, 15.439981)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 0.82287854, 0.5682172, 0, -0.5682172, 0.82287854, 0.11177254, 7.88673, 12.947693)
 fov = 67.4
 size = 4.277194
 target = NodePath("../Player")
