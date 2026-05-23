@@ -1,11 +1,15 @@
 [gd_scene format=3 uid="uid://bmdye2ltdkgkn"]
 
 [ext_resource type="PackedScene" uid="uid://rov8fqa8eyi3" path="res://scenes/objects/floor.tscn" id="1_bc5iu"]
+[ext_resource type="Script" uid="uid://cq0sr3c11v4wd" path="res://scripts/environment.gd" id="1_d5dl1"]
 [ext_resource type="PackedScene" uid="uid://dluvc51jn4g87" path="res://scenes/objects/table.tscn" id="2_fm4en"]
 
 [sub_resource type="Environment" id="Environment_y44tv"]
 
-[node name="Environment" type="Node3D" unique_id=1852985595]
+[node name="Environment" type="Node3D" unique_id=1852985595 node_paths=PackedStringArray("limit_left", "limit_right")]
+script = ExtResource("1_d5dl1")
+limit_left = NodePath("LimitLeft")
+limit_right = NodePath("LimitRight")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2098331190]
 environment = SubResource("Environment_y44tv")
@@ -14,3 +18,9 @@ environment = SubResource("Environment_y44tv")
 
 [node name="Table" parent="." unique_id=72821643 instance=ExtResource("2_fm4en")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.53313017, 0)
+
+[node name="LimitLeft" type="Marker3D" parent="." unique_id=972738560]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 11)
+
+[node name="LimitRight" type="Marker3D" parent="." unique_id=804357763]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 11)

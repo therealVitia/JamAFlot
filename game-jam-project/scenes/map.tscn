@@ -7,11 +7,14 @@
 [node name="map" type="Node3D" unique_id=1199345111]
 
 [node name="Player" parent="." unique_id=1807533549 instance=ExtResource("1_paxxb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.6080112, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6710453, 1.6694946)
 
 [node name="Environment" parent="." unique_id=1852985595 instance=ExtResource("2_gldc4")]
 
-[node name="Camera" parent="." unique_id=1114856204 instance=ExtResource("3_gldc4")]
-transform = Transform3D(1, 0, 0, 0, 0.96875226, 0.24803048, 0, -0.24803048, 0.96875226, 0.11177254, 2.2917075, 2.020853)
-fov = 81.56249
+[node name="Camera" parent="." unique_id=1114856204 node_paths=PackedStringArray("target", "env") instance=ExtResource("3_gldc4")]
+transform = Transform3D(1, 0, 0, 0, 0.92610127, 0.37727514, 0, -0.37727514, 0.92610127, 0.11177254, 5.2656074, 15.439981)
+visible = false
+fov = 67.4
 size = 4.277194
+target = NodePath("../Player")
+env = NodePath("../Environment")
