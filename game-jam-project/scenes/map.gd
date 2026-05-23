@@ -7,7 +7,7 @@ var last_pos: Vector3
 func _ready() -> void:
 	get_tree().paused = true
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 	
 

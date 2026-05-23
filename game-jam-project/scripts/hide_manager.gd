@@ -10,7 +10,6 @@ var visibility_points: Node3D
 var hidden_timer: float = 0.0
 var transition_started: bool = false
 var transition_finish: bool = false
-var current_tween: Tween = null
 
 func _ready() -> void:
 	visibility_points = player.get_node("visibilityPoints")
@@ -28,21 +27,10 @@ func _physics_process(delta: float) -> void:
 
 func start_transition() -> void:
 	transition_started = true
-	var mat = color_rect.material as ShaderMaterial
-	current_tween = create_tween()
 	AutoBus.swap.emit()
-	transition_finish = true;
 
 func cancel_transition() -> void:
 	transition_started = false
-	if current_tween:
-		current_tween.kill()
-		current_tween = null
-	reset_shader()
-
-func reset_shader() -> void:
-	var mat = color_rect.material as ShaderMaterial
-	mat.set_shader_parameter("progress", 0.0)
 
 func is_player_fully_hidden() -> bool:
 	var space_state = get_world_3d().direct_space_state
