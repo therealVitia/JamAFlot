@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://d4nrumix1481"]
 
-[ext_resource type="PackedScene" uid="uid://bsxg8vbm2rc2a" path="res://assets/BinbunGrass/grass_ground.tscn" id="1_o6wto"]
-[ext_resource type="Material" uid="uid://b5vyawolpq3dw" path="res://assets/WaterColor/material/WaterColorMaterial.tres" id="2_e2xdq"]
+[ext_resource type="PackedScene" path="res://assets/BinbunGrass/grass_ground.tscn" id="1_o6wto"]
+[ext_resource type="Material" path="res://assets/WaterColor/material/WaterColorMaterial.tres" id="2_e2xdq"]
+[ext_resource type="PackedScene" uid="uid://ey5aw6owxi6c" path="res://assets/StaticMeshes/PotsEtPlantes/SM_Pot15CM.fbx" id="3_2ng3w"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_o6wto"]
 material = ExtResource("2_e2xdq")
@@ -10,6 +11,12 @@ material = ExtResource("2_e2xdq")
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
 [node name="LightShaders" type="Node3D" unique_id=973389475]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1447258284]
+transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 2.5072305, -1.4475502)
+light_color = Color(0.6789437, 0.6789437, 0.6789437, 1)
+light_bake_mode = 1
+shadow_enabled = true
 
 [node name="GrassGround" parent="." unique_id=1508849956 instance=ExtResource("1_o6wto")]
 visible = false
@@ -25,3 +32,6 @@ mesh = SubResource("BoxMesh_o6wto")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=463313672]
 shape = SubResource("ConcavePolygonShape3D_e2xdq")
+
+[node name="SM_Pot15CM" parent="." unique_id=609470474 instance=ExtResource("3_2ng3w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9116678, 0, 0)

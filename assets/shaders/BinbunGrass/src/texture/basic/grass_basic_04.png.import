@@ -2,16 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dv6g2qxppq3ec"
-valid=false
+uid="uid://se8nc8tgocfp"
+path="res://.godot/imported/grass_basic_04.png-c688dafcf20c8a5ceb0fb9c69231901a.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://assets/BinbunGrass/src/texture/basic/grass_basic_atlas.png"
+source_file="res://assets/shaders/BinbunGrass/src/texture/basic/grass_basic_04.png"
+dest_files=["res://.godot/imported/grass_basic_04.png-c688dafcf20c8a5ceb0fb9c69231901a.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -19,7 +23,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -33,4 +37,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1
