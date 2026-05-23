@@ -4,14 +4,38 @@
 [ext_resource type="Script" uid="uid://cq0sr3c11v4wd" path="res://scripts/environment.gd" id="1_d5dl1"]
 [ext_resource type="PackedScene" uid="uid://bgket7j6l6e3l" path="res://scenes/objects/bed.tscn" id="4_0psjf"]
 [ext_resource type="PackedScene" uid="uid://crdfgci1ewd7r" path="res://scenes/objects/silhouette.tscn" id="4_hlc4h"]
-[ext_resource type="PackedScene" uid="uid://6l8saa5v84cn" path="res://scenes/objects/plant.tscn" id="5_0psjf"]
 [ext_resource type="PackedScene" uid="uid://bsrrd8x3w8jm1" path="res://scenes/objects/wall.tscn" id="6_yw8f4"]
 [ext_resource type="PackedScene" uid="uid://7oijiowfiod7" path="res://scenes/objects/bigplant.tscn" id="7_jtak5"]
 [ext_resource type="PackedScene" uid="uid://xown3lntf0cj" path="res://scenes/objects/tutohide.tscn" id="9_7yrbd"]
 [ext_resource type="PackedScene" uid="uid://dvpo5beb2wqs4" path="res://scenes/objects/tree.tscn" id="9_a3oai"]
 [ext_resource type="PackedScene" uid="uid://cnhdrxeo7gf1y" path="res://scenes/objects/collectibleplaceholder.tscn" id="9_ysate"]
+[ext_resource type="PackedScene" uid="uid://5vflrjdnbl2a" path="res://assets/StaticMeshes/Mobilier/Lit.fbx" id="11_7yrbd"]
+[ext_resource type="PackedScene" uid="uid://g517ao0p522h" path="res://assets/StaticMeshes/Mobilier/LitSombre.fbx" id="12_0hc8i"]
+[ext_resource type="PackedScene" uid="uid://cvrteh5y3xdtl" path="res://assets/StaticMeshes/PotsEtPlantes/SM_Pot60CMSombre.fbx" id="13_yyxhd"]
+[ext_resource type="PackedScene" uid="uid://d21yljb3om7hd" path="res://assets/StaticMeshes/PotsEtPlantes/SM_PlanteLapinSombre.fbx" id="14_ofm7x"]
+[ext_resource type="PackedScene" uid="uid://djm1gqxukjlv7" path="res://assets/StaticMeshes/PotsEtPlantes/SM_PlanteLapin.fbx" id="14_yyxhd"]
+[ext_resource type="PackedScene" uid="uid://cx7l6mbgtcu1v" path="res://assets/StaticMeshes/PotsEtPlantes/SM_Pot60CM.fbx" id="15_80s2q"]
+[ext_resource type="PackedScene" uid="uid://bb6bvvd6d30ml" path="res://assets/StaticMeshes/PotsEtPlantes/SM_PlanteChampiSombre.fbx" id="16_375xh"]
+[ext_resource type="PackedScene" uid="uid://bnj207j8c8erl" path="res://assets/StaticMeshes/PotsEtPlantes/SM_PlanteCactusSombre.fbx" id="17_3am05"]
+[ext_resource type="PackedScene" uid="uid://bcqn00kbnikfb" path="res://assets/StaticMeshes/PotsEtPlantes/SM_PlanteChampi.fbx" id="17_6p5pf"]
+[ext_resource type="PackedScene" uid="uid://cbt1wp7x7mvrk" path="res://assets/StaticMeshes/PotsEtPlantes/SM_PlanteCactus.fbx" id="17_375xh"]
+[ext_resource type="PackedScene" uid="uid://bg074jfdd6h4b" path="res://assets/StaticMeshes/PotsEtPlantes/SM_Pot1MSombre.fbx" id="18_1afuj"]
+[ext_resource type="PackedScene" uid="uid://bs0jr7yl1366k" path="res://assets/StaticMeshes/PotsEtPlantes/SM_PlanteDeuxBoules.fbx" id="18_cofmf"]
+[ext_resource type="PackedScene" uid="uid://djue3y1mtt6i7" path="res://assets/StaticMeshes/PotsEtPlantes/SM_Pot1M.fbx" id="19_6p5pf"]
+[ext_resource type="PackedScene" uid="uid://j4niuq36wmxj" path="res://assets/StaticMeshes/PotsEtPlantes/SM_PlanteDeuxBoulesSombre.fbx" id="19_f0uwl"]
 
 [sub_resource type="Environment" id="Environment_y44tv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dmsi2"]
+size = Vector3(5.2966614, 2.1518555, 4.319336)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ofm7x"]
+height = 1.184082
+radius = 0.72314453
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_375xh"]
+radius = 1.1875
+height = 3.5091248
 
 [node name="Environment" type="Node3D" unique_id=1852985595 node_paths=PackedStringArray("limit_left", "limit_right")]
 transform = Transform3D(0.99999064, 0.0020808566, -0.0037912927, -0.0020815257, 0.99999785, -0.00017272872, 0.0037909253, 0.00018061064, 0.9999928, 0, 0, 0)
@@ -62,7 +86,7 @@ transform = Transform3D(0.98558486, -1.6422064e-10, -3.259629e-09, 5.919219e-09,
 transform = Transform3D(0.98558444, -1.5613182e-09, -3.259629e-09, 5.9189915e-09, 0.9855849, 2.3283064e-10, -1.8626451e-09, 2.910383e-11, 0.9855843, 23.584415, 1.3777801, -3.6749249)
 
 [node name="Silhouette7" parent="." unique_id=335703074 instance=ExtResource("4_hlc4h")]
-transform = Transform3D(0.9855854, -6.297114e-10, -2.561137e-09, 2.8931026e-09, 0.9855852, 1.0186341e-10, -4.656613e-10, 5.820766e-11, 0.98558515, 10.443004, 1.5405002, 3.644669)
+transform = Transform3D(0.98558533, -8.6254204e-10, -2.7939677e-09, 2.8930458e-09, 0.9855852, 1.0186341e-10, -4.656613e-10, 5.820766e-11, 0.9855851, 8.811726, 1.537093, 3.57871)
 
 [node name="Silhouette" parent="Silhouette7" unique_id=1053018648 instance=ExtResource("4_hlc4h")]
 transform = Transform3D(1.0000001, 3.9244696e-10, -4.656613e-10, 1.8991386e-10, 1, 0, -4.656613e-10, 4.3655746e-11, 1, -0.3776474, 0.06284714, -1.483448)
@@ -71,43 +95,33 @@ transform = Transform3D(1.0000001, 3.9244696e-10, -4.656613e-10, 1.8991386e-10, 
 transform = Transform3D(0.98558474, -1.5612613e-09, -2.7939677e-09, 4.755236e-09, 0.9855849, 2.4738256e-10, -6.9849193e-10, 4.3655746e-11, 0.9855846, 25.18325, 1.4856725, -4.517721)
 
 [node name="Silhouette" parent="." unique_id=607594126 instance=ExtResource("4_hlc4h")]
-transform = Transform3D(0.98558533, -8.626557e-10, -1.6298145e-09, 2.660272e-09, 0.9855852, 1.3096724e-10, -2.3283064e-10, 2.910383e-11, 0.9855852, 8.683308, 1.4750875, 2.4841135)
+transform = Transform3D(0.9855853, -1.0954864e-09, -1.8626451e-09, 2.6602152e-09, 0.9855852, 1.3096724e-10, -2.3283064e-10, 2.910383e-11, 0.98558515, 7.0520315, 1.4716805, 2.4181545)
 
 [node name="Silhouette2" parent="." unique_id=1801966865 instance=ExtResource("4_hlc4h")]
-transform = Transform3D(0.9999997, -7.366907e-11, -1.1641532e-09, 1.5869546e-09, 0.9999997, 1.0186341e-10, 0, 2.910383e-11, 0.9999997, 10.111855, 1.5696175, 0.12267436)
+transform = Transform3D(0.99999964, -7.3725914e-11, -1.3969839e-09, 2.052559e-09, 0.99999964, 1.3096724e-10, 0, 2.910383e-11, 0.99999964, 7.5139647, 1.5643481, 0.9234288)
 
 [node name="Bed" parent="." unique_id=72821643 instance=ExtResource("4_0psjf")]
 transform = Transform3D(-0.08732373, -0.002081515, 5.754945, -0.00084580324, 0.9999968, 0.01195652, -3.8444586, -0.00017272535, -0.13072157, -7.1169357, 0.35297945, -2.9038117)
+visible = false
 
 [node name="Bed" parent="Bed" unique_id=1176773791 instance=ExtResource("4_0psjf")]
 transform = Transform3D(-0.016311755, -0.00375645, 0.74200344, -0.00015799352, 1.8046681, 0.0015415972, -0.71813166, -0.00031171273, -0.016854368, -0.25377738, 0.2891909, 7.8478208)
 
-[node name="Plant" parent="." unique_id=651187894 instance=ExtResource("5_0psjf")]
-transform = Transform3D(0.60165656, -0.0011885556, 0.0024120396, 0.0012519724, 0.5710009, 0.000114921866, -0.002281074, -9.8623794e-05, 0.6362622, 6.4307065, 0.5438012, 7.6749415)
-
-[node name="Plant2" parent="." unique_id=1719243272 instance=ExtResource("5_0psjf")]
-transform = Transform3D(0.60165656, -0.0011885563, 0.0024120405, 0.0012519724, 0.5710011, 0.000114921866, -0.0022810749, -9.8623845e-05, 0.6362624, 7.8006535, 0.5360221, 7.6315494)
-
-[node name="Plant3" parent="." unique_id=1174443564 instance=ExtResource("5_0psjf")]
-transform = Transform3D(0.60165656, -0.0011885563, 0.0024120405, 0.0012519724, 0.5710011, 0.000114921866, -0.0022810749, -9.8623845e-05, 0.6362624, 9.0894785, 0.5371067, 7.620208)
-
 [node name="Wall2" parent="." unique_id=1557850575 instance=ExtResource("6_yw8f4")]
-transform = Transform3D(-0.18467888, -0.001807584, 0.9981071, 0.00057549134, 1.0003852, 0.0022477997, -4.618315, 0.011219937, -0.05997387, -10.080492, 0.6721785, -0.2804704)
+transform = Transform3D(-0.18467885, -0.0018075842, 0.99810684, 0.000575491, 1.0003849, 0.0022477997, -4.618315, 0.0112199355, -0.059973862, -6.783558, 0.6790445, -0.2605583)
 
 [node name="Wall3" parent="." unique_id=1183238248 instance=ExtResource("6_yw8f4")]
-transform = Transform3D(5.33858, -0.004703902, 0.024516005, 0.013138428, 0.34914178, 0.00040409557, -0.023939569, -0.000105532905, 0.9991496, 0.7548957, 0.33249387, 9.147784)
+transform = Transform3D(5.3385797, -0.004703902, 0.024516001, 0.013138428, 0.34914178, 0.00040409557, -0.023939565, -0.00010553289, 0.9991495, 0.5530693, 0.33191696, 8.240206)
 
 [node name="Wall" parent="." unique_id=665705393 instance=ExtResource("6_yw8f4")]
-transform = Transform3D(5.4720354, -0.0020815262, 0.0037909213, 0.011386634, 0.99999726, 0.00018061872, -0.020746283, -0.0001727205, 0.9999923, 0.3249124, 0.64565015, -6.5202694)
+transform = Transform3D(5.4720354, -0.0020815264, 0.0037909208, 0.011386636, 0.9999972, 0.0001806187, -0.020746283, -0.00017272048, 0.99999225, 0.030570518, 0.64540094, -4.415733)
 
 [node name="Wall" parent="Wall" unique_id=149804837 instance=ExtResource("6_yw8f4")]
 transform = Transform3D(-0.2184723, -0.0020799702, 0.049314924, -0.00045461385, 0.99925095, 0.0023496123, 0.00082830037, -0.00017259168, 13.00858, 1.536746, 0.16014504, 2.6457982)
 
 [node name="Plant5" parent="." unique_id=1018349601 instance=ExtResource("7_jtak5")]
 transform = Transform3D(0.60165656, -0.0011885569, 0.0024120416, 0.0012519724, 0.5710014, 0.000114921866, -0.002281076, -9.86239e-05, 0.6362627, 3.4605663, 0.6267641, -2.877497)
-
-[node name="Plant4" parent="." unique_id=1092200922 instance=ExtResource("5_0psjf")]
-transform = Transform3D(0.60165656, -0.0011885578, 0.002412043, 0.0012519724, 0.57100177, 0.00011492189, -0.0022810774, -9.8623976e-05, 0.6362631, -8.125369, 0.62672794, 7.552564)
+visible = false
 
 [node name="Wall4" parent="." unique_id=79613651 instance=ExtResource("6_yw8f4")]
 transform = Transform3D(2.0837514, -0.0020815267, 0.00379092, 0.0043360284, 0.9999971, 0.00018061872, -0.007900186, -0.00017272048, 0.99999213, 15.266202, 0.7591592, -0.18945546)
@@ -128,7 +142,7 @@ transform = Transform3D(-0.007881713, 0.0023298562, -0.96421164, 0.0001566417, 0
 transform = Transform3D(1.9157274, -0.0006408152, 0.003790913, 0.0039863954, 0.3078572, 0.00018061869, -0.0072631515, -5.3173433e-05, 0.9999916, 15.386728, 0.31397298, 4.657892)
 
 [node name="Wall7" parent="." unique_id=1492401203 instance=ExtResource("6_yw8f4")]
-transform = Transform3D(-0.010053905, -0.0007369083, 0.9685728, 0.00015845668, 0.2880538, 0.002067662, -1.254114, 0.003902612, -0.01340465, 11.387113, 0.4026615, 6.808112)
+transform = Transform3D(-0.010053902, -0.0007369082, 0.9685726, 0.00015845663, 0.28805363, 0.002067662, -1.2541133, 0.0039026106, -0.013404647, 7.979322, 0.39553964, 6.641228)
 
 [node name="Plant6" parent="." unique_id=1714886858 instance=ExtResource("9_a3oai")]
 transform = Transform3D(0.60165656, -0.0011885572, 0.0024120423, 0.0012519724, 0.5710016, 0.00011492188, -0.0022810767, -9.862394e-05, 0.6362629, 30.756191, 1.2862504, -5.529487)
@@ -158,3 +172,200 @@ transform = Transform3D(0.60165656, -0.0011885576, 0.0024120428, 0.0012519724, 0
 
 [node name="Table" parent="." unique_id=36874222 instance=ExtResource("9_ysate")]
 transform = Transform3D(0.60950387, -0.001267174, 0.002010274, 0.001268303, 0.6087696, 9.577972e-05, -0.002310828, -0.00010514732, 0.53028226, 25.155293, 0.24859074, -2.3261762)
+
+[node name="Lit" type="StaticBody3D" parent="." unique_id=1391530597]
+transform = Transform3D(0.99999976, -7.366907e-11, -9.313226e-10, 1.3541808e-09, 0.99999976, 7.2759576e-11, 0, 2.910383e-11, 0.99999976, -4.054684, -0.00876204, -1.870224)
+
+[node name="LitMesh" parent="Lit" unique_id=2046224717 instance=ExtResource("11_7yrbd")]
+transform = Transform3D(-1.2990552, 0, 1.7351074e-07, 0, 1.250058, 0, -1.1356701e-07, 0, -1.9847316, 0, 0, 0)
+visible = false
+
+[node name="LitSombre" parent="Lit" unique_id=367278043 instance=ExtResource("12_0hc8i")]
+transform = Transform3D(-1.2990001, 1.9929303e-10, 1.7415732e-07, -4.8487436e-11, 1.2499999, -2.910383e-11, -1.13621354e-07, 2.910383e-11, -1.9850001, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lit" unique_id=684426875]
+transform = Transform3D(1.0000095, 8.564177e-08, -8.568168e-08, 5.0836775e-09, 1, -1.4551915e-11, -1.2805685e-08, 8.527422e-09, 1, 0.05100012, 0.8771973, 4.7683716e-07)
+shape = SubResource("BoxShape3D_dmsi2")
+
+[node name="PotLapin" type="StaticBody3D" parent="." unique_id=1275882416]
+transform = Transform3D(1.4949996, -2.0204425e-09, 0, 2.6820999e-09, 1.4949993, 5.820766e-11, -1.3969839e-09, 1.1641532e-10, 1.495, -4.68454, -0.008596603, 6.6847506)
+
+[node name="SM_PlanteLapin" parent="PotLapin" unique_id=1171614399 instance=ExtResource("14_yyxhd")]
+transform = Transform3D(-0.34545714, -0.00091587263, -0.27250436, -0.0006720092, 0.4399987, -0.0006269002, 0.27250507, -7.600355e-05, -0.3454573, -0.0057959557, 1.0022696, -0.007824898)
+visible = false
+
+[node name="SM_PlanteLapinSombre" parent="PotLapin" unique_id=1632329196 instance=ExtResource("14_ofm7x")]
+transform = Transform3D(-0.34545714, -0.0009158722, -0.2725041, -0.0006720092, 0.43999866, -0.00062689977, 0.27250504, -7.6003984e-05, -0.34545752, -0.0057959557, 1.0022696, -0.007824898)
+
+[node name="SM_Pot60CM" parent="PotLapin" unique_id=1229335115 instance=ExtResource("15_80s2q")]
+transform = Transform3D(1, 1.5950263e-10, -2.3283064e-10, 1.8991386e-10, 1, 0, -2.3283064e-10, 1.4551915e-11, 1, 0, 0, 0)
+visible = false
+
+[node name="SM_Pot60CMSombre" parent="PotLapin" unique_id=1044910221 instance=ExtResource("13_yyxhd")]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999999, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PotLapin" unique_id=1649613287]
+transform = Transform3D(1, 2.8569502e-08, -2.863817e-08, 2.8590136e-08, 1, 1.4551915e-11, -2.863817e-08, 1.1350494e-09, 1, 4.7683716e-07, 0.6179198, 0)
+shape = SubResource("CylinderShape3D_ofm7x")
+
+[node name="PotLapin2" type="StaticBody3D" parent="." unique_id=1329565290]
+transform = Transform3D(0.82146806, -0.00027312123, 0.57025236, -0.00047011377, 0.99999803, 0.0011561621, -0.5702529, -0.0012178373, 0.8214675, -3.1099432, -0.005258723, 7.033938)
+
+[node name="SM_PlanteLapin" parent="PotLapin2" unique_id=845124946 instance=ExtResource("14_yyxhd")]
+transform = Transform3D(-0.34545714, -0.00091587263, -0.27250436, -0.0006720092, 0.4399987, -0.0006269002, 0.27250507, -7.600355e-05, -0.3454573, -0.0057959557, 1.0022696, -0.007824898)
+visible = false
+
+[node name="SM_PlanteLapinSombre" parent="PotLapin2" unique_id=1041633911 instance=ExtResource("14_ofm7x")]
+transform = Transform3D(-0.34545714, -0.0009158722, -0.2725041, -0.0006720092, 0.43999866, -0.00062689977, 0.27250504, -7.6003984e-05, -0.34545752, -0.0057959557, 1.0022696, -0.007824898)
+
+[node name="SM_Pot60CM" parent="PotLapin2" unique_id=983947430 instance=ExtResource("15_80s2q")]
+transform = Transform3D(1, 1.5950263e-10, -2.3283064e-10, 1.8991386e-10, 1, 0, -2.3283064e-10, 1.4551915e-11, 1, 0, 0, 0)
+visible = false
+
+[node name="SM_Pot60CMSombre" parent="PotLapin2" unique_id=504217919 instance=ExtResource("13_yyxhd")]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999999, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PotLapin2" unique_id=73801707]
+transform = Transform3D(1, 2.8569502e-08, -2.863817e-08, 2.8590136e-08, 1, 1.4551915e-11, -2.863817e-08, 1.1350494e-09, 1, 4.7683716e-07, 0.6179198, 0)
+shape = SubResource("CylinderShape3D_ofm7x")
+
+[node name="PotChampi" type="StaticBody3D" parent="." unique_id=1585830898]
+transform = Transform3D(0.37659824, -0.0011376174, 0.92637473, -0.0014576341, 0.9999957, 0.0018205995, -0.92637384, -0.002035955, 0.3765963, 4.403522, 0.010312558, 6.638932)
+
+[node name="SM_PlanteChampi3" parent="PotChampi" unique_id=263506296 instance=ExtResource("17_6p5pf")]
+transform = Transform3D(0.55999994, -6.96987e-17, -1.4901163e-07, 0, 0.5599999, -2.6193445e-10, 1.4901161e-07, 2.619344e-10, 0.56, 0.018820286, 1.0562638, 0.026436806)
+visible = false
+
+[node name="SM_PlanteChampiSombre" parent="PotChampi" unique_id=806766800 instance=ExtResource("16_375xh")]
+transform = Transform3D(0.55999994, 2.910383e-10, -1.4901161e-07, 0, 0.5599999, -1.7462298e-10, 1.4901161e-07, 2.6193447e-10, 0.56, 0.018820286, 1.0562638, 0.026436806)
+
+[node name="SM_PlanteChampi2" parent="PotChampi" unique_id=572474575 instance=ExtResource("17_6p5pf")]
+transform = Transform3D(-0.3035294, -0.046484184, -0.070243336, -0.00061717536, 0.26390997, -0.17197774, 0.08422894, -0.16557777, -0.2543907, 0.026434898, 1.0539609, -0.019224167)
+visible = false
+
+[node name="SM_PlanteChampiSombre2" parent="PotChampi" unique_id=1176343349 instance=ExtResource("16_375xh")]
+transform = Transform3D(-0.30352938, -0.04648424, -0.070243225, -0.0006171753, 0.26390997, -0.17197782, 0.08422893, -0.16557772, -0.25439066, 0.026434898, 1.0539609, -0.019224167)
+
+[node name="SM_PlanteChampi" parent="PotChampi" unique_id=1385336642 instance=ExtResource("17_6p5pf")]
+transform = Transform3D(0.028507892, -0.00015611501, -0.06937063, 7.13223e-05, 0.074999906, -0.0001394734, 0.06937079, -1.2954383e-05, 0.028507968, 0.072052, 1.0821903, 0.313694)
+visible = false
+
+[node name="SM_PlanteChampiSombre3" parent="PotChampi" unique_id=1622075414 instance=ExtResource("16_375xh")]
+transform = Transform3D(0.028507896, -0.00015611498, -0.06937064, 7.132229e-05, 0.074999906, -0.00013947336, 0.06937079, -1.2954328e-05, 0.028507927, 0.072052, 1.0821903, 0.313694)
+
+[node name="SM_Pot60CM" parent="PotChampi" unique_id=2135201510 instance=ExtResource("15_80s2q")]
+transform = Transform3D(1, 1.5950263e-10, -2.3283064e-10, 1.8991386e-10, 1, 0, -2.3283064e-10, 1.4551915e-11, 1, 0, 0, 0)
+visible = false
+
+[node name="SM_Pot60CMSombre" parent="PotChampi" unique_id=1453975787 instance=ExtResource("13_yyxhd")]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999999, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PotChampi" unique_id=506703796]
+transform = Transform3D(1, 2.8569502e-08, -2.863817e-08, 2.8590136e-08, 1, 1.4551915e-11, -2.863817e-08, 1.1350494e-09, 1, 4.7683716e-07, 0.6179198, 0)
+shape = SubResource("CylinderShape3D_ofm7x")
+
+[node name="PotDeuxBoules" type="StaticBody3D" parent="." unique_id=2134845079]
+transform = Transform3D(0.3765983, -0.0011376174, 0.92637473, -0.0014576346, 0.9999958, 0.0018205994, -0.92637396, -0.0020359552, 0.37659633, 6.3721504, 0.014243143, 5.6752276)
+
+[node name="SM_PlanteChampi" parent="PotDeuxBoules" unique_id=1895927089 instance=ExtResource("17_6p5pf")]
+transform = Transform3D(0.028507892, -0.00015611503, -0.06937062, 7.132229e-05, 0.074999906, -0.0001394734, 0.06937079, -1.2954387e-05, 0.028507967, 0.44201708, 1.0828997, -0.037160873)
+visible = false
+
+[node name="SM_PlanteDeuxBoules" parent="PotDeuxBoules" unique_id=1299663255 instance=ExtResource("18_cofmf")]
+transform = Transform3D(2.885, -1.3434329e-09, -7.8198075e-20, 1.3434329e-09, 2.885, 1.6792912e-10, -2.3304845e-26, -1.6792912e-10, 2.885, -0.04347706, 1.0469135, -0.0028409958)
+
+[node name="SM_PlanteDeuxBoulesSombre" parent="PotDeuxBoules" unique_id=1053820594 instance=ExtResource("19_f0uwl")]
+transform = Transform3D(2.885, -1.3434329e-09, -7.8198075e-20, 1.3434329e-09, 2.885, 1.6792912e-10, -2.3304845e-26, -1.6792912e-10, 2.885, -0.04347706, 1.0469135, -0.0028409958)
+
+[node name="SM_PlanteChampiSombre3" parent="PotDeuxBoules" unique_id=36683622 instance=ExtResource("16_375xh")]
+transform = Transform3D(0.028507894, -0.000156115, -0.06937064, 7.132228e-05, 0.074999906, -0.00013947336, 0.06937079, -1.2954328e-05, 0.028507926, 0.44201708, 1.0828997, -0.037160873)
+
+[node name="SM_Pot60CM" parent="PotDeuxBoules" unique_id=217390428 instance=ExtResource("15_80s2q")]
+transform = Transform3D(1, 1.5950263e-10, -2.3283064e-10, 1.8991386e-10, 1, 0, -2.3283064e-10, 1.4551915e-11, 1, 0, 0, 0)
+visible = false
+
+[node name="SM_Pot60CMSombre" parent="PotDeuxBoules" unique_id=1557095920 instance=ExtResource("13_yyxhd")]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999999, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PotDeuxBoules" unique_id=544899717]
+transform = Transform3D(1, 2.8569502e-08, -2.863817e-08, 2.8590136e-08, 1, 1.4551915e-11, -2.863817e-08, 1.1350494e-09, 1, 4.7683716e-07, 0.6179198, 0)
+shape = SubResource("CylinderShape3D_ofm7x")
+
+[node name="PotChampi2" type="StaticBody3D" parent="." unique_id=165950841]
+transform = Transform3D(0.11205797, -0.002487554, 1.4205841, -0.002978299, 1.4249927, 0.0027302082, -1.4205827, -0.0031837674, 0.11205214, 5.8986926, 0.013474932, 6.931887)
+
+[node name="SM_PlanteChampi3" parent="PotChampi2" unique_id=1970247172 instance=ExtResource("17_6p5pf")]
+transform = Transform3D(0.55999994, -6.96987e-17, -1.4901163e-07, 0, 0.5599999, -2.6193445e-10, 1.4901161e-07, 2.619344e-10, 0.56, 0.018820286, 1.0562638, 0.026436806)
+visible = false
+
+[node name="SM_PlanteChampiSombre" parent="PotChampi2" unique_id=950809806 instance=ExtResource("16_375xh")]
+transform = Transform3D(0.55999994, 2.910383e-10, -1.4901161e-07, 0, 0.5599999, -1.7462298e-10, 1.4901161e-07, 2.6193447e-10, 0.56, 0.018820286, 1.0562638, 0.026436806)
+
+[node name="SM_PlanteChampi2" parent="PotChampi2" unique_id=108540400 instance=ExtResource("17_6p5pf")]
+transform = Transform3D(-0.3035294, -0.046484184, -0.070243336, -0.00061717536, 0.26390997, -0.17197774, 0.08422894, -0.16557777, -0.2543907, 0.026434898, 1.0539609, -0.019224167)
+visible = false
+
+[node name="SM_PlanteChampiSombre2" parent="PotChampi2" unique_id=1873117019 instance=ExtResource("16_375xh")]
+transform = Transform3D(-0.30352938, -0.04648424, -0.070243225, -0.0006171753, 0.26390997, -0.17197782, 0.08422893, -0.16557772, -0.25439066, 0.026434898, 1.0539609, -0.019224167)
+
+[node name="SM_PlanteChampi" parent="PotChampi2" unique_id=1923424367 instance=ExtResource("17_6p5pf")]
+transform = Transform3D(0.028507892, -0.00015611501, -0.06937063, 7.13223e-05, 0.074999906, -0.0001394734, 0.06937079, -1.2954383e-05, 0.028507968, 0.072052, 1.0821903, 0.313694)
+visible = false
+
+[node name="SM_PlanteChampiSombre3" parent="PotChampi2" unique_id=1535885786 instance=ExtResource("16_375xh")]
+transform = Transform3D(0.028507896, -0.00015611498, -0.06937064, 7.132229e-05, 0.074999906, -0.00013947336, 0.06937079, -1.2954328e-05, 0.028507927, 0.072052, 1.0821903, 0.313694)
+
+[node name="SM_Pot60CM" parent="PotChampi2" unique_id=1965493311 instance=ExtResource("15_80s2q")]
+transform = Transform3D(1, 1.5950263e-10, -2.3283064e-10, 1.8991386e-10, 1, 0, -2.3283064e-10, 1.4551915e-11, 1, 0, 0, 0)
+visible = false
+
+[node name="SM_Pot60CMSombre" parent="PotChampi2" unique_id=1135213301 instance=ExtResource("13_yyxhd")]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999999, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PotChampi2" unique_id=255376379]
+transform = Transform3D(1, 2.8569502e-08, -2.863817e-08, 2.8590136e-08, 1, 1.4551915e-11, -2.863817e-08, 1.1350494e-09, 1, 4.7683716e-07, 0.6179198, 0)
+shape = SubResource("CylinderShape3D_ofm7x")
+
+[node name="PotLapin3" type="StaticBody3D" parent="." unique_id=1884177001]
+transform = Transform3D(0.99769956, 6.921073e-06, 0.06777072, -1.6487242e-05, 0.9999984, 0.00014067082, -0.06777116, -0.00014146644, 0.9976994, -3.78677, -0.0069941604, 5.141733)
+
+[node name="SM_PlanteLapin" parent="PotLapin3" unique_id=294398321 instance=ExtResource("14_yyxhd")]
+transform = Transform3D(-0.34545714, -0.00091587263, -0.27250436, -0.0006720092, 0.4399987, -0.0006269002, 0.27250507, -7.600355e-05, -0.3454573, -0.0057959557, 1.0022696, -0.007824898)
+visible = false
+
+[node name="SM_PlanteLapinSombre" parent="PotLapin3" unique_id=1331257569 instance=ExtResource("14_ofm7x")]
+transform = Transform3D(-0.34545714, -0.0009158722, -0.2725041, -0.0006720092, 0.43999866, -0.00062689977, 0.27250504, -7.6003984e-05, -0.34545752, -0.0057959557, 1.0022696, -0.007824898)
+
+[node name="SM_Pot60CM" parent="PotLapin3" unique_id=780684535 instance=ExtResource("15_80s2q")]
+transform = Transform3D(1, 1.5950263e-10, -2.3283064e-10, 1.8991386e-10, 1, 0, -2.3283064e-10, 1.4551915e-11, 1, 0, 0, 0)
+visible = false
+
+[node name="SM_Pot60CMSombre" parent="PotLapin3" unique_id=1488788788 instance=ExtResource("13_yyxhd")]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999999, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PotLapin3" unique_id=567816424]
+transform = Transform3D(1, 2.8569502e-08, -2.863817e-08, 2.8590136e-08, 1, 1.4551915e-11, -2.863817e-08, 1.1350494e-09, 1, 4.7683716e-07, 0.6179198, 0)
+shape = SubResource("CylinderShape3D_ofm7x")
+
+[node name="PotCactus" type="StaticBody3D" parent="." unique_id=80152016]
+transform = Transform3D(0.99999976, -7.366907e-11, -9.313226e-10, 1.3541808e-09, 0.99999976, 7.2759576e-11, 0, 2.910383e-11, 0.99999976, 3.3335698, 0.006804967, -0.7755587)
+
+[node name="SM_PlanteCactus" parent="PotCactus" unique_id=438176334 instance=ExtResource("17_375xh")]
+transform = Transform3D(3.6261117, -0.0046509104, 0.013988573, 0.0075454917, 2.2343693, 0.00066645595, -0.013747787, -0.0003859225, 3.689987, 0.018098831, 1.4341211, 2.9087067e-05)
+visible = false
+
+[node name="SM_PlanteCactusSombre" parent="PotCactus" unique_id=1505168152 instance=ExtResource("17_3am05")]
+transform = Transform3D(3.6261117, -0.0046509127, 0.013988555, 0.007545491, 2.2343693, 0.000666486, -0.013747787, -0.00038592244, 3.6899872, 0.018098831, 1.4341211, 2.9087067e-05)
+
+[node name="SM_Pot1M" parent="PotCactus" unique_id=757156112 instance=ExtResource("19_6p5pf")]
+visible = false
+
+[node name="SM_Pot1MSombre" parent="PotCactus" unique_id=2117784786 instance=ExtResource("18_1afuj")]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999999, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PotCactus" unique_id=96911966]
+transform = Transform3D(1.0000095, 9.705491e-08, -9.709038e-08, 5.0836775e-09, 1, -1.4551915e-11, -1.2805685e-08, 9.662472e-09, 1, -1.66893e-06, 1.5855558, 1.66893e-06)
+shape = SubResource("CapsuleShape3D_375xh")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=429751564]
+transform = Transform3D(0.9999803, -0.0015981046, -0.006064854, 0.0059743878, -0.051564474, 0.9986517, -0.0019086815, -0.9986683, -0.05155391, -2.359509, 5.305209, -0.79044276)
