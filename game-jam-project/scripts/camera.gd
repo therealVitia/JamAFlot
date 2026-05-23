@@ -16,7 +16,7 @@ func _ready() -> void:
 	limit_left = env.limit_left
 	limit_right = env.limit_right
 	
-		# Security
+	# Security
 	assert(env != null, "env non assigné sur PlayerCamera")
 	assert(limit_left != null, "limit_left manquant sur env")
 	assert(limit_right != null, "limit_right manquant sur env")
