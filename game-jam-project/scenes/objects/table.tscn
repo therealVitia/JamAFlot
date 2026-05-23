@@ -1,14 +1,18 @@
 [gd_scene format=3 uid="uid://dluvc51jn4g87"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0hih1"]
+size = Vector3(2.6521606, 1.8458252, 0.5067749)
 
 [sub_resource type="BoxMesh" id="BoxMesh_0hih1"]
+size = Vector3(2.64, 1.84, 0.505)
 
 [node name="Table" type="StaticBody3D" unique_id=72821643]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=571242318]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.005, 0.92, 0.004)
 shape = SubResource("BoxShape3D_0hih1")
 debug_color = Color(1, 1, 1, 1)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1337825739]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92, 0)
 mesh = SubResource("BoxMesh_0hih1")

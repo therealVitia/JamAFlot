@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://bofhfwedhkm6b"]
+
+[ext_resource type="Script" uid="uid://djwoltldtftrb" path="res://scripts/enemy.gd" id="1_4gyqm"]
+[ext_resource type="Texture2D" uid="uid://bef2s6ct3plih" path="res://icon.svg" id="1_7k104"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_md0e3"]
+albedo_color = Color(0, 0, 0, 0.49019608)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_4ra3w"]
+material = SubResource("StandardMaterial3D_md0e3")
+height = 0.01
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8tegq"]
+direction = Vector3(0, 0, 0)
+initial_velocity_min = 0.19999999
+initial_velocity_max = 0.5
+gravity = Vector3(0, -3, 0)
+scale_min = 0.049999997
+scale_max = 0.14999999
+color = Color(0.33, 0.3168, 0.32076, 0.5882353)
+
+[sub_resource type="QuadMesh" id="QuadMesh_8tegq"]
+size = Vector2(0.1, 0.1)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8tegq"]
+radius = 0.3046875
+height = 0.86413574
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7k104"]
+size = Vector3(1.0244751, 1, 0.14172363)
+
+[node name="Enemy" type="CharacterBody3D" unique_id=528756262]
+script = ExtResource("1_4gyqm")
+
+[node name="pathfind" type="NavigationAgent3D" parent="." unique_id=1945207249]
+path_desired_distance = 0.5
+target_desired_distance = 0.5
+max_speed = 3.5
+
+[node name="hardShadow" type="MeshInstance3D" parent="." unique_id=1513901559]
+visible = false
+mesh = SubResource("CylinderMesh_4ra3w")
+
+[node name="particlesWalk" type="GPUParticles3D" parent="." unique_id=2110031379]
+emitting = false
+amount = 10
+lifetime = 0.6
+process_material = SubResource("ParticleProcessMaterial_8tegq")
+draw_pass_1 = SubResource("QuadMesh_8tegq")
+
+[node name="soundWalk" type="AudioStreamPlayer3D" parent="." unique_id=902504953]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1390235002]
+transform = Transform3D(0.9999977, 0.0018286309, -0.0011370786, -0.0018275008, 0.99999785, 0.0009997112, 0.001138894, -0.0009976425, 0.99999887, 0, 0.43206787, 0)
+shape = SubResource("CapsuleShape3D_8tegq")
+
+[node name="fakeShape" type="Sprite3D" parent="." unique_id=1467759137]
+transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0)
+texture = ExtResource("1_7k104")
+
+[node name="realShape" type="Sprite3D" parent="." unique_id=1433314043]
+texture = ExtResource("1_7k104")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1041344176]
+collision_layer = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=2125340230]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.017547607, 0, 0.00982666)
+shape = SubResource("BoxShape3D_7k104")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
