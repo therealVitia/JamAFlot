@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d4nrumix1481"]
 
-[ext_resource type="PackedScene" path="res://assets/BinbunGrass/grass_ground.tscn" id="1_o6wto"]
-[ext_resource type="Material" path="res://assets/WaterColor/material/WaterColorMaterial.tres" id="2_e2xdq"]
+[ext_resource type="PackedScene" uid="uid://bsxg8vbm2rc2a" path="res://assets/shaders/BinbunGrass/grass_ground.tscn" id="1_o6wto"]
+[ext_resource type="Material" uid="uid://b5vyawolpq3dw" path="res://assets/shaders/WaterColor/material/WaterColorMaterial.tres" id="2_e2xdq"]
 [ext_resource type="PackedScene" uid="uid://ey5aw6owxi6c" path="res://assets/StaticMeshes/PotsEtPlantes/SM_Pot15CM.fbx" id="3_2ng3w"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_o6wto"]

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bsxg8vbm2rc2a"]
 
-[ext_resource type="Material" path="res://assets/BinbunGrass/src/materials/grass_01/grass_ground_01.tres" id="1_ku7qn"]
-[ext_resource type="Material" path="res://assets/BinbunGrass/src/materials/grass_01/grass_01.tres" id="2_ubmyb"]
+[ext_resource type="Material" uid="uid://bra6ug2wjmj0j" path="res://assets/shaders/BinbunGrass/src/materials/grass_01/grass_ground_01.tres" id="2_ku7qn"]
+[ext_resource type="Material" uid="uid://c2to67v55oatp" path="res://assets/shaders/BinbunGrass/src/materials/grass_01/grass_01.tres" id="2_ubmyb"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_7dm0k"]
 size = Vector2(20, 20)
@@ -26,14 +26,15 @@ buffer = PackedFloat32Array(-1.07601, 0, -1.20455, 2.39808, 0, 1.61516, 0, 0, 1.
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1065631293]
 
 [node name="Ground" type="MeshInstance3D" parent="StaticBody3D" unique_id=92320520]
-material_override = ExtResource("1_ku7qn")
+material_override = ExtResource("2_ubmyb")
+material_overlay = ExtResource("2_ku7qn")
+cast_shadow = 0
 mesh = SubResource("PlaneMesh_7dm0k")
 
 [node name="Collision" type="CollisionShape3D" parent="StaticBody3D" unique_id=566166848]
 shape = SubResource("ConcavePolygonShape3D_u2c30")
 
 [node name="GrassBlade" type="MeshInstance3D" parent="StaticBody3D" unique_id=1041341591]
-visible = false
 mesh = SubResource("QuadMesh_ig7tw")
 
 [node name="Grass" type="MultiMeshInstance3D" parent="StaticBody3D" unique_id=1291191383]

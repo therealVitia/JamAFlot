@@ -1,5 +1,0 @@
-[gd_scene format=3 uid="uid://cxyrqdry1mowr"]
-
-[node name="HatchShader" type="Node3D" unique_id=777855961]
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1976824125]

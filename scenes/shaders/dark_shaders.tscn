@@ -1,5 +1,9 @@
 [gd_scene format=3 uid="uid://djwjbalwd6o2i"]
 
+[ext_resource type="Shader" uid="uid://c228ywmtmbhss" path="res://assets/shaders/Hatch/hash.gdshader" id="1_uaibk"]
+[ext_resource type="Texture2D" uid="uid://befhdd4x1oo1m" path="res://assets/shaders/BinbunGrass/src/texture/basic/grass_basic_03.png" id="3_a0aab"]
+[ext_resource type="Texture2D" uid="uid://se8nc8tgocfp" path="res://assets/shaders/BinbunGrass/src/texture/basic/grass_basic_04.png" id="4_a83rf"]
+
 [sub_resource type="PlaneMesh" id="PlaneMesh_gapkg"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_otq7w"]
@@ -10,13 +14,33 @@ points = PackedVector3Array(-1, 0, -1, -1, 0, 1, 1, 0, -1, 1, 0, 1)
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2eluo"]
 points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pa80u"]
+render_priority = 0
+shader = ExtResource("1_uaibk")
+shader_parameter/threshold1 = 0.506000024035
+shader_parameter/threshold2 = 0.6
+
+[sub_resource type="QuadMesh" id="QuadMesh_466ba"]
+material = SubResource("ShaderMaterial_pa80u")
+flip_faces = true
+size = Vector2(2, 2)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pa80u"]
+load_path = "res://.godot/imported/grass_basic_01.png-e99c3ac53003524f1a95a8fdaae2e7c1.s3tc.ctex"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kl72x"]
+render_priority = 0
+shader = ExtResource("1_uaibk")
+shader_parameter/hatch1 = SubResource("CompressedTexture2D_pa80u")
+shader_parameter/hatch2 = ExtResource("3_a0aab")
+shader_parameter/hatch3 = ExtResource("4_a83rf")
+shader_parameter/threshold1 = 0.5
+shader_parameter/threshold2 = 0.6
+
 [node name="DarkShaders" type="Node3D" unique_id=203322902]
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1393773081]
-transform = Transform3D(1, 0, 0, 0, 0.9252693, 0.37931082, 0, -0.37931082, 0.9252693, 0, 1.0688672, 1.7087858)
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Camera3D" unique_id=1939057969]
-transform = Transform3D(1, 0, 0, 0, 0.9909621, 0.13414189, 0, -0.13414189, 0.9909621, 0, 0, 0)
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1939057969]
+transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.50000006, 0, -0.50000006, 0.8660254, 0, 1.0688672, 1.7087858)
 
 [node name="Ground" type="StaticBody3D" parent="." unique_id=1092998785]
 
@@ -38,3 +62,23 @@ mesh = SubResource("BoxMesh_4ij36")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Box" unique_id=1362161912]
 transform = Transform3D(0.5684474, 0, 0, 0, 0.8041891, 0, 0, 0, 0.7302792, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_2eluo")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1393773081]
+transform = Transform3D(1, 0, 0, 0, 0.9252693, 0.37931082, 0, -0.37931082, 0.9252693, 0, 1.0688672, 1.7087858)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D" unique_id=1539404446]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0148102045, -0.33467102)
+mesh = SubResource("QuadMesh_466ba")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2029723900]
+layer = 127
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1710418198]
+material = SubResource("ShaderMaterial_kl72x")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.45882353, 0.14117648, 0.22745098, 0.53333336)
