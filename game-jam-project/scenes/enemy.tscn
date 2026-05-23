@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://8hjwhnb0l4sv"]
+
+[ext_resource type="Texture2D" uid="uid://bef2s6ct3plih" path="res://icon.svg" id="2_md0e3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7p1mj"]
+size = Vector3(1.2697172, 1.2597046, 0.36157227)
+
+[node name="Enemy" type="CharacterBody3D" unique_id=1062593944]
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1890613078]
+texture = ExtResource("2_md0e3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=325164495]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0068650097, 0.0018615723, 0.01965332)
+shape = SubResource("BoxShape3D_7p1mj")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1608599799]

@@ -3,6 +3,17 @@
 [ext_resource type="PackedScene" uid="uid://cb0ur3vdf28xq" path="res://scenes/player.tscn" id="1_paxxb"]
 [ext_resource type="PackedScene" uid="uid://bmdye2ltdkgkn" path="res://scenes/environment.tscn" id="2_gldc4"]
 [ext_resource type="PackedScene" uid="uid://dcg2kb8m4bvkj" path="res://scenes/camera.tscn" id="3_gldc4"]
+[ext_resource type="PackedScene" uid="uid://b0ncomhgye1o" path="res://scenes/hide_manager.tscn" id="4_0cso3"]
+[ext_resource type="PackedScene" uid="uid://dul0eby33j6m" path="res://scenes/manager.tscn" id="4_2klcf"]
+[ext_resource type="Shader" uid="uid://b2r707t3pwyhb" path="res://scenes/map.gdshader" id="5_2klcf"]
+[ext_resource type="PackedScene" uid="uid://ct544gvy01nkd" path="res://scenes/collectible.tscn" id="5_2lpho"]
+[ext_resource type="PackedScene" uid="uid://bxgca8mk2elu6" path="res://scenes/directional_light_3d.tscn" id="6_2lpho"]
+[ext_resource type="PackedScene" uid="uid://8hjwhnb0l4sv" path="res://scenes/enemy.tscn" id="9_be0no"]
+[ext_resource type="Script" uid="uid://djwoltldtftrb" path="res://scripts/enemy.gd" id="10_blm8a"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2lpho"]
+shader = ExtResource("5_2klcf")
+shader_parameter/progress = 0.0
 
 [node name="map" type="Node3D" unique_id=1199345111]
 
@@ -13,8 +24,50 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6710453, 1.6694946)
 
 [node name="Camera" parent="." unique_id=1114856204 node_paths=PackedStringArray("target", "env") instance=ExtResource("3_gldc4")]
 transform = Transform3D(1, 0, 0, 0, 0.92610127, 0.37727514, 0, -0.37727514, 0.92610127, 0.11177254, 5.2656074, 15.439981)
-visible = false
 fov = 67.4
 size = 4.277194
 target = NodePath("../Player")
 env = NodePath("../Environment")
+
+[node name="Manager" parent="." unique_id=631669273 instance=ExtResource("4_2klcf")]
+
+[node name="Collectible" parent="." unique_id=1709241768 instance=ExtResource("5_2lpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.381952, 1.1620398, -2.796545)
+
+[node name="Collectible2" parent="." unique_id=487379545 instance=ExtResource("5_2lpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.987978, 1.1620398, -2.796545)
+
+[node name="Collectible3" parent="." unique_id=1211090816 instance=ExtResource("5_2lpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9324207, 1.1620398, -2.796545)
+
+[node name="Collectible4" parent="." unique_id=715397446 instance=ExtResource("5_2lpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0065684, 1.1620398, -2.796545)
+
+[node name="DirectionalLight3D" parent="." unique_id=453814777 instance=ExtResource("6_2lpho")]
+transform = Transform3D(0.7477865, -0.30606925, 0.5891833, 0, 0.8874054, 0.46098986, -0.66393924, -0.344722, 0.6635898, 0, 4.439234, 0)
+shadow_enabled = true
+
+[node name="hideManager" parent="." unique_id=1758502476 node_paths=PackedStringArray("color_rect", "player", "camera") instance=ExtResource("4_0cso3")]
+color_rect = NodePath("../CanvasLayer/ColorRect")
+player = NodePath("../Player")
+camera = NodePath("../Camera")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1574250011]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=79559488]
+material = SubResource("ShaderMaterial_2lpho")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Enemy" parent="." unique_id=528756262 node_paths=PackedStringArray("target") instance=ExtResource("9_be0no")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.081987, 0.89610434, 0)
+script = ExtResource("10_blm8a")
+target = NodePath("../Player")
+
+[connection signal="collected" from="Collectible" to="Manager" method="_on_collectible_collected"]
+[connection signal="collected" from="Collectible2" to="Manager" method="_on_collectible_collected"]
+[connection signal="collected" from="Collectible3" to="Manager" method="_on_collectible_collected"]
+[connection signal="collected" from="Collectible4" to="Manager" method="_on_collectible_collected"]

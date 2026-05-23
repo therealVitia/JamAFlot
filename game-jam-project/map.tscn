@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://bsxd1tc7wvkwh"]
+
+[ext_resource type="PackedScene" uid="uid://cb0ur3vdf28xq" path="res://scenes/player.tscn" id="1_urblq"]
+[ext_resource type="PackedScene" uid="uid://bmdye2ltdkgkn" path="res://scenes/environment.tscn" id="2_iw27f"]
+[ext_resource type="PackedScene" uid="uid://dcg2kb8m4bvkj" path="res://scenes/camera.tscn" id="3_71pa8"]
+[ext_resource type="PackedScene" uid="uid://b0ncomhgye1o" path="res://scenes/hide_manager.tscn" id="4_05x41"]
+[ext_resource type="Shader" uid="uid://b2r707t3pwyhb" path="res://scenes/map.gdshader" id="5_gqbix"]
+[ext_resource type="PackedScene" uid="uid://8hjwhnb0l4sv" path="res://scenes/enemy.tscn" id="6_iw27f"]
+[ext_resource type="Script" uid="uid://djwoltldtftrb" path="res://scripts/enemy.gd" id="7_71pa8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2lpho"]
+shader = ExtResource("5_gqbix")
+shader_parameter/progress = 0.0
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_71pa8"]
+
+[node name="map" type="Node3D" unique_id=1199345111]
+
+[node name="Player" parent="." unique_id=1807533549 instance=ExtResource("1_urblq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.6080112, 0)
+
+[node name="Environment" parent="." unique_id=1852985595 instance=ExtResource("2_iw27f")]
+
+[node name="Camera" parent="." unique_id=1114856204 instance=ExtResource("3_71pa8")]
+transform = Transform3D(1, 0, 0, 0, 0.96875226, 0.24803048, 0, -0.24803048, 0.96875226, 0.11177254, 2.2917075, 2.020853)
+fov = 81.56249
+size = 4.277194
+
+[node name="hideManager" parent="." unique_id=1758502476 node_paths=PackedStringArray("color_rect", "player", "camera") instance=ExtResource("4_05x41")]
+color_rect = NodePath("../CanvasLayer/ColorRect")
+player = NodePath("../Player")
+camera = NodePath("../Camera")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1574250011]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=79559488]
+material = SubResource("ShaderMaterial_2lpho")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1883096313]
+navigation_mesh = SubResource("NavigationMesh_71pa8")
+
+[node name="Enemy" parent="." unique_id=528756262 node_paths=PackedStringArray("player") instance=ExtResource("6_iw27f")]
+script = ExtResource("7_71pa8")
+player = NodePath("../Player")

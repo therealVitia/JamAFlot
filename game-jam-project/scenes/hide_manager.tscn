@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b0ncomhgye1o"]
+
+[ext_resource type="Script" uid="uid://oak0756bhn5" path="res://scripts/hide_manager.gd" id="1_2wal3"]
+
+[node name="hideManager" type="Node3D" unique_id=1758502476]
+script = ExtResource("1_2wal3")
+transition_duration = 3.0
