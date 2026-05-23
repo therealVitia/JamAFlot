@@ -10,6 +10,8 @@
 shader = ExtResource("5_2klcf")
 shader_parameter/progress = 0.0
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_2klcf"]
+
 [node name="map" type="Node3D" unique_id=1199345111]
 
 [node name="Player" parent="." unique_id=1807533549 instance=ExtResource("1_paxxb")]
@@ -36,3 +38,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1883096313]
+navigation_mesh = SubResource("NavigationMesh_2klcf")
