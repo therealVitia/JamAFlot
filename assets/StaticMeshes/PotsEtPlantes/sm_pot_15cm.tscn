@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://b7sd6psgekc40"]
+
+[ext_resource type="PackedScene" uid="uid://ey5aw6owxi6c" path="res://assets/StaticMeshes/PotsEtPlantes/SM_Pot15CM.fbx" id="1_ilbrq"]
+[ext_resource type="Material" uid="uid://b5vyawolpq3dw" path="res://assets/WaterColor/material/WaterColorMaterial.tres" id="2_3flf5"]
+
+[node name="SM_Pot15CM" unique_id=609470474 instance=ExtResource("1_ilbrq")]
+
+[node name="Pot15CM" parent="." index="0" unique_id=1865136852]
+surface_material_override/0 = ExtResource("2_3flf5")

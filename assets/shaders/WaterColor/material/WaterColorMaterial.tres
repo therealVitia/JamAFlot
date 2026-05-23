@@ -1,0 +1,36 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://b5vyawolpq3dw"]
+
+[ext_resource type="Shader" uid="uid://bt53th5tf0som" path="res://assets/shaders/WaterColor/shader/WaterColorShader.gdshader" id="1_woepx"]
+
+[sub_resource type="Gradient" id="Gradient_woepx"]
+colors = PackedColorArray(0.87947625, 0.6307875, 0.93788505, 1, 0.7411765, 0.8117647, 0.8039216, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qe5p6"]
+gradient = SubResource("Gradient_woepx")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_dohpp"]
+noise_type = 0
+fractal_weighted_strength = 0.37
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_qwqpo"]
+noise = SubResource("FastNoiseLite_dohpp")
+seamless = true
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_woepx")
+shader_parameter/light_noise_scale = Vector2(0.01, 0.01)
+shader_parameter/light_noise_strength = 0.1
+shader_parameter/light_steps = 4
+shader_parameter/light_step_power = 0.5
+shader_parameter/light_offset = 0.0
+shader_parameter/light_multiplier = 1.0
+shader_parameter/albedo = SubResource("GradientTexture2D_qe5p6")
+shader_parameter/albedo_noise_texture = SubResource("NoiseTexture2D_qwqpo")
+shader_parameter/albedo_noise_strength = Vector2(0.97, 0.955)
+shader_parameter/albedo_noise_scale = Vector2(0.11, 0.355)
+shader_parameter/saturation_multiplier = 1.5
+shader_parameter/desaturation_power = 8.0
+shader_parameter/enable_depth_scaling = true
+shader_parameter/depth_strength = 2.0
+shader_parameter/edge_strength = 0.0
