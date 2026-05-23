@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://rov8fqa8eyi3" path="res://scenes/objects/floor.tscn" id="1_bc5iu"]
 [ext_resource type="Script" uid="uid://cq0sr3c11v4wd" path="res://scripts/environment.gd" id="1_d5dl1"]
 [ext_resource type="PackedScene" uid="uid://dluvc51jn4g87" path="res://scenes/objects/table.tscn" id="2_fm4en"]
+[ext_resource type="Script" uid="uid://dj6cgyrtfq0u7" path="res://scripts/swap_world.gd" id="4_hlc4h"]
 
 [sub_resource type="Environment" id="Environment_y44tv"]
 
@@ -20,6 +21,7 @@ disable_mode = 1
 [node name="Table" parent="." unique_id=72821643 instance=ExtResource("2_fm4en")]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, -0.24485254, 0)
 disable_mode = 1
+script = ExtResource("4_hlc4h")
 
 [node name="LimitLeft" type="Marker3D" parent="." unique_id=972738560]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 11)
