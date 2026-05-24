@@ -24,7 +24,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
-		sprite.pause()
+		sprite.play("idle")
 	
 	if direction.x != 0:
 		sprite.flip_h = direction.x < 0

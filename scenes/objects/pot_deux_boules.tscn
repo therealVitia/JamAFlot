@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://c4dchat426b1p"]
 
+[ext_resource type="Script" uid="uid://dj6cgyrtfq0u7" path="res://scripts/swap_world.gd" id="1_kson7"]
 [ext_resource type="PackedScene" uid="uid://bcqn00kbnikfb" path="res://assets/StaticMeshes/PotsEtPlantes/SM_PlanteChampi.fbx" id="1_o015q"]
 [ext_resource type="PackedScene" uid="uid://bs0jr7yl1366k" path="res://assets/StaticMeshes/PotsEtPlantes/SM_PlanteDeuxBoules.fbx" id="2_kson7"]
 [ext_resource type="PackedScene" uid="uid://j4niuq36wmxj" path="res://assets/StaticMeshes/PotsEtPlantes/SM_PlanteDeuxBoulesSombre.fbx" id="3_2nxkp"]
@@ -14,26 +15,33 @@ radius = 0.72314453
 [node name="PotDeuxBoules" type="StaticBody3D" unique_id=1010943857]
 transform = Transform3D(0.3765983, -0.0011376174, 0.92637473, -0.0014576346, 0.9999958, 0.0018205994, -0.92637396, -0.0020359552, 0.37659633, 0, 0, 0)
 
-[node name="SM_PlanteChampi" parent="." unique_id=263506296 instance=ExtResource("1_o015q")]
-transform = Transform3D(0.028507892, -0.00015611503, -0.06937062, 7.132229e-05, 0.074999906, -0.0001394734, 0.06937079, -1.2954387e-05, 0.028507967, 0.44201708, 1.0828997, -0.037160873)
-visible = false
-
-[node name="SM_PlanteDeuxBoules" parent="." unique_id=1299663255 instance=ExtResource("2_kson7")]
-transform = Transform3D(2.885, -1.3434329e-09, -7.8198075e-20, 1.3434329e-09, 2.885, 1.6792912e-10, -2.3304845e-26, -1.6792912e-10, 2.885, -0.04347706, 1.0469135, -0.0028409958)
-
-[node name="SM_PlanteDeuxBoulesSombre" parent="." unique_id=1053820594 instance=ExtResource("3_2nxkp")]
-transform = Transform3D(2.885, -1.3434329e-09, -7.8198075e-20, 1.3434329e-09, 2.885, 1.6792912e-10, -2.3304845e-26, -1.6792912e-10, 2.885, -0.04347706, 1.0469135, -0.0028409958)
-
-[node name="SM_PlanteChampiSombre3" parent="." unique_id=806766800 instance=ExtResource("4_3kl6g")]
-transform = Transform3D(0.028507894, -0.000156115, -0.06937064, 7.132228e-05, 0.074999906, -0.00013947336, 0.06937079, -1.2954328e-05, 0.028507926, 0.44201708, 1.0828997, -0.037160873)
-
-[node name="SM_Pot60CM" parent="." unique_id=1229335115 instance=ExtResource("5_gan0i")]
-transform = Transform3D(1, 1.5950263e-10, -2.3283064e-10, 1.8991386e-10, 1, 0, -2.3283064e-10, 1.4551915e-11, 1, 0, 0, 0)
-visible = false
-
-[node name="SM_Pot60CMSombre" parent="." unique_id=1044910221 instance=ExtResource("6_l2rqg")]
-transform = Transform3D(0.9999999, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999999, 0, 0, 0)
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1511501126]
 transform = Transform3D(1, 2.8569502e-08, -2.863817e-08, 2.8590136e-08, 1, 1.4551915e-11, -2.863817e-08, 1.1350494e-09, 1, 4.7683716e-07, 0.6179198, 0)
 shape = SubResource("CylinderShape3D_ofm7x")
+
+[node name="pot" type="Node3D" parent="." unique_id=531699660]
+script = ExtResource("1_kson7")
+
+[node name="SM_Pot60CMSombre" parent="pot" unique_id=1044910221 instance=ExtResource("6_l2rqg")]
+transform = Transform3D(0.9999999, -1.1641532e-10, 0, -1.1641532e-10, 0.99999994, 5.820766e-11, 2.9802322e-08, 1.7462298e-10, 0.99999994, 0, 0, 0)
+
+[node name="SM_Pot60CM" parent="pot" unique_id=1229335115 instance=ExtResource("5_gan0i")]
+transform = Transform3D(1, 2.3283064e-10, -2.9802322e-08, 1.1641532e-10, 1.0000001, -5.820766e-11, 2.9802322e-08, 1.1641532e-10, 1.0000001, 0, 0, 0)
+
+[node name="champi" type="Node3D" parent="." unique_id=1100856173]
+script = ExtResource("1_kson7")
+
+[node name="SM_PlanteChampiSombre3" parent="champi" unique_id=806766800 instance=ExtResource("4_3kl6g")]
+transform = Transform3D(0.028507894, -0.000156115, -0.06937065, 7.1322276e-05, 0.07499992, -0.00013947337, 0.06937079, -1.2954315e-05, 0.028507924, 0.4420171, 1.0828997, -0.03716089)
+
+[node name="SM_PlanteChampi" parent="champi" unique_id=263506296 instance=ExtResource("1_o015q")]
+transform = Transform3D(0.028507894, -0.00015611503, -0.06937062, 7.132229e-05, 0.07499992, -0.0001394734, 0.06937079, -1.2954357e-05, 0.028507967, 0.4420171, 1.0828997, -0.03716089)
+
+[node name="champiDeuxBoules" type="Node3D" parent="." unique_id=1020349794]
+script = ExtResource("1_kson7")
+
+[node name="SM_PlanteDeuxBoulesSombre" parent="champiDeuxBoules" unique_id=1053820594 instance=ExtResource("3_2nxkp")]
+transform = Transform3D(2.885, -1.3969839e-09, 0, 9.313226e-10, 2.8850005, 2.3283064e-10, 1.1920929e-07, 2.3283064e-10, 2.8850002, -0.04347706, 1.0469137, -0.0028409977)
+
+[node name="SM_PlanteDeuxBoules" parent="champiDeuxBoules" unique_id=1299663255 instance=ExtResource("2_kson7")]
+transform = Transform3D(2.885, -1.3969839e-09, 0, 9.313226e-10, 2.8850005, 2.3283064e-10, 1.1920929e-07, 2.3283064e-10, 2.8850002, -0.04347706, 1.0469137, -0.0028409977)

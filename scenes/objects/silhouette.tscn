@@ -1,17 +1,125 @@
 [gd_scene format=3 uid="uid://crdfgci1ewd7r"]
 
-[ext_resource type="Texture2D" uid="uid://0pi02r4ggne8" path="res://scenes/icon.svg" id="1_emt41"]
+[ext_resource type="Script" uid="uid://yoe6twmdcjrq" path="res://scripts/silhouette.gd" id="1_5o6h2"]
+[ext_resource type="Texture2D" uid="uid://b7gdj5xoutfpo" path="res://assets/npc1/NPC 1_0003.png" id="1_woash"]
+[ext_resource type="Texture2D" uid="uid://dj8b303v7v0oq" path="res://assets/npc1/NPC 1_0002.png" id="2_5o6h2"]
+[ext_resource type="Texture2D" uid="uid://b5oi47gbjamg1" path="res://assets/npc1/NPC 1_0001.png" id="3_8cxfc"]
+[ext_resource type="Texture2D" uid="uid://c1biii76itptc" path="res://assets/npc1/NPC 1_0000.png" id="4_qlb0x"]
+[ext_resource type="Texture2D" uid="uid://bb0s5lc8bw76d" path="res://assets/npc2/NPC 2_0003.png" id="6_pvuaq"]
+[ext_resource type="Texture2D" uid="uid://osyijnkeuvym" path="res://assets/npc2/NPC 2_0002.png" id="7_y0ibu"]
+[ext_resource type="Texture2D" uid="uid://bsw5njblvwncn" path="res://assets/npc2/NPC 2_0001.png" id="8_mnm4r"]
+[ext_resource type="Texture2D" uid="uid://c6ncrssfmxqn6" path="res://assets/npc2/NPC 2_0000.png" id="9_alrr0"]
+[ext_resource type="Texture2D" uid="uid://2g86fi7wntjr" path="res://assets/npc3/NPC_3_0003.png" id="10_ltywa"]
+[ext_resource type="Texture2D" uid="uid://c2afucwagobc8" path="res://assets/npc3/NPC_3_0002.png" id="11_ecu52"]
+[ext_resource type="Texture2D" uid="uid://b264mx6tx6toc" path="res://assets/npc3/NPC_3_0001.png" id="12_nka5l"]
+[ext_resource type="Texture2D" uid="uid://b3oq4uurqwkk3" path="res://assets/npc3/NPC_3_0000.png" id="13_t4amt"]
+[ext_resource type="Texture2D" uid="uid://daegn5hc7ulfa" path="res://assets/npc4/NPC_4_0003.png" id="14_76u68"]
+[ext_resource type="Texture2D" uid="uid://00bptebu6sw3" path="res://assets/npc4/NPC_4_0002.png" id="15_4cjuj"]
+[ext_resource type="Texture2D" uid="uid://b5s8eqne4uv53" path="res://assets/npc4/NPC_4_0001.png" id="16_bp3ll"]
+[ext_resource type="Texture2D" uid="uid://c6n5ttxeuts6h" path="res://assets/npc4/NPC_4_0000.png" id="17_olkn4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oddtq"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"Bnpc1",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Bnpc2",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Bnpc3",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Bnpc4",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 2.2,
+"texture": ExtResource("1_woash")
+}, {
+"duration": 2.2,
+"texture": ExtResource("2_5o6h2")
+}, {
+"duration": 2.2,
+"texture": ExtResource("3_8cxfc")
+}, {
+"duration": 2.2,
+"texture": ExtResource("4_qlb0x")
+}],
+"loop": true,
+"name": &"Gnpc1",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 2.2,
+"texture": ExtResource("6_pvuaq")
+}, {
+"duration": 2.2,
+"texture": ExtResource("7_y0ibu")
+}, {
+"duration": 2.2,
+"texture": ExtResource("8_mnm4r")
+}, {
+"duration": 2.2,
+"texture": ExtResource("9_alrr0")
+}],
+"loop": true,
+"name": &"Gnpc2",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 2.2,
+"texture": ExtResource("10_ltywa")
+}, {
+"duration": 2.2,
+"texture": ExtResource("11_ecu52")
+}, {
+"duration": 2.2,
+"texture": ExtResource("12_nka5l")
+}, {
+"duration": 2.2,
+"texture": ExtResource("13_t4amt")
+}],
+"loop": true,
+"name": &"Gnpc3",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 2.2,
+"texture": ExtResource("14_76u68")
+}, {
+"duration": 2.2,
+"texture": ExtResource("15_4cjuj")
+}, {
+"duration": 2.2,
+"texture": ExtResource("16_bp3ll")
+}, {
+"duration": 2.2,
+"texture": ExtResource("17_olkn4")
+}],
+"loop": true,
+"name": &"Gnpc4",
+"speed": 10.0
+}]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_emt41"]
 size = Vector3(1.0908203, 2.9249268, 0.19067383)
 
 [node name="Silhouette" type="Node3D" unique_id=602552750]
+script = ExtResource("1_5o6h2")
 
-[node name="Sprite3D" type="Sprite3D" parent="." unique_id=557528727]
-transform = Transform3D(0.79737115, 0, 0, 0, 2.4922779, 0, 0, 0, 1, 0.0016949056, -0.0007795623, 0)
-texture = ExtResource("1_emt41")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=305065825]
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=481728023]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_oddtq")
+animation = &"Gnpc4"
 
 [node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1905392290]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 5.359532, 0, 0, 0)
