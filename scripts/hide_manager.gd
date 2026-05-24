@@ -3,8 +3,8 @@ extends Node3D
 @export var color_rect: ColorRect
 @export var player: CharacterBody3D
 @export var camera: Camera3D
-@export var hidden_time_required: float = 0.5
-@export var transition_duration: float = 1.0
+@export var hidden_time_required: float = 2.0
+@export var transition_duration: float = 0.5
 
 var visibility_points: Node3D
 var hidden_timer: float = 0.0

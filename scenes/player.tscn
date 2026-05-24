@@ -65,6 +65,7 @@ animations = [{
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bf480"]
 radius = 0.42822266
+height = 2.925293
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_g2els"]
 size = Vector3(1.403, 2.4780273, 1.263208)
@@ -81,27 +82,28 @@ animation = &"idle"
 speed_scale = 2.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1402576687]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0068650097, 0.71640015, 0.01965332)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0068650097, 1.1790466, 0.01965332)
 shape = SubResource("CapsuleShape3D_bf480")
 
 [node name="visibilityPoints" type="Node3D" parent="." unique_id=466537607]
 
 [node name="head" type="Marker3D" parent="visibilityPoints" unique_id=793826642]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.598862, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5126474, 0)
 
 [node name="chest" type="Marker3D" parent="visibilityPoints" unique_id=1105968422]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.27269912, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92501676, 0)
 
 [node name="feet" type="Marker3D" parent="visibilityPoints" unique_id=1354372695]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.6224295, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.035003424, 0)
 
 [node name="left" type="Marker3D" parent="visibilityPoints" unique_id=1058466620]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.60016, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.542992, 0, 0)
 
 [node name="right" type="Marker3D" parent="visibilityPoints" unique_id=58850335]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.574396, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.517228, 0, 0)
 
 [node name="DetectionZone" type="Area3D" parent="." unique_id=1722588231]
+transform = Transform3D(1.4673043, 0, 0, 0, 1.49138, 0, 0, 0, 0.86428505, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DetectionZone" unique_id=67293937]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.011077881, 0.7390137, 0.025036573)

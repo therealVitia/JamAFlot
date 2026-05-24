@@ -7,14 +7,14 @@
 [ext_resource type="PackedScene" uid="uid://cvrteh5y3xdtl" path="res://assets/StaticMeshes/PotsEtPlantes/SM_Pot60CMSombre.fbx" id="4_oxp2b"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_ofm7x"]
-height = 1.184082
+height = 1.4956665
 radius = 0.72314453
 
 [node name="PotLapin" type="StaticBody3D" unique_id=1681190710]
 transform = Transform3D(1.4949996, -2.0204425e-09, 0, 2.6820999e-09, 1.4949993, 5.820766e-11, -1.3969839e-09, 1.1641532e-10, 1.495, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1415376956]
-transform = Transform3D(1, 2.8569502e-08, -2.863817e-08, 2.8590136e-08, 1, 1.4551915e-11, -2.863817e-08, 1.1350494e-09, 1, 4.7683716e-07, 0.6179198, 0)
+transform = Transform3D(1.0000001, 4.0453717e-08, -2.8638171e-08, 2.8590138e-08, 1.4159755, 1.4551905e-11, -2.863817e-08, 1.607202e-09, 1, 4.7331218e-07, 1.0668534, -2.190847e-10)
 shape = SubResource("CylinderShape3D_ofm7x")
 
 [node name="Pots" type="Node3D" parent="." unique_id=1441938802]

@@ -5,7 +5,7 @@ signal hit
 
 @onready var sprite: AnimatedSprite3D = $AnimatedSprite3D
 const grav = -9.81
-const SPEED = 3.0
+const SPEED = 6.0
 const JUMP_VELOCITY = 4.5
 
 func _ready() -> void:
