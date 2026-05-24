@@ -10,14 +10,13 @@ var isWorld: bool = true
 func _ready() -> void:
 	type_shape = type_shape % 5
 	type_voice = type_voice % 6
-	AutoBus.swap.connect(switch)
-	_enable_all()
+	AutoBus.swap_complete.connect(switch)
 
 func switch() -> void:
 	if isWorld:
-		_disable_all()
+		call_deferred("_disable_all")
 	else:
-		_enable_all()
+		call_deferred("_enable_all")
 
 func _disable_all() -> void:
 	collision.disabled = true

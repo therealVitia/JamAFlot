@@ -3,103 +3,39 @@
 [ext_resource type="Script" uid="uid://yoe6twmdcjrq" path="res://scripts/silhouette.gd" id="1_5o6h2"]
 [ext_resource type="Texture2D" uid="uid://b7gdj5xoutfpo" path="res://assets/npc1/NPC 1_0003.png" id="1_woash"]
 [ext_resource type="Texture2D" uid="uid://dj8b303v7v0oq" path="res://assets/npc1/NPC 1_0002.png" id="2_5o6h2"]
-[ext_resource type="Texture2D" uid="uid://sg3f823wiccl" path="res://assets/NPCshadow/NPC ombres_0003.png" id="2_76u68"]
-[ext_resource type="Texture2D" uid="uid://dt16ws7vr404i" path="res://assets/NPCshadow/NPC ombres_0002.png" id="3_4cjuj"]
 [ext_resource type="Texture2D" uid="uid://b5oi47gbjamg1" path="res://assets/npc1/NPC 1_0001.png" id="3_8cxfc"]
-[ext_resource type="Texture2D" uid="uid://b4saeguu3rd1t" path="res://assets/NPCshadow/NPC ombres_0001.png" id="4_bp3ll"]
 [ext_resource type="Texture2D" uid="uid://c1biii76itptc" path="res://assets/npc1/NPC 1_0000.png" id="4_qlb0x"]
-[ext_resource type="Texture2D" uid="uid://56tjmmkvfig1" path="res://assets/NPCshadow/NPC ombres_0000.png" id="5_olkn4"]
-[ext_resource type="Texture2D" uid="uid://2syu1vd3xv45" path="res://assets/NPCshadow/NPC ombres_0007.png" id="6_g1vwj"]
 [ext_resource type="Texture2D" uid="uid://bb0s5lc8bw76d" path="res://assets/npc2/NPC 2_0003.png" id="6_pvuaq"]
-[ext_resource type="Texture2D" uid="uid://dmkdf1qpjpf1" path="res://assets/NPCshadow/NPC ombres_0006.png" id="7_8wrsr"]
 [ext_resource type="Texture2D" uid="uid://osyijnkeuvym" path="res://assets/npc2/NPC 2_0002.png" id="7_y0ibu"]
 [ext_resource type="Texture2D" uid="uid://bsw5njblvwncn" path="res://assets/npc2/NPC 2_0001.png" id="8_mnm4r"]
-[ext_resource type="Texture2D" uid="uid://84b5yl6krihd" path="res://assets/NPCshadow/NPC ombres_0005.png" id="8_xu2xd"]
-[ext_resource type="Texture2D" uid="uid://pd85s6aowvp0" path="res://assets/NPCshadow/NPC ombres_0004.png" id="9_3rweq"]
 [ext_resource type="Texture2D" uid="uid://c6ncrssfmxqn6" path="res://assets/npc2/NPC 2_0000.png" id="9_alrr0"]
-[ext_resource type="Texture2D" uid="uid://rsdske8mqojw" path="res://assets/NPCshadow/NPC ombres_0011.png" id="10_8rlk7"]
 [ext_resource type="Texture2D" uid="uid://2g86fi7wntjr" path="res://assets/npc3/NPC_3_0003.png" id="10_ltywa"]
 [ext_resource type="Texture2D" uid="uid://c2afucwagobc8" path="res://assets/npc3/NPC_3_0002.png" id="11_ecu52"]
-[ext_resource type="Texture2D" uid="uid://ccv5b51fwt6gp" path="res://assets/NPCshadow/NPC ombres_0010.png" id="11_uhdhe"]
-[ext_resource type="Texture2D" uid="uid://brl2cebof8hjh" path="res://assets/NPCshadow/NPC ombres_0009.png" id="12_0w22m"]
 [ext_resource type="Texture2D" uid="uid://b264mx6tx6toc" path="res://assets/npc3/NPC_3_0001.png" id="12_nka5l"]
 [ext_resource type="Texture2D" uid="uid://b3oq4uurqwkk3" path="res://assets/npc3/NPC_3_0000.png" id="13_t4amt"]
-[ext_resource type="Texture2D" uid="uid://wh2fd5lq26lj" path="res://assets/NPCshadow/NPC ombres_0008.png" id="13_xncmq"]
 [ext_resource type="Texture2D" uid="uid://daegn5hc7ulfa" path="res://assets/npc4/NPC_4_0003.png" id="14_76u68"]
-[ext_resource type="Texture2D" uid="uid://du4q4ffqf7syy" path="res://assets/NPCshadow/NPC ombres_0015.png" id="14_x624n"]
 [ext_resource type="Texture2D" uid="uid://00bptebu6sw3" path="res://assets/npc4/NPC_4_0002.png" id="15_4cjuj"]
-[ext_resource type="Texture2D" uid="uid://mnhwfo3jflgj" path="res://assets/NPCshadow/NPC ombres_0014.png" id="15_w543v"]
 [ext_resource type="Texture2D" uid="uid://b5s8eqne4uv53" path="res://assets/npc4/NPC_4_0001.png" id="16_bp3ll"]
-[ext_resource type="Texture2D" uid="uid://dimv2knfyg1vj" path="res://assets/NPCshadow/NPC ombres_0013.png" id="16_imaac"]
 [ext_resource type="Texture2D" uid="uid://c6n5ttxeuts6h" path="res://assets/npc4/NPC_4_0000.png" id="17_olkn4"]
-[ext_resource type="Texture2D" uid="uid://cw4dpttsc5s3a" path="res://assets/NPCshadow/NPC ombres_0012.png" id="17_ooly1"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_oddtq"]
 animations = [{
-"frames": [{
-"duration": 2.0,
-"texture": ExtResource("2_76u68")
-}, {
-"duration": 2.0,
-"texture": ExtResource("3_4cjuj")
-}, {
-"duration": 2.0,
-"texture": ExtResource("4_bp3ll")
-}, {
-"duration": 2.0,
-"texture": ExtResource("5_olkn4")
-}],
+"frames": [],
 "loop": true,
 "name": &"Bnpc1",
 "speed": 10.0
 }, {
-"frames": [{
-"duration": 2.0,
-"texture": ExtResource("6_g1vwj")
-}, {
-"duration": 2.0,
-"texture": ExtResource("7_8wrsr")
-}, {
-"duration": 2.0,
-"texture": ExtResource("8_xu2xd")
-}, {
-"duration": 2.0,
-"texture": ExtResource("9_3rweq")
-}],
+"frames": [],
 "loop": true,
 "name": &"Bnpc2",
 "speed": 10.0
 }, {
-"frames": [{
-"duration": 2.0,
-"texture": ExtResource("10_8rlk7")
-}, {
-"duration": 2.0,
-"texture": ExtResource("11_uhdhe")
-}, {
-"duration": 2.0,
-"texture": ExtResource("12_0w22m")
-}, {
-"duration": 2.0,
-"texture": ExtResource("13_xncmq")
-}],
+"frames": [],
 "loop": true,
 "name": &"Bnpc3",
 "speed": 10.0
 }, {
-"frames": [{
-"duration": 2.0,
-"texture": ExtResource("14_x624n")
-}, {
-"duration": 2.0,
-"texture": ExtResource("15_w543v")
-}, {
-"duration": 2.0,
-"texture": ExtResource("16_imaac")
-}, {
-"duration": 2.0,
-"texture": ExtResource("17_ooly1")
-}],
+"frames": [],
 "loop": true,
 "name": &"Bnpc4",
 "speed": 10.0
@@ -183,8 +119,7 @@ script = ExtResource("1_5o6h2")
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_oddtq")
-animation = &"Bnpc1"
-frame_progress = 0.6037881
+animation = &"Gnpc4"
 
 [node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1905392290]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 5.359532, 0, 0, 0)
