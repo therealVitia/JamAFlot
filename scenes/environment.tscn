@@ -22,10 +22,13 @@ background_color = Color(0.5036755, 0.62322164, 0.4470563, 1)
 glow_intensity = 0.22
 glow_strength = 0.0
 fog_enabled = true
-fog_light_color = Color(0.45890445, 0.73865265, 0.7600711, 1)
+fog_light_color = Color(0.050649077, 0.062290356, 0.07262511, 1)
+fog_light_energy = 0.0
+fog_density = 0.2072
 volumetric_fog_enabled = true
-volumetric_fog_density = 0.01
-volumetric_fog_albedo = Color(3.85046e-07, 0.92850584, 0.50232923, 1)
+volumetric_fog_density = 0.025
+volumetric_fog_albedo = Color(3.549643e-07, 0.15317124, 0.15947476, 1)
+volumetric_fog_detail_spread = 2.6116536
 
 [sub_resource type="Animation" id="Animation_0hc8i"]
 length = 0.001
@@ -301,7 +304,8 @@ transform = Transform3D(0.3765982, -0.0011376186, 0.9263749, -0.0014576346, 0.99
 transform = Transform3D(0.99999976, -1.3541808e-09, 1.379415e-19, 1.3541808e-09, 0.99999976, -2.910383e-11, -9.852965e-20, 2.910383e-11, 0.99999976, 3.3335698, 0.006804967, -0.7755587)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=429751564]
-transform = Transform3D(0.9999786, -0.0013701357, -0.0063978992, 0.0061329207, -0.14443764, 0.9894948, -0.0022798409, -0.98951286, -0.14442617, -4.613254, 7.7056704, 4.1000295)
+transform = Transform3D(0.9999786, -0.0013701357, -0.006397899, 0.00613292, -0.14443766, 0.9894948, -0.0022798409, -0.98951286, -0.14442618, 0.23068877, 7.7154374, 2.2678063)
+light_color = Color(0.055066347, 0.2695481, 0.32315034, 1)
 light_energy = 1.5
 light_indirect_energy = 1.6
 shadow_enabled = true
