@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cb0ur3vdf28xq" path="res://scenes/player.tscn" id="1_paxxb"]
 [ext_resource type="PackedScene" uid="uid://bmdye2ltdkgkn" path="res://scenes/environment.tscn" id="2_gldc4"]
 [ext_resource type="PackedScene" uid="uid://dcg2kb8m4bvkj" path="res://scenes/camera.tscn" id="3_gldc4"]
+[ext_resource type="PackedScene" uid="uid://d003mkrsise2p" path="res://addons/dither3d/full-screen-effect/Dither3DMonochrome.tscn" id="4_0cso3"]
 
 [node name="map" type="Node3D" unique_id=1199345111]
 
@@ -18,3 +19,8 @@ fov = 67.4
 size = 4.277194
 target = NodePath("../Player")
 env = NodePath("../Environment")
+
+[node name="Dither3DMonochrome" parent="." unique_id=955883526 instance=ExtResource("4_0cso3")]
+layer = 127
+follow_viewport_enabled = true
+follow_viewport_scale = 2.0

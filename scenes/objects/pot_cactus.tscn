@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dvyxmuxhdjfey"]
+
+[ext_resource type="PackedScene" uid="uid://cbt1wp7x7mvrk" path="res://assets/StaticMeshes/PotsEtPlantes/SM_PlanteCactus.fbx" id="1_5h57o"]
+[ext_resource type="PackedScene" uid="uid://jxyh12xhwimk" path="res://assets/StaticMeshes/PotsEtPlantes/sm_plante_cactus_sombre.tscn" id="2_5h57o"]
+[ext_resource type="PackedScene" uid="uid://djue3y1mtt6i7" path="res://assets/StaticMeshes/PotsEtPlantes/SM_Pot1M.fbx" id="3_6huhq"]
+[ext_resource type="PackedScene" uid="uid://croc4aswn2uw1" path="res://assets/StaticMeshes/PotsEtPlantes/sm_pot_1m_sombre.tscn" id="4_5h57o"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_375xh"]
+radius = 1.1875
+height = 3.5091248
+
+[node name="PotCactus" type="StaticBody3D" unique_id=427769546]
+transform = Transform3D(0.99999976, -7.366907e-11, -9.313226e-10, 1.3541808e-09, 0.99999976, 7.2759576e-11, 0, 2.910383e-11, 0.99999976, 0, 0, 0)
+
+[node name="SM_PlanteCactus" parent="." unique_id=438176334 instance=ExtResource("1_5h57o")]
+transform = Transform3D(3.6261117, -0.0046509104, 0.013988573, 0.0075454917, 2.2343693, 0.00066645595, -0.013747787, -0.0003859225, 3.689987, 0.018098831, 1.4341211, 2.9087067e-05)
+visible = false
+
+[node name="SM_PlanteCactusSombre2" parent="." unique_id=1505168152 instance=ExtResource("2_5h57o")]
+transform = Transform3D(3.6261117, -0.0046509127, 0.013988555, 0.007545491, 2.2343693, 0.000666486, -0.013747787, -0.00038592244, 3.6899872, 0.018098831, 1.4341211, 2.9087067e-05)
+
+[node name="SM_Pot1M" parent="." unique_id=757156112 instance=ExtResource("3_6huhq")]
+visible = false
+
+[node name="SM_Pot1MSombre" parent="." unique_id=2117784786 instance=ExtResource("4_5h57o")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1912986294]
+transform = Transform3D(1.0000095, 9.705491e-08, -9.709038e-08, 5.0836775e-09, 1, -1.4551915e-11, -1.2805685e-08, 9.662472e-09, 1, -1.66893e-06, 1.5855558, 1.66893e-06)
+shape = SubResource("CapsuleShape3D_375xh")

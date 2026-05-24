@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://lb0tewgjgndg"]
+
+[ext_resource type="PackedScene" uid="uid://djm1gqxukjlv7" path="res://assets/StaticMeshes/PotsEtPlantes/SM_PlanteLapin.fbx" id="1_7k03j"]
+[ext_resource type="PackedScene" uid="uid://d21yljb3om7hd" path="res://assets/StaticMeshes/PotsEtPlantes/SM_PlanteLapinSombre.fbx" id="2_qqgv5"]
+[ext_resource type="PackedScene" uid="uid://cx7l6mbgtcu1v" path="res://assets/StaticMeshes/PotsEtPlantes/SM_Pot60CM.fbx" id="3_nil35"]
+[ext_resource type="PackedScene" uid="uid://cvrteh5y3xdtl" path="res://assets/StaticMeshes/PotsEtPlantes/SM_Pot60CMSombre.fbx" id="4_oxp2b"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ofm7x"]
+height = 1.184082
+radius = 0.72314453
+
+[node name="PotLapin" type="StaticBody3D" unique_id=1681190710]
+transform = Transform3D(1.4949996, -2.0204425e-09, 0, 2.6820999e-09, 1.4949993, 5.820766e-11, -1.3969839e-09, 1.1641532e-10, 1.495, 0, 0, 0)
+
+[node name="SM_PlanteLapin" parent="." unique_id=1171614399 instance=ExtResource("1_7k03j")]
+transform = Transform3D(-0.34545714, -0.00091587263, -0.27250436, -0.0006720092, 0.4399987, -0.0006269002, 0.27250507, -7.600355e-05, -0.3454573, -0.0057959557, 1.0022696, -0.007824898)
+visible = false
+
+[node name="SM_PlanteLapinSombre" parent="." unique_id=1632329196 instance=ExtResource("2_qqgv5")]
+transform = Transform3D(-0.34545714, -0.0009158722, -0.2725041, -0.0006720092, 0.43999866, -0.00062689977, 0.27250504, -7.6003984e-05, -0.34545752, -0.0057959557, 1.0022696, -0.007824898)
+
+[node name="SM_Pot60CM" parent="." unique_id=1229335115 instance=ExtResource("3_nil35")]
+transform = Transform3D(1, 1.5950263e-10, -2.3283064e-10, 1.8991386e-10, 1, 0, -2.3283064e-10, 1.4551915e-11, 1, 0, 0, 0)
+visible = false
+
+[node name="SM_Pot60CMSombre" parent="." unique_id=1044910221 instance=ExtResource("4_oxp2b")]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999999, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1415376956]
+transform = Transform3D(1, 2.8569502e-08, -2.863817e-08, 2.8590136e-08, 1, 1.4551915e-11, -2.863817e-08, 1.1350494e-09, 1, 4.7683716e-07, 0.6179198, 0)
+shape = SubResource("CylinderShape3D_ofm7x")

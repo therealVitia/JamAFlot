@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://croc4aswn2uw1"]
+
+[ext_resource type="PackedScene" uid="uid://bg074jfdd6h4b" path="res://assets/StaticMeshes/PotsEtPlantes/SM_Pot1MSombre.fbx" id="1_6c4yy"]
+
+[node name="SM_Pot1MSombre" unique_id=2117784786 instance=ExtResource("1_6c4yy")]

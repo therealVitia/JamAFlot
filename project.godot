@@ -21,10 +21,6 @@ config/plugin_name="git"
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
 
-[editor_plugins]
-
-enabled=PackedStringArray()
-
 [physics]
 
 3d/physics_engine="Jolt Physics"
@@ -32,3 +28,22 @@ enabled=PackedStringArray()
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+
+[shader_globals]
+
+dither_input_exposure={
+"type": "float",
+"value": 3.0
+}
+dither_mode={
+"type": "int",
+"value": 0
+}
+dither_dot_scale={
+"type": "float",
+"value": 9.6
+}
+dither_radial_compensation={
+"type": "bool",
+"value": false
+}
