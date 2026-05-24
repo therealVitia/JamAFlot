@@ -5,7 +5,7 @@ extends Node3D
 var last_pos: Vector3
 
 func _ready() -> void:
-	get_tree().paused = true
+	pass
 
 func _process(_delta: float) -> void:
 	pass

@@ -1,15 +1,41 @@
 extends CanvasLayer
 
-signal start_game
+@onready var button_container: VBoxContainer = $MainButtons
+@onready var options: VBoxContainer = $Options
 
-func show_message(txt) -> void:
-	$Message.text = txt
-	$Message.show()
+var pause: bool = false
+var option: bool = false
+
+func _ready() -> void:
+	hide()
+	$Options.hide()
+
+func pause_unpaused() -> void:
+	pause = !pause
+	if pause:
+		show()
+	else:
+		hide()
+	get_tree().paused = pause
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("pause"):
+		if option == false:
+			pause_unpaused()
+		else:
+			$Options.hide()
+			$MainButtons.show()
+			$Message.show()
+			option = false
+			
+
+func _on_quit_button_pressed() -> void:
+	get_tree().quit()
+
+
+func _on_button_pressed() -> void:
+	$Options.show()
+	$MainButtons.hide()
+	$Message.hide()
+	option = true
 	
-func start() -> void:
-	show_message("Game Name")
-	await $TimeButton.timout
-	$StartButton.show()
-
-func _on_start_button_pressed() -> void:
-	start_game.emit()

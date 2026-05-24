@@ -6,12 +6,13 @@
 [ext_resource type="PackedScene" uid="uid://dcg2kb8m4bvkj" path="res://scenes/camera.tscn" id="3_gldc4"]
 [ext_resource type="PackedScene" uid="uid://b0ncomhgye1o" path="res://scenes/hide_manager.tscn" id="4_0cso3"]
 [ext_resource type="Shader" uid="uid://b2r707t3pwyhb" path="res://scenes/map.gdshader" id="5_2klcf"]
-[ext_resource type="PackedScene" uid="uid://ct544gvy01nkd" path="res://scenes/collectible.tscn" id="5_2lpho"]
+[ext_resource type="PackedScene" uid="uid://bhbckfgk57uac" path="res://scenes/collectible.tscn" id="5_2lpho"]
 [ext_resource type="PackedScene" uid="uid://bxgca8mk2elu6" path="res://scenes/directional_light_3d.tscn" id="6_2lpho"]
 [ext_resource type="PackedScene" uid="uid://8hjwhnb0l4sv" path="res://scenes/enemy.tscn" id="9_be0no"]
 [ext_resource type="PackedScene" uid="uid://cjf64u5780kp7" path="res://scenes/path_finding.tscn" id="9_mlgqr"]
 [ext_resource type="Script" uid="uid://djwoltldtftrb" path="res://scripts/enemy.gd" id="10_blm8a"]
-[ext_resource type="PackedScene" uid="uid://qbopejrqyofn" path="res://scenes/hud.tscn" id="13_gw3fx"]
+[ext_resource type="PackedScene" uid="uid://qbopejrqyofn" path="res://scenes/ui/hud.tscn" id="13_gw3fx"]
+[ext_resource type="AudioStream" uid="uid://bmjyp4hbg4755" path="res://assets/sound/alex-morgan-dark-suspense-thriller-528314.mp3" id="13_n1psn"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2lpho"]
 shader = ExtResource("5_2klcf")
@@ -32,7 +33,7 @@ script = ExtResource("1_wslke")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6710453, 8.1797695)
 
 [node name="Camera" parent="." unique_id=1114856204 node_paths=PackedStringArray("target", "env") instance=ExtResource("3_gldc4")]
-transform = Transform3D(1, 0, 0, 0, 0.92610127, 0.37727514, 0, -0.37727514, 0.92610127, 0.11177254, 5.2656074, 15.439981)
+transform = Transform3D(1, 0, 0, 0, 0.92610127, 0.37727514, 0, -0.37727514, 0.92610127, 0.11177254, 5.2656074, 11.334476)
 fov = 67.4
 size = 4.277194
 target = NodePath("../Player")
@@ -52,6 +53,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0065684, 1.1620398, -2.796
 
 [node name="DirectionalLight3D" parent="." unique_id=453814777 instance=ExtResource("6_2lpho")]
 transform = Transform3D(0.7477865, -0.30606925, 0.5891833, 0, 0.8874054, 0.46098986, -0.66393924, -0.344722, 0.6635898, 0, 4.439234, 0)
+light_energy = 4.647
 shadow_enabled = true
 
 [node name="hideManager" parent="." unique_id=1758502476 node_paths=PackedStringArray("color_rect", "player", "camera") instance=ExtResource("4_0cso3")]
@@ -60,8 +62,10 @@ player = NodePath("../Player")
 camera = NodePath("../Camera")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1574250011]
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=79559488]
+visible = false
 material = SubResource("ShaderMaterial_2lpho")
 anchors_preset = 15
 anchor_right = 1.0
@@ -83,7 +87,13 @@ environment = NodePath("../PathFinding/Environment")
 [node name="StartPosition" type="Marker3D" parent="." unique_id=1049031505]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01, 5)
 
-[node name="HUD" parent="." unique_id=1122124873 instance=ExtResource("13_gw3fx")]
+[node name="PauseMenu" parent="." unique_id=1122124873 instance=ExtResource("13_gw3fx")]
+layer = 2
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1256402372]
+process_mode = 3
+stream = ExtResource("13_n1psn")
+autoplay = true
+bus = &"Music"
 
 [connection signal="hit" from="Player" to="." method="_on_player_hit"]
-[connection signal="start_game" from="HUD" to="." method="_on_hud_start_game"]

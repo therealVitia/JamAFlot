@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://qbopejrqyofn"]
+
+[ext_resource type="Script" uid="uid://drwvvurb2jm0l" path="res://scripts/hud.gd" id="1_0mwgc"]
+[ext_resource type="PackedScene" uid="uid://cvt10ps3h5ei0" path="res://scenes/ui/options.tscn" id="2_hqnrr"]
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=1122124873]
+process_mode = 3
+layer = 0
+script = ExtResource("1_0mwgc")
+
+[node name="Panel" type="Panel" parent="." unique_id=1506278587]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="Message" type="Label" parent="." unique_id=647330424]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -299.5
+offset_top = -248.5
+offset_right = 299.5
+offset_bottom = -152.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 70
+text = "Leave on pause ..."
+horizontal_alignment = 1
+
+[node name="TimeButton" type="Timer" parent="." unique_id=34608304]
+wait_time = 5.0
+one_shot = true
+
+[node name="MainButtons" type="VBoxContainer" parent="." unique_id=995886484]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.0
+offset_top = 40.0
+offset_right = 137.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Button" type="Button" parent="MainButtons" unique_id=908691139]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "OPTIONS"
+
+[node name="QuitButton" type="Button" parent="MainButtons" unique_id=1408519108]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "QUIT"
+
+[node name="Options" parent="." unique_id=1493536454 instance=ExtResource("2_hqnrr")]
+
+[connection signal="pressed" from="MainButtons/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MainButtons/QuitButton" to="." method="_on_quit_button_pressed"]
