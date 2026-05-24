@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bbi8g1b7snasn"
+path="res://.godot/imported/Unsafe place.mp3-957f8c3bf643b96459bddba2d11ed00b.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/Unsafe place.mp3"
+dest_files=["res://.godot/imported/Unsafe place.mp3-957f8c3bf643b96459bddba2d11ed00b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

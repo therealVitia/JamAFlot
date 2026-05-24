@@ -10,8 +10,11 @@
 [ext_resource type="PackedScene" uid="uid://8hjwhnb0l4sv" path="res://scenes/enemy.tscn" id="9_be0no"]
 [ext_resource type="PackedScene" uid="uid://cjf64u5780kp7" path="res://scenes/path_finding.tscn" id="9_mlgqr"]
 [ext_resource type="Script" uid="uid://djwoltldtftrb" path="res://scripts/enemy.gd" id="10_blm8a"]
+[ext_resource type="Script" uid="uid://bp1o66o2bw26x" path="res://scripts/music.gd" id="12_wslke"]
 [ext_resource type="PackedScene" uid="uid://qbopejrqyofn" path="res://scenes/ui/hud.tscn" id="13_gw3fx"]
-[ext_resource type="AudioStream" uid="uid://bmjyp4hbg4755" path="res://assets/sound/alex-morgan-dark-suspense-thriller-528314.mp3" id="13_n1psn"]
+[ext_resource type="AudioStream" uid="uid://0das35fe547r" path="res://assets/sound/Safe place.mp3" id="13_n1psn"]
+[ext_resource type="AudioStream" uid="uid://bbi8g1b7snasn" path="res://assets/sound/Unsafe place.mp3" id="14_c00ee"]
+[ext_resource type="AudioStream" uid="uid://blrkwo6iel0vc" path="res://assets/sound/coeur.mp3" id="15_p7tei"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_wslke"]
 vertices = PackedVector3Array(29, 0.5, -3, 30.5, 0.5, -3.5, 30.5, 0.5, -4.5, 30, 0.5, -5.5, 25.5, 0.5, -3, 6, 0.5, 0.5, 5, 0.5, -0.5, 4.5, 0.5, 1, 29, 0.5, 3, 29, 0.5, 5, 30.5, 0.5, 4.5, 30.5, 0.5, 3, -49.5, 0.5, -24.5, -8.5, 0.5, -10, 6, 0.5, -11.5, 49.5, 0.5, -24.5, 30.5, 0.5, 2.5, 32, 0.5, 4, 30.5, 0.5, -1.5, 31.5, 0.5, -1.5, 30, 0.5, 0, 29, 0.5, -2, 2, 0.5, 1, 4, 0.5, 5, 30.5, 0.5, 6.5, 31.5, 0.5, 7, 37, 0.5, -6, 11.5, 0.5, 8.5, 9, 0.5, 9, 8.5, 0.5, 10, 18.5, 0.5, 9.5, -7, 0.5, 1, -7, 0.5, 7, -4.5, 0.5, 3.5, -2, 0.5, 1, -2.5, 0.5, 4, 32, 0.5, 0, 28.5, 0.5, 1.5, 30, 0.5, 1, 26.5, 0.5, -0.5, -10.5, 0.5, 7.5, -8.5, 0.5, 7.5, -8.5, 0.5, 4, -10.5, 0.5, -7.5, -11, 0.5, -9, 23.5, 0.5, -2, 19.5, 0.5, -1, 20, 0.5, 0.5, 24, 0.5, 0, 29, 0.5, 6, 19.5, 0.5, 3.5, 20, 0.5, 8, 30, 0.5, 8, 18.5, 0.5, -5.5, 18, 0.5, -7, 12, 0.5, -9.5, 12, 0.5, -1, 11, 0.5, 4.5, 8.5, 0.5, 3.5, 9, 0.5, 7.5, 11, 0.5, 7.5, 11.5, 0.5, 5.5, 4.5, 0.5, -2.5, 5.5, 0.5, -1, 5.5, 0.5, -7.5, -9, 0.5, -7.5, -1.5, 0.5, 7.5, 3, 0.5, 7.5, 2, 0.5, -2.5, -1.5, 0.5, -4.5, 11, 0.5, 1, 7, 0.5, 9, -10.5, 0.5, 9, -7.5, 0.5, -7.5, -7, 0.5, -5, 11, 0.5, -11.5, 36.5, 0.5, -7.5, -49.5, 0.5, 24.5, 49.5, 0.5, 24.5, 32, 0.5, 8, 49.5, 0.5, 8.5, 5.5, 0.5, -9.5, 18, 0.5, 5.5, 49.5, 0.5, 10, 7, 0.75, -7.5, 7, 0.75, -1, 10.5, 0.75, -1, 10.5, 0.75, -7.5, 30, 4, -6.5, 30.5, 3.75, -5, 32, 4, -6, -7, 2.25, -4, -7, 2.25, 0, -2.5, 2.25, 0, -2.5, 2.25, -4, -6.5, 0.5, -3.5, -6.5, 0.5, -0.5, -3, 0.5, -0.5, -3, 0.5, -3.5, 3, 3.75, -1.5, 3, 3.75, 0, 4, 3.75, -0.5, 4, 3.75, -1.5, 29, 3.75, 1.5, 29, 3.75, 2.5, 30, 3.75, 2.5, 30, 3.75, 1.5, 7, 1.5, 5.5, 8, 1.5, 6.5, 8, 1.5, 5, -5.5, 2.25, 6, -5.5, 2.25, 7.5, -4, 2.25, 7.5, -4, 2.25, 6, 5, 2, 7.5, 6.5, 2, 8, 6.5, 2, 6, 5, 2, 6)
@@ -51,8 +54,7 @@ transform = Transform3D(0.7477865, -0.30606925, 0.5891833, 0, 0.8874054, 0.46098
 light_energy = 4.647
 shadow_enabled = true
 
-[node name="hideManager" parent="." unique_id=1758502476 node_paths=PackedStringArray("color_rect", "player", "camera") instance=ExtResource("4_0cso3")]
-color_rect = NodePath("")
+[node name="hideManager" parent="." unique_id=1758502476 node_paths=PackedStringArray("player", "camera") instance=ExtResource("4_0cso3")]
 player = NodePath("../Player")
 camera = NodePath("../Camera")
 
@@ -75,8 +77,14 @@ layer = 2
 
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=1256402372]
 process_mode = 3
-stream = ExtResource("13_n1psn")
-autoplay = true
 bus = &"Music"
+script = ExtResource("12_wslke")
+musicSafe = ExtResource("13_n1psn")
+musicUnsafe = ExtResource("14_c00ee")
+
+[node name="Heart" type="AudioStreamPlayer" parent="." unique_id=161183476]
+stream = ExtResource("15_p7tei")
+autoplay = true
+bus = &"SFX"
 
 [connection signal="hit" from="Player" to="." method="_on_player_hit"]

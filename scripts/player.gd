@@ -36,6 +36,5 @@ func _on_detection_zone_body_entered(body: Node3D) -> void:
 		hit.emit()
 		AutoBus.swap.emit()
 
-
 func start(pos: Vector3) -> void:
 	position = pos
