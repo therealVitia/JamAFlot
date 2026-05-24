@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://rov8fqa8eyi3" path="res://scenes/objects/floor.tscn" id="1_bc5iu"]
 [ext_resource type="Script" uid="uid://cq0sr3c11v4wd" path="res://scripts/environment.gd" id="1_d5dl1"]
+[ext_resource type="PackedScene" uid="uid://bsxg8vbm2rc2a" path="res://assets/shaders/BinbunGrass/grass_ground.tscn" id="3_yyxhd"]
 [ext_resource type="PackedScene" uid="uid://crdfgci1ewd7r" path="res://scenes/objects/silhouette.tscn" id="4_hlc4h"]
 [ext_resource type="PackedScene" uid="uid://bsrrd8x3w8jm1" path="res://scenes/objects/wall.tscn" id="6_yw8f4"]
 [ext_resource type="PackedScene" uid="uid://61pn36j0aol" path="res://scenes/objects/lit.tscn" id="9_0hc8i"]
@@ -15,21 +16,22 @@
 [ext_resource type="Script" uid="uid://baoi0agyicm3i" path="res://scripts/canvas_layer.gd" id="13_yyxhd"]
 [ext_resource type="Shader" uid="uid://cxo1rsfua8gjb" path="res://addons/postfx/shaders/dither.gdshader" id="14_yyxhd"]
 
-[sub_resource type="Environment" id="Environment_y44tv"]
+[sub_resource type="Environment" id="Environment_0hc8i"]
+background_mode = 1
+background_color = Color(0.5036755, 0.62322164, 0.4470563, 1)
+glow_intensity = 0.22
+glow_strength = 0.0
 fog_enabled = true
-fog_light_color = Color(0.050649077, 0.062290356, 0.07262511, 1)
-fog_light_energy = 0.0
-fog_density = 0.2072
+fog_light_color = Color(0.45890445, 0.73865265, 0.7600711, 1)
 volumetric_fog_enabled = true
-volumetric_fog_density = 0.025
-volumetric_fog_albedo = Color(3.549643e-07, 0.15317124, 0.15947476, 1)
-volumetric_fog_detail_spread = 2.6116536
+volumetric_fog_density = 0.01
+volumetric_fog_albedo = Color(3.85046e-07, 0.92850584, 0.50232923, 1)
 
 [sub_resource type="Animation" id="Animation_0hc8i"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
-tracks/0/enabled = true
+tracks/0/enabled = false
 tracks/0/path = NodePath(".:light_energy")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
@@ -77,10 +79,19 @@ limit_left = NodePath("LimitLeft")
 limit_right = NodePath("LimitRight")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2098331190]
-environment = SubResource("Environment_y44tv")
+environment = SubResource("Environment_0hc8i")
 
 [node name="Floor" parent="." unique_id=1793124290 instance=ExtResource("1_bc5iu")]
 transform = Transform3D(0.714294, -8.1308826e-10, -1.1641532e-09, 1.4221087e-09, 0.8103584, 1.891749e-10, 0, -1.4551915e-11, 0.8276545, 0.51643884, 0.0010746452, -0.0019579888)
+visible = false
+
+[node name="GrassGround" parent="." unique_id=1508849956 instance=ExtResource("3_yyxhd")]
+transform = Transform3D(1.2769388, 1.213607e-10, -1.3969839e-09, 2.1521487e-09, 1.0006244, 1.0186341e-10, 0, 2.910383e-11, 1.2805631, 1.9393846, 0.115894616, -0.007373046)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="GrassGround" unique_id=1340911650]
+
+[node name="GrassGround2" parent="." unique_id=1790009312 instance=ExtResource("3_yyxhd")]
+transform = Transform3D(0.9999995, -7.3725914e-11, -1.8626451e-09, 2.750994e-09, 0.9999995, 1.6007107e-10, 0, 4.3655746e-11, 0.9999995, 28.731794, 0.17228962, 3.6158407)
 
 [node name="Living room" parent="." unique_id=627441045 instance=ExtResource("1_bc5iu")]
 transform = Transform3D(1.3465232, -1.3415615e-09, -1.6298145e-09, 4.861704e-09, 0.81179667, 2.0372681e-10, 3.7252903e-09, 2.910383e-11, 0.7135869, 39.031754, 0.08141632, 0.9871057)
@@ -92,10 +103,11 @@ transform = Transform3D(0.25889444, -1.4242687e-09, -1.2223609e-09, 1.2483099e-0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 11)
 
 [node name="LimitRight" type="Marker3D" parent="." unique_id=804357763]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 11)
+transform = Transform3D(0.9999998, -7.366907e-11, -6.9849193e-10, 8.885763e-10, 0.9999998, 5.820766e-11, 0, 1.4551915e-11, 0.9999998, 36.77844, 0.03554466, 11.0969305)
 
 [node name="Wall2" parent="." unique_id=1557850575 instance=ExtResource("6_yw8f4")]
-transform = Transform3D(-0.18660067, -0.0034585288, 0.99827117, 0.0005814794, 1.9140791, 0.00224817, -4.666375, 0.021467578, -0.05998374, -7.9399314, 1.4817824, -0.25631943)
+transform = Transform3D(-0.18660066, -0.0034585288, 0.99827105, 0.00058147934, 1.914079, 0.0022481699, -4.6663747, 0.021467576, -0.059983738, -7.9390054, 1.0371535, -0.2562426)
+visible = false
 
 [node name="Wall3" parent="." unique_id=1183238248 instance=ExtResource("6_yw8f4")]
 transform = Transform3D(5.3385797, -0.004703902, 0.024516001, 0.013138428, 0.34914178, 0.00040409557, -0.023939565, -0.00010553289, 0.9991495, 0.5530693, 0.33191696, 8.240206)
@@ -103,12 +115,14 @@ visible = false
 
 [node name="Wall" parent="." unique_id=665705393 instance=ExtResource("6_yw8f4")]
 transform = Transform3D(5.4720354, -0.004699209, 0.0037909194, 0.011386641, 2.2575715, 0.00018061872, -0.020746283, -0.0003899299, 0.9999921, 0.4332981, 1.2080294, -8.585527)
+visible = false
 
 [node name="Wall" parent="Wall" unique_id=149804837 instance=ExtResource("6_yw8f4")]
 transform = Transform3D(-0.22418067, -0.0020805758, 0.111429565, -0.00046649223, 0.9995416, 0.0053090667, 0.00084994256, -0.0001726419, 29.393538, 1.495973, 0.16014484, 3.9652872)
 
 [node name="Wall4" parent="." unique_id=79613651 instance=ExtResource("6_yw8f4")]
 transform = Transform3D(2.0837514, -0.0020815267, 0.00379092, 0.0043360284, 0.9999971, 0.00018061872, -0.007900186, -0.00017272048, 0.99999213, 15.266202, 0.7591592, -0.18945546)
+visible = false
 
 [node name="Wall4" parent="Wall4" unique_id=1845845736 instance=ExtResource("6_yw8f4")]
 transform = Transform3D(2.0837507, -0.0020815264, 0.0037909206, 0.0043360284, 0.99999714, 0.0001806187, -0.007900186, -0.00017272048, 0.9999922, 5.922332, 0.087569356, -6.2830462)
@@ -124,6 +138,7 @@ transform = Transform3D(-0.007881713, 0.0023298562, -0.96421164, 0.0001566417, 0
 
 [node name="Wall5" parent="." unique_id=797551146 instance=ExtResource("6_yw8f4")]
 transform = Transform3D(1.9157274, -0.0006408152, 0.003790913, 0.0039863954, 0.3078572, 0.00018061869, -0.0072631515, -5.3173433e-05, 0.9999916, 15.386728, 0.31397298, 4.657892)
+visible = false
 
 [node name="Wall7" parent="." unique_id=1492401203 instance=ExtResource("6_yw8f4")]
 transform = Transform3D(-0.010053902, -0.0007369082, 0.9685726, 0.00015845663, 0.28805363, 0.002067662, -1.2541133, 0.0039026106, -0.013404647, 7.979322, 0.39553964, 6.641228)
@@ -236,14 +251,15 @@ transform = Transform3D(0.99999976, -1.3541808e-09, 1.379415e-19, 1.3541808e-09,
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=429751564]
 transform = Transform3D(0.99985427, 0.016598225, 0.0039644977, -0.0170602, 0.9666415, 0.25556397, 0.00040965877, -0.2555944, 0.96678394, 0.8330617, 4.246221, 9.867719)
 light_color = Color(0.87600714, 0.8760071, 0, 1)
-transform = Transform3D(0.9999786, -0.0013701357, -0.0063978992, 0.0061329207, -0.14443764, 0.9894948, -0.0022798409, -0.98951286, -0.14442617, -4.613254, 7.7056704, 4.1000295)
+transform = Transform3D(0.9999786, -0.0013701357, -0.006397899, 0.00613292, -0.14443766, 0.9894948, -0.0022798409, -0.98951286, -0.14442618, 0.23068877, 7.7154374, 2.2678063)
 light_energy = 1.5
 light_indirect_energy = 1.6
 shadow_enabled = true
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=117749579]
 transform = Transform3D(0.9771874, -0.011527615, -0.2120658, 0.1889307, 0.50326514, 0.8432254, 0.09700498, -0.86405504, 0.49396247, -7.699632, 5.038338, -7.282198)
-light_energy = 2.863
+visible = false
+light_energy = 0.0
 light_indirect_energy = 6.047
 light_specular = 8.242
 shadow_enabled = true
@@ -259,7 +275,8 @@ autoplay = &"flicker"
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=876596002]
 transform = Transform3D(-0.104100816, 0.9939544, 0.034890197, 0.09958233, -0.024487654, 0.9947278, 0.9895687, 0.107026435, -0.096431114, 5.515504, 8.257867, -4.873965)
-light_energy = 2.863
+visible = false
+light_energy = 0.0
 light_indirect_energy = 6.047
 light_specular = 8.242
 shadow_enabled = true

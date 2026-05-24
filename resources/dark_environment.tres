@@ -1,0 +1,11 @@
+[gd_resource type="Environment" format=3 uid="uid://b16hcl5fmt0mw"]
+
+[resource]
+fog_enabled = true
+fog_light_color = Color(0.050649077, 0.062290356, 0.07262511, 1)
+fog_light_energy = 0.0
+fog_density = 0.2072
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.025
+volumetric_fog_albedo = Color(3.549643e-07, 0.15317124, 0.15947476, 1)
+volumetric_fog_detail_spread = 2.6116536
