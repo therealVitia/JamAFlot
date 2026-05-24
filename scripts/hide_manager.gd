@@ -41,6 +41,7 @@ func is_player_fully_hidden() -> bool:
 		)
 		query.collide_with_bodies = true
 		query.collide_with_areas = false
+		query.collision_mask = ~(1 << 2)
 		var result = space_state.intersect_ray(query)
 		if result.is_empty() or result.collider == player:
 			return false

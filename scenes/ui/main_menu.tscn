@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://cg3ao64lodkbd"]
+
+[ext_resource type="Script" uid="uid://bl5lv828n8svh" path="res://scripts/ui/main_menu.gd" id="1_sl1te"]
+[ext_resource type="PackedScene" uid="uid://cvt10ps3h5ei0" path="res://scenes/ui/options.tscn" id="2_fe2o3"]
+
+[sub_resource type="Gradient" id="Gradient_fe2o3"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0.004237288, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_1g8jr"]
+gradient = SubResource("Gradient_fe2o3")
+
+[node name="MainMenu" type="Control" unique_id=2024833876]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sl1te")
+
+[node name="Background" type="TextureRect" parent="." unique_id=128352992]
+layout_mode = 0
+offset_right = 1156.0
+offset_bottom = 650.0
+texture = SubResource("GradientTexture1D_1g8jr")
+
+[node name="Message" type="Label" parent="." unique_id=586456213]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -136.0
+offset_right = 48.0
+offset_bottom = -113.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 70
+text = "Leave me Alone !"
+horizontal_alignment = 1
+
+[node name="TimeButton" type="Timer" parent="." unique_id=793503443]
+wait_time = 5.0
+one_shot = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1712819702]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.0
+offset_top = 40.0
+offset_right = 137.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="StartButton" type="Button" parent="VBoxContainer" unique_id=831148710]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "START
+"
+
+[node name="Options" type="Button" parent="VBoxContainer" unique_id=464330424]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "OPTIONS
+"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=267496250]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "QUIT"
+
+[node name="Options" parent="." unique_id=1493536454 instance=ExtResource("2_fe2o3")]
+layout_mode = 1
+
+[connection signal="button_down" from="VBoxContainer/StartButton" to="." method="_on_start_button_button_down"]
+[connection signal="button_down" from="VBoxContainer/Options" to="." method="_on_options_button_down"]
+[connection signal="button_down" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_button_down"]
