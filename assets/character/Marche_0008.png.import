@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bbpa6oobqpycf"
-path.s3tc="res://.godot/imported/Marche_0008.png-da3259fd839cddd4a4d36e91ebaa723a.s3tc.ctex"
+path.s3tc="res://.godot/imported/Marche_0008.png-07e3e2e66a2d230caebe3d8fa6467073.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://game-jam-project/resources/character/Marche_0008.png"
-dest_files=["res://.godot/imported/Marche_0008.png-da3259fd839cddd4a4d36e91ebaa723a.s3tc.ctex"]
+source_file="res://assets/character/Marche_0008.png"
+dest_files=["res://.godot/imported/Marche_0008.png-07e3e2e66a2d230caebe3d8fa6467073.s3tc.ctex"]
 
 [params]
 
