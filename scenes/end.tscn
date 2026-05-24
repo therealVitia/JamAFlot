@@ -1,10 +1,10 @@
-[gd_scene format=3 uid="uid://cgs13rug1r3a3"]
+[gd_scene format=3 uid="uid://le2mgomncn7o"]
 
-[ext_resource type="Script" uid="uid://bdoybcjjur1mv" path="res://scripts/end.gd" id="1_3d26k"]
-[ext_resource type="Texture2D" uid="uid://c06xf3ajo7mvl" path="res://assets/menu.jpg" id="2_p7m4f"]
-[ext_resource type="Script" uid="uid://bp1o66o2bw26x" path="res://scripts/music.gd" id="3_s4tl2"]
-[ext_resource type="AudioStream" uid="uid://0das35fe547r" path="res://assets/sound/Safe place.mp3" id="4_8hmjt"]
-[ext_resource type="AudioStream" uid="uid://bbi8g1b7snasn" path="res://assets/sound/Unsafe place.mp3" id="5_o5lv4"]
+[ext_resource type="Script" path="res://scripts/end.gd" id="1_3d26k"]
+[ext_resource type="Texture2D" path="res://assets/menu.jpg" id="2_p7m4f"]
+[ext_resource type="Script" path="res://scripts/music.gd" id="3_s4tl2"]
+[ext_resource type="AudioStream" path="res://assets/sound/Safe place.mp3" id="4_8hmjt"]
+[ext_resource type="AudioStream" path="res://assets/sound/Unsafe place.mp3" id="5_o5lv4"]
 
 [node name="End" type="Control" unique_id=1623809728]
 layout_mode = 3
