@@ -18,8 +18,9 @@
 [sub_resource type="Environment" id="Environment_y44tv"]
 fog_enabled = true
 fog_light_color = Color(0.050649077, 0.062290356, 0.07262511, 1)
-fog_light_energy = 0.38
-fog_density = 0.3
+fog_light_energy = 0.0
+fog_density = 0.2072
+volumetric_fog_enabled = true
 volumetric_fog_density = 0.025
 volumetric_fog_albedo = Color(3.549643e-07, 0.15317124, 0.15947476, 1)
 volumetric_fog_detail_spread = 2.6116536
@@ -241,7 +242,7 @@ light_indirect_energy = 1.6
 shadow_enabled = true
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=117749579]
-transform = Transform3D(0.9766338, -0.010714473, -0.21464342, 0.21179129, -0.12156569, 0.9697247, -0.03648337, -0.9925255, -0.11645592, -7.6985536, 2.603116, -8.333568)
+transform = Transform3D(0.9771874, -0.011527615, -0.2120658, 0.1889307, 0.50326514, 0.8432254, 0.09700498, -0.86405504, 0.49396247, -7.699632, 5.038338, -7.282198)
 light_energy = 2.863
 light_indirect_energy = 6.047
 light_specular = 8.242
@@ -257,7 +258,7 @@ libraries/ = SubResource("AnimationLibrary_dmsi2")
 autoplay = &"flicker"
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=876596002]
-transform = Transform3D(-0.093058154, 0.9855872, 0.14127256, 0.20973913, -0.11929972, 0.97045183, 0.9733188, 0.11993885, -0.19561441, 6.098363, 2.985104, -7.3619785)
+transform = Transform3D(-0.104100816, 0.9939544, 0.034890197, 0.09958233, -0.024487654, 0.9947278, 0.9895687, 0.107026435, -0.096431114, 5.515504, 8.257867, -4.873965)
 light_energy = 2.863
 light_indirect_energy = 6.047
 light_specular = 8.242
@@ -265,7 +266,7 @@ shadow_enabled = true
 shadow_blur = 3.312
 spot_range = 23.856
 spot_attenuation = -1.47
-spot_angle = 54.09
+spot_angle = 30.18
 spot_angle_attenuation = 9.189583
 
 [node name="Postprocessing" type="CanvasLayer" parent="." unique_id=1523721853]
