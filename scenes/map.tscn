@@ -5,7 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://bmdye2ltdkgkn" path="res://scenes/environment.tscn" id="2_gldc4"]
 [ext_resource type="PackedScene" uid="uid://dcg2kb8m4bvkj" path="res://scenes/camera.tscn" id="3_gldc4"]
 [ext_resource type="PackedScene" uid="uid://b0ncomhgye1o" path="res://scenes/hide_manager.tscn" id="4_0cso3"]
-[ext_resource type="Shader" uid="uid://b2r707t3pwyhb" path="res://scenes/map.gdshader" id="5_2klcf"]
 [ext_resource type="PackedScene" uid="uid://bhbckfgk57uac" path="res://scenes/collectible.tscn" id="5_2lpho"]
 [ext_resource type="PackedScene" uid="uid://bxgca8mk2elu6" path="res://scenes/directional_light_3d.tscn" id="6_2lpho"]
 [ext_resource type="PackedScene" uid="uid://8hjwhnb0l4sv" path="res://scenes/enemy.tscn" id="9_be0no"]
