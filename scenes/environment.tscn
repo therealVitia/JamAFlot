@@ -393,12 +393,15 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Collectible" parent="Postprocessing" unique_id=176497600 instance=ExtResource("12_8sbm4")]
 transform = Transform3D(0.9999996, -7.315748e-11, -1.6298145e-09, 1.5879209e-09, 0.9999996, 8.731149e-11, -9.313226e-10, 1.1641532e-10, 0.9999996, 33.663208, 0.54884696, 6.3676615)
+visible = false
 
 [node name="Collectible3" parent="Postprocessing" unique_id=568362875 instance=ExtResource("12_8sbm4")]
 transform = Transform3D(0.9999147, -0.0062464206, 0.011371363, 0.0062403907, 0.999977, 0.00056551193, -0.011374691, -0.00049447763, 0.9999333, 32.34697, 2.4547527, -4.5393333)
+visible = false
 
 [node name="Collectible2" parent="Postprocessing" unique_id=1709241768 instance=ExtResource("12_8sbm4")]
 transform = Transform3D(0.9999897, -0.0020815267, 0.0037909197, 0.0020808547, 0.9999965, 0.00018061881, -0.0037912917, -0.0001727205, 0.99999183, 30.072998, 1.165307, 2.6081405)
+visible = false
 
 [node name="Canape" parent="." unique_id=550145466 instance=ExtResource("13_0hc8i")]
 transform = Transform3D(0.009769868, -0.004250244, -1.8687966, 0.00037950225, 2.041875, -0.0038884445, 2.0793376, -0.000352696, 0.008781461, 22.772097, 0.09262978, -2.907607)

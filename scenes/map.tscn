@@ -39,16 +39,16 @@ target = NodePath("../Player")
 env = NodePath("../PathFinding/Environment")
 
 [node name="Collectible" parent="." unique_id=1709241768 groups=["collectible"] instance=ExtResource("5_2lpho")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.381952, 1.1620398, -2.796545)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04137039, 1.1620398, -2.796545)
 
 [node name="Collectible2" parent="." unique_id=487379545 groups=["collectible"] instance=ExtResource("5_2lpho")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.987978, 1.1620398, -2.796545)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.43384, 1.1620398, 2.1764731)
 
 [node name="Collectible3" parent="." unique_id=1211090816 groups=["collectible"] instance=ExtResource("5_2lpho")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9324207, 1.1620398, -2.796545)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.13269, 1.1620398, -4.0858793)
 
 [node name="Collectible4" parent="." unique_id=715397446 groups=["collectible"] instance=ExtResource("5_2lpho")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0065684, 1.1620398, -2.796545)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.810055, 1.1620398, 6.302834)
 
 [node name="DirectionalLight3D" parent="." unique_id=453814777 instance=ExtResource("6_2lpho")]
 transform = Transform3D(0.7477865, -0.30606925, 0.5891833, 0, 0.8874054, 0.46098986, -0.66393924, -0.344722, 0.6635898, 0, 4.439234, 0)
@@ -87,7 +87,6 @@ musicUnsafe = ExtResource("14_c00ee")
 [node name="Heart" type="AudioStreamPlayer" parent="." unique_id=161183476]
 stream = ExtResource("15_p7tei")
 autoplay = true
-bus = &"SFX"
 parameters/looping = true
 script = ExtResource("16_p7tei")
 

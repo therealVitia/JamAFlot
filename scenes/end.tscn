@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://cgs13rug1r3a3"]
+
+[ext_resource type="Script" uid="uid://bdoybcjjur1mv" path="res://scripts/end.gd" id="1_3d26k"]
+[ext_resource type="Texture2D" uid="uid://c06xf3ajo7mvl" path="res://assets/menu.jpg" id="2_p7m4f"]
+[ext_resource type="Script" uid="uid://bp1o66o2bw26x" path="res://scripts/music.gd" id="3_s4tl2"]
+[ext_resource type="AudioStream" uid="uid://0das35fe547r" path="res://assets/sound/Safe place.mp3" id="4_8hmjt"]
+[ext_resource type="AudioStream" uid="uid://bbi8g1b7snasn" path="res://assets/sound/Unsafe place.mp3" id="5_o5lv4"]
+
+[node name="End" type="Control" unique_id=1623809728]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3d26k")
+
+[node name="Background" type="TextureRect" parent="." unique_id=2000547737]
+layout_mode = 0
+offset_right = 1156.0
+offset_bottom = 650.0
+texture = ExtResource("2_p7m4f")
+expand_mode = 3
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=768170980]
+process_mode = 3
+autoplay = true
+bus = &"Music"
+script = ExtResource("3_s4tl2")
+musicSafe = ExtResource("4_8hmjt")
+musicUnsafe = ExtResource("5_o5lv4")
+
+[node name="Control" type="Control" parent="." unique_id=1464039175]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1675746898]
+layout_direction = 3
+layout_mode = 0
+offset_left = 120.0
+offset_top = 230.0
+offset_right = 160.0
+offset_bottom = 285.0
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=632463600]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="PanelContainer/MarginContainer" unique_id=200838097]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer" unique_id=233589680]
+layout_direction = 3
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "..."
+horizontal_alignment = 1
+
+[node name="QuitButton" type="Button" parent="." unique_id=1689948939]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 0
+offset_left = 507.0
+offset_top = 555.0
+offset_right = 707.0
+offset_bottom = 605.0
+theme_override_font_sizes/font_size = 30
+text = "QUIT"
+
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

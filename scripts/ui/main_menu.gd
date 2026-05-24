@@ -4,10 +4,12 @@ var option: bool = false
 
 func _ready() -> void:
 	$Options.hide()
+	$Panel.hide()
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("pause"):
 		$Options.hide()
+		$Panel.hide()
 		$VBoxContainer.show()
 		$Message.show()
 		option = false
@@ -23,6 +25,7 @@ func _on_quit_button_button_down() -> void:
 
 func _on_options_button_down() -> void:
 	$Options.show()
+	$Panel.show()
 	$VBoxContainer.hide()
 	$Message.hide()
 	option = true

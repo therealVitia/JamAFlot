@@ -2,51 +2,38 @@
 
 [ext_resource type="Script" uid="uid://bl4maggj1t623" path="res://scripts/collectible.gd" id="1_bkg8t"]
 [ext_resource type="Material" uid="uid://ic2frtbuhdgn" path="res://resources/particules_material_override.tres" id="2_1pg6c"]
+[ext_resource type="Texture2D" uid="uid://nbb13p01l5hw" path="res://assets/collectibles/fragments 3.0.png" id="3_mh687"]
+[ext_resource type="Texture2D" uid="uid://dngenogy0fdns" path="res://assets/collectibles/fragments 2.1.png" id="4_ma10x"]
+[ext_resource type="Texture2D" uid="uid://ra0aq725tw2s" path="res://assets/collectibles/fragments 2.0.png" id="5_fuck5"]
+[ext_resource type="Texture2D" uid="uid://82ep2dfbps7c" path="res://assets/collectibles/fragments 1.2.png" id="6_72l5o"]
+[ext_resource type="Texture2D" uid="uid://bq3h50fafj6nx" path="res://assets/collectibles/fragments 0.0.png" id="7_udoxq"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_bkg8t"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_ga2k0"]
 
-[sub_resource type="Gradient" id="Gradient_1pg6c"]
-offsets = PackedFloat32Array(0, 0.47682118, 1)
-colors = PackedColorArray(0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0.53, 0)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_61c27"]
-gradient = SubResource("Gradient_1pg6c")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ga2k0"]
-emission_shape = 1
-emission_sphere_radius = 0.1
-direction = Vector3(0, 1, 0)
-spread = 180.0
-initial_velocity_min = 0.099999994
-initial_velocity_max = 0.29999998
-orbit_velocity_min = 0.1000001
-orbit_velocity_max = 0.3000001
-gravity = Vector3(0, 0, 0)
-scale_min = 10.0
-scale_max = 100.0
-color = Color(0, 1, 1, 1)
-color_ramp = SubResource("GradientTexture1D_61c27")
-turbulence_enabled = true
-
-[sub_resource type="Gradient" id="Gradient_6gns2"]
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_rapul"]
-gradient = SubResource("Gradient_6gns2")
-fill = 1
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mh687"]
-transparency = 1
-shading_mode = 0
-vertex_color_use_as_albedo = true
-albedo_color = Color(0, 1, 1, 1)
-albedo_texture = SubResource("GradientTexture2D_rapul")
-billboard_mode = 1
-
-[sub_resource type="QuadMesh" id="QuadMesh_ma10x"]
-material = SubResource("StandardMaterial3D_mh687")
-size = Vector2(0.5, 0.5)
+[sub_resource type="SpriteFrames" id="SpriteFrames_naap0"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("3_mh687")
+}, {
+"duration": 2.0,
+"texture": ExtResource("4_ma10x")
+}, {
+"duration": 2.0,
+"texture": ExtResource("5_fuck5")
+}, {
+"duration": 2.0,
+"texture": ExtResource("6_72l5o")
+}, {
+"duration": 2.0,
+"texture": ExtResource("7_udoxq")
+}],
+"loop": true,
+"name": &"collectible",
+"speed": 10.0
+}]
 
 [node name="Collectible" type="Area3D" unique_id=1709241768]
 script = ExtResource("1_bkg8t")
@@ -59,12 +46,12 @@ visible = false
 material_override = ExtResource("2_1pg6c")
 mesh = SubResource("SphereMesh_ga2k0")
 
-[node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=911731496]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.000113248825, 0)
-amount = 16
-lifetime = 2.0
-local_coords = true
-process_material = SubResource("ParticleProcessMaterial_ga2k0")
-draw_pass_1 = SubResource("QuadMesh_ma10x")
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1354852446]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.9142685, 0)
+billboard = 1
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_naap0")
+animation = &"collectible"
+frame_progress = 0.9395836
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
