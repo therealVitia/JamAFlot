@@ -2,16 +2,18 @@ extends CharacterBody3D
 
 @export var target: CharacterBody3D
 @export var environment: Node3D
-@export var timer := 1.5
+@export var timer := 5
+
 @onready var navigation_agent: NavigationAgent3D = $NavigationAgent3D
 
 @onready var hard_shadow: Node3D     = $HardShadow
-@onready var fake_shadow: Node3D     = $fakeShadow
-@onready var real_shadow: Node3D     = $realShadow
-@onready var little_step: Node3D     = $littleStep
+@onready var fake_shadow: AnimatedSprite3D     = $fakeShadow
+@onready var real_shadow: AnimatedSprite3D     = $realShadow
+@onready var little_step: AnimatedSprite3D     = $littleStep
 @onready var audio_little_step: AudioStreamPlayer3D = $AudioStreamPlayer3D
 @onready var collision: CollisionShape3D = $CollisionShape3D
 
+var sprite: AnimatedSprite3D
 const GRAVITY: float = -9.8
 var speed: float = 0.0
 @export var speed_ratio: float = 1.1
@@ -65,22 +67,34 @@ func _on_collectible_found() -> void:
 func _set_form(count: int) -> void:
 	hard_shadow.visible = false
 	fake_shadow.visible = false
+	fake_shadow.pause()
 	real_shadow.visible = false
+	real_shadow.pause()
 	little_step.visible = false
+	little_step.pause()
 	match count:
 		0:
 			pass
 		1:
 			little_step.visible = true
 			audio_little_step.play()
+			little_step.play("default")
+			sprite = little_step
 		2:
 			hard_shadow.visible = true
+			sprite = null
 		3:
 			fake_shadow.visible = true
+			fake_shadow.play("default")
+			sprite = fake_shadow
 		4:
 			real_shadow.visible = true
+			real_shadow.play("default")
+			sprite = real_shadow
 		_:
 			real_shadow.visible = true
+			real_shadow.play("default")
+			sprite = real_shadow
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -94,5 +108,7 @@ func _physics_process(delta: float) -> void:
 	speed = target.SPEED * 1.1
 	velocity.x = direction.x * speed
 	velocity.z = direction.z * speed
+	if direction.x != 0 and sprite:
+		sprite.flip_h = direction.x < 0
 
 	move_and_slide()

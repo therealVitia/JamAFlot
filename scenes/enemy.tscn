@@ -9,12 +9,29 @@
 [ext_resource type="Texture2D" uid="uid://bx85htkfd3qdc" path="res://resources/fakeshadow/Ombre_0007.png" id="7_rogs8"]
 [ext_resource type="Texture2D" uid="uid://bwuur6balgmds" path="res://resources/fakeshadow/Ombre_0008.png" id="8_wrm80"]
 [ext_resource type="Texture2D" uid="uid://xkacvftw4dw4" path="res://resources/fakeshadow/Ombre_0010.png" id="9_6awcb"]
+[ext_resource type="Texture2D" uid="uid://bq41mywwqnq0n" path="res://resources/fakeshadow/Ombre_0009.png" id="9_lsnsy"]
+[ext_resource type="Texture2D" uid="uid://dviysprl3eflr" path="res://assets/enemyfinal/marche ombre _0000.png" id="9_s1ycm"]
+[ext_resource type="Texture2D" uid="uid://drx4lj7dx3rxb" path="res://assets/enemyfinal/marche ombre _0001.png" id="10_shcg2"]
 [ext_resource type="Texture2D" uid="uid://c1dfvftv6dwg1" path="res://resources/fakeshadow/Ombre_0011.png" id="10_wjec0"]
 [ext_resource type="Texture2D" uid="uid://beaqeedmoapj3" path="res://resources/fakeshadow/Ombre_0012.png" id="11_i4rgx"]
+[ext_resource type="Texture2D" uid="uid://dm4b63tq22087" path="res://assets/enemyfinal/marche ombre _0002.png" id="11_ile5s"]
+[ext_resource type="Texture2D" uid="uid://3xy4cih6fwgr" path="res://assets/enemyfinal/marche ombre _0003.png" id="12_1x4g4"]
 [ext_resource type="Texture2D" uid="uid://dh4l0h1brvlv1" path="res://resources/fakeshadow/Ombre_0013.png" id="12_2mchx"]
+[ext_resource type="Texture2D" uid="uid://dcr0bvl3c4j3y" path="res://assets/enemyfinal/marche ombre _0004.png" id="13_2pwtc"]
 [ext_resource type="Texture2D" uid="uid://bn3jhlkyjqt3c" path="res://resources/fakeshadow/Ombre_0014.png" id="13_t3vcr"]
 [ext_resource type="Texture2D" uid="uid://cv05grgqkndkj" path="res://resources/fakeshadow/Ombre_0015.png" id="14_qaulx"]
+[ext_resource type="Texture2D" uid="uid://d67kkyvkmx8l" path="res://assets/enemyfinal/marche ombre _0005.png" id="14_rogs8"]
 [ext_resource type="Texture2D" uid="uid://cmu7ls4dl8ug0" path="res://resources/fakeshadow/Ombre_0016.png" id="15_1f82d"]
+[ext_resource type="Texture2D" uid="uid://baoe23r0mslng" path="res://assets/enemyfinal/marche ombre _0006.png" id="15_wrm80"]
+[ext_resource type="Texture2D" uid="uid://bxa6drmu4n8pa" path="res://assets/enemyfinal/marche ombre _0007.png" id="16_6awcb"]
+[ext_resource type="Texture2D" uid="uid://etpd5sophfco" path="res://assets/petons/pieds_0000.png" id="25_lsnsy"]
+[ext_resource type="Texture2D" uid="uid://cs3xnvglwuft2" path="res://assets/petons/pieds_0001.png" id="26_thsr5"]
+[ext_resource type="Texture2D" uid="uid://di03dtxafifmv" path="res://assets/petons/pieds_0003.png" id="27_ekh6n"]
+[ext_resource type="Texture2D" uid="uid://mawqqbsycar4" path="res://assets/petons/pieds_0005.png" id="28_2sbpf"]
+[ext_resource type="Texture2D" uid="uid://2xjeatvn4iip" path="res://assets/petons/pieds_0002.png" id="29_78kod"]
+[ext_resource type="Texture2D" uid="uid://md4h4titx5ac" path="res://assets/petons/pieds_0004.png" id="30_605iw"]
+[ext_resource type="Texture2D" uid="uid://bupwsono3uonc" path="res://assets/petons/pieds_0007.png" id="31_x6q4o"]
+[ext_resource type="Texture2D" uid="uid://cv32phossuv3n" path="res://assets/petons/pieds_0006.png" id="32_2tuss"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7p1mj"]
 radius = 0.6386719
@@ -55,7 +72,7 @@ animations = [{
 "texture": ExtResource("8_wrm80")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_wrm80")
+"texture": ExtResource("9_lsnsy")
 }, {
 "duration": 1.0,
 "texture": ExtResource("9_6awcb")
@@ -83,6 +100,70 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_md484"]
+animations = [{
+"frames": [{
+"duration": 4.0,
+"texture": ExtResource("9_s1ycm")
+}, {
+"duration": 4.0,
+"texture": ExtResource("10_shcg2")
+}, {
+"duration": 4.0,
+"texture": ExtResource("11_ile5s")
+}, {
+"duration": 4.0,
+"texture": ExtResource("12_1x4g4")
+}, {
+"duration": 4.0,
+"texture": ExtResource("13_2pwtc")
+}, {
+"duration": 4.0,
+"texture": ExtResource("14_rogs8")
+}, {
+"duration": 4.0,
+"texture": ExtResource("15_wrm80")
+}, {
+"duration": 4.0,
+"texture": ExtResource("16_6awcb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ipns3"]
+animations = [{
+"frames": [{
+"duration": 4.0,
+"texture": ExtResource("25_lsnsy")
+}, {
+"duration": 4.0,
+"texture": ExtResource("26_thsr5")
+}, {
+"duration": 4.0,
+"texture": ExtResource("27_ekh6n")
+}, {
+"duration": 4.0,
+"texture": ExtResource("28_2sbpf")
+}, {
+"duration": 4.0,
+"texture": ExtResource("29_78kod")
+}, {
+"duration": 4.0,
+"texture": ExtResource("30_605iw")
+}, {
+"duration": 4.0,
+"texture": ExtResource("31_x6q4o")
+}, {
+"duration": 4.0,
+"texture": ExtResource("32_2tuss")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
 [node name="Enemy" type="CharacterBody3D" unique_id=1062593944]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=325164495]
@@ -92,6 +173,7 @@ shape = SubResource("CapsuleShape3D_7p1mj")
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1608599799]
 
 [node name="HardShadow" type="MeshInstance3D" parent="." unique_id=937177905]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.56860274, 0)
 visible = false
 mesh = SubResource("CylinderMesh_0lg75")
 
@@ -99,7 +181,7 @@ mesh = SubResource("CylinderMesh_0lg75")
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.10788202, 0.9210067, 0)
 visible = false
 sprite_frames = SubResource("SpriteFrames_lsnsy")
-frame_progress = 0.5022461
+frame_progress = 0.5920812
 speed_scale = 2.0
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=87996242]
@@ -108,13 +190,13 @@ visible = false
 [node name="realShadow" type="AnimatedSprite3D" parent="." unique_id=708039542]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.108888984, 1.0523224, 0)
 visible = false
-sprite_frames = SubResource("SpriteFrames_lsnsy")
-frame_progress = 0.9054014
+sprite_frames = SubResource("SpriteFrames_md484")
+frame_progress = 0.062335517
 speed_scale = 2.0
 
 [node name="littleStep" type="AnimatedSprite3D" parent="." unique_id=861353847]
-transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, -0.012966275, 0.7277093, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.012966275, 3.7727246, 0)
 visible = false
-sprite_frames = SubResource("SpriteFrames_lsnsy")
-frame_progress = 0.9054014
+sprite_frames = SubResource("SpriteFrames_ipns3")
+frame_progress = 0.078279294
 speed_scale = 2.0

@@ -24,8 +24,8 @@ initial_velocity_max = 0.29999998
 orbit_velocity_min = 0.1000001
 orbit_velocity_max = 0.3000001
 gravity = Vector3(0, 0, 0)
-scale_min = 0.049999997
-scale_max = 0.14999999
+scale_min = 10.0
+scale_max = 100.0
 color = Color(0, 1, 1, 1)
 color_ramp = SubResource("GradientTexture1D_61c27")
 turbulence_enabled = true
@@ -46,7 +46,7 @@ billboard_mode = 1
 
 [sub_resource type="QuadMesh" id="QuadMesh_ma10x"]
 material = SubResource("StandardMaterial3D_mh687")
-size = Vector2(0.05, 0.05)
+size = Vector2(0.5, 0.5)
 
 [node name="Collectible" type="Area3D" unique_id=1709241768]
 script = ExtResource("1_bkg8t")
@@ -60,7 +60,7 @@ material_override = ExtResource("2_1pg6c")
 mesh = SubResource("SphereMesh_ga2k0")
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=911731496]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.000113248825, 0)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.000113248825, 0)
 amount = 16
 lifetime = 2.0
 local_coords = true
