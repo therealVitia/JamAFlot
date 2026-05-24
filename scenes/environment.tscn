@@ -13,27 +13,16 @@
 [ext_resource type="PackedScene" uid="uid://d155u3vfx7ukg" path="res://scenes/objects/pot_champi.tscn" id="11_dmsi2"]
 [ext_resource type="PackedScene" uid="uid://c4dchat426b1p" path="res://scenes/objects/pot_deux_boules.tscn" id="12_ofm7x"]
 [ext_resource type="PackedScene" uid="uid://dvyxmuxhdjfey" path="res://scenes/objects/pot_cactus.tscn" id="13_80s2q"]
+[ext_resource type="Shader" uid="uid://cxo1rsfua8gjb" path="res://addons/postfx/shaders/dither.gdshader" id="14_yyxhd"]
 
 [sub_resource type="Environment" id="Environment_y44tv"]
 fog_enabled = true
-fog_light_color = Color(0.02837259, 0.034384977, 0.044885457, 1)
+fog_light_color = Color(0.050649077, 0.062290356, 0.07262511, 1)
+fog_light_energy = 0.38
 fog_density = 0.3
-volumetric_fog_enabled = true
 volumetric_fog_density = 0.025
 volumetric_fog_albedo = Color(3.549643e-07, 0.15317124, 0.15947476, 1)
 volumetric_fog_detail_spread = 2.6116536
-
-[sub_resource type="FogMaterial" id="FogMaterial_cofmf"]
-density = 1.5105
-albedo = Color(0.22670749, 0.22670749, 0.22670746, 1)
-height_falloff = 1.0646358
-edge_fade = 0.10717722
-
-[sub_resource type="FogMaterial" id="FogMaterial_f0uwl"]
-density = 1.085
-albedo = Color(0.22670749, 0.22670749, 0.22670746, 1)
-height_falloff = 0.0038802312
-edge_fade = 0.10717722
 
 [sub_resource type="Animation" id="Animation_0hc8i"]
 length = 0.001
@@ -72,6 +61,13 @@ _data = {
 &"RESET": SubResource("Animation_0hc8i"),
 &"flicker": SubResource("Animation_yyxhd")
 }
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dmsi2"]
+shader = ExtResource("14_yyxhd")
+shader_parameter/color_depth = 2.999999955296
+shader_parameter/dither_spread = 0.206000009785
+shader_parameter/dither_scale = 1.4999999888239999
+shader_parameter/grayscale_mix = 1.0
 
 [node name="Environment" type="Node3D" unique_id=1852985595 node_paths=PackedStringArray("limit_left", "limit_right")]
 transform = Transform3D(0.99999064, 0.0020808566, -0.0037912927, -0.0020815257, 0.99999785, -0.00017272872, 0.0037909253, 0.00018061064, 0.9999928, 0, 0, 0)
@@ -229,24 +225,13 @@ transform = Transform3D(0.3765982, -0.0011376186, 0.9263749, -0.0014576346, 0.99
 transform = Transform3D(0.99999976, -1.3541808e-09, 1.379415e-19, 1.3541808e-09, 0.99999976, -2.910383e-11, -9.852965e-20, 2.910383e-11, 0.99999976, 3.3335698, 0.006804967, -0.7755587)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=429751564]
-transform = Transform3D(0.9999803, -0.0015981051, -0.0060648513, 0.005974385, -0.051564474, 0.9986517, -0.0019086818, -0.9986683, -0.05155391, 0.6351779, 5.311565, -0.0708923)
+transform = Transform3D(0.9999786, -0.001370135, -0.0063978997, 0.006132919, -0.14443767, 0.98949474, -0.0022798409, -0.9895129, -0.14442624, -4.6119184, 7.705736, 4.4525905)
 light_energy = 1.5
 light_indirect_energy = 1.6
 shadow_enabled = true
 
-[node name="FogVolume" type="FogVolume" parent="." unique_id=1504238212]
-transform = Transform3D(0.9965034, 7.198125e-06, 0.08274783, -2.1044045e-05, 0.99993026, 0.00017167673, -0.08274874, -0.00017284424, 0.9964922, -8.502929, 3.140126, -0.09454775)
-size = Vector3(2.7280884, 6.940854, 18.282873)
-material = SubResource("FogMaterial_cofmf")
-
-[node name="FogVolume2" type="FogVolume" parent="." unique_id=129611274]
-transform = Transform3D(0.9999347, 7.0436954e-08, -3.5157427e-07, 3.7292688e-07, 0.9999347, 2.1173037e-08, 1.0849908e-07, 1.7316779e-09, 0.9999347, 1.6127311, -0.37967527, 10.166402)
-size = Vector3(19.454401, 5.8996353, 7.9598503)
-material = SubResource("FogMaterial_f0uwl")
-
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=117749579]
-transform = Transform3D(0.9766337, -0.01071447, -0.21464348, 0.21179132, -0.12156571, 0.9697247, -0.036483373, -0.9925256, -0.11645593, -7.062897, 2.6045804, -7.5142217)
-light_color = Color(1, 0.79934204, 0.55372655, 1)
+transform = Transform3D(0.9766338, -0.010714473, -0.21464342, 0.21179129, -0.12156569, 0.9697247, -0.03648337, -0.9925255, -0.11645592, -7.6985536, 2.603116, -8.333568)
 light_energy = 2.863
 light_indirect_energy = 6.047
 light_specular = 8.242
@@ -254,8 +239,33 @@ shadow_enabled = true
 shadow_blur = 3.312
 spot_range = 23.856
 spot_attenuation = -1.47
-spot_angle = 56.889744
+spot_angle = 60.76
+spot_angle_attenuation = 0.4829682
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="SpotLight3D" unique_id=1503441329]
 libraries/ = SubResource("AnimationLibrary_dmsi2")
 autoplay = &"flicker"
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=876596002]
+transform = Transform3D(-0.093058154, 0.9855872, 0.14127256, 0.20973913, -0.11929972, 0.97045183, 0.9733188, 0.11993885, -0.19561441, 6.098363, 2.985104, -7.3619785)
+light_energy = 2.863
+light_indirect_energy = 6.047
+light_specular = 8.242
+shadow_enabled = true
+shadow_blur = 3.312
+spot_range = 23.856
+spot_attenuation = -1.47
+spot_angle = 54.09
+spot_angle_attenuation = 9.189583
+
+[node name="Postprocessing" type="CanvasLayer" parent="." unique_id=1523721853]
+
+[node name="ColorRect" type="ColorRect" parent="Postprocessing" unique_id=582895576]
+light_mask = 8
+material = SubResource("ShaderMaterial_dmsi2")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true

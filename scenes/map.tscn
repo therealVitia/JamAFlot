@@ -3,7 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://cb0ur3vdf28xq" path="res://scenes/player.tscn" id="1_paxxb"]
 [ext_resource type="PackedScene" uid="uid://bmdye2ltdkgkn" path="res://scenes/environment.tscn" id="2_gldc4"]
 [ext_resource type="PackedScene" uid="uid://dcg2kb8m4bvkj" path="res://scenes/camera.tscn" id="3_gldc4"]
-[ext_resource type="PackedScene" uid="uid://d003mkrsise2p" path="res://addons/dither3d/full-screen-effect/Dither3DMonochrome.tscn" id="4_0cso3"]
 
 [node name="map" type="Node3D" unique_id=1199345111]
 
@@ -14,13 +13,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6710453, 1.6694946)
 transform = Transform3D(0.99999064, 0.0020808566, -0.0037912927, -0.0020815257, 0.99999785, -0.00017272872, 0.0037909253, 0.00018061064, 0.9999928, -0.043426514, -9.536743e-07, -0.0010261536)
 
 [node name="Camera" parent="." unique_id=1114856204 node_paths=PackedStringArray("target", "env") instance=ExtResource("3_gldc4")]
-transform = Transform3D(1, 0, 0, 0, 0.8228786, 0.5682173, 0, -0.5682173, 0.8228786, 0.0134442, 6.2510023, 11.016707)
+transform = Transform3D(1, 0, 0, 0, 0.9457116, 0.3250071, 0, -0.3250071, 0.9457116, 0.13942172, 5.05887, 11.016707)
+cull_mask = 1048573
 fov = 67.4
 size = 4.277194
 target = NodePath("../Player")
 env = NodePath("../Environment")
-
-[node name="Dither3DMonochrome" parent="." unique_id=955883526 instance=ExtResource("4_0cso3")]
-layer = 127
-follow_viewport_enabled = true
-follow_viewport_scale = 2.0

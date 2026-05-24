@@ -2,4 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://bnj207j8c8erl" path="res://assets/StaticMeshes/PotsEtPlantes/SM_PlanteCactusSombre.fbx" id="1_ejroa"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0dgdh"]
+
 [node name="SM_PlanteCactusSombre" unique_id=1505168152 instance=ExtResource("1_ejroa")]
+
+[node name="SM_PlanteCactus" parent="." index="0" unique_id=1001777757]
+surface_material_override/0 = SubResource("StandardMaterial3D_0dgdh")
