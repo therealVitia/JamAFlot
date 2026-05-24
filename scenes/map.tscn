@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dcg2kb8m4bvkj" path="res://scenes/camera.tscn" id="3_gldc4"]
 [ext_resource type="PackedScene" uid="uid://b0ncomhgye1o" path="res://scenes/hide_manager.tscn" id="4_0cso3"]
 [ext_resource type="Shader" uid="uid://b2r707t3pwyhb" path="res://scenes/map.gdshader" id="5_2klcf"]
-[ext_resource type="PackedScene" uid="uid://ct544gvy01nkd" path="res://scenes/collectible.tscn" id="5_2lpho"]
+[ext_resource type="PackedScene" uid="uid://bhbckfgk57uac" path="res://scenes/collectible.tscn" id="5_2lpho"]
 [ext_resource type="PackedScene" uid="uid://bxgca8mk2elu6" path="res://scenes/directional_light_3d.tscn" id="6_2lpho"]
 [ext_resource type="PackedScene" uid="uid://8hjwhnb0l4sv" path="res://scenes/enemy.tscn" id="9_be0no"]
 [ext_resource type="PackedScene" uid="uid://cjf64u5780kp7" path="res://scenes/path_finding.tscn" id="9_mlgqr"]
@@ -32,7 +32,7 @@ script = ExtResource("1_wslke")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6710453, 8.1797695)
 
 [node name="Camera" parent="." unique_id=1114856204 node_paths=PackedStringArray("target", "env") instance=ExtResource("3_gldc4")]
-transform = Transform3D(1, 0, 0, 0, 0.92610127, 0.37727514, 0, -0.37727514, 0.92610127, 0.11177254, 5.2656074, 15.439981)
+transform = Transform3D(1, 0, 0, 0, 0.92610127, 0.37727514, 0, -0.37727514, 0.92610127, 0.11177254, 5.2656074, 11.380215)
 fov = 67.4
 size = 4.277194
 target = NodePath("../Player")
