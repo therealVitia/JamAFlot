@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://rov8fqa8eyi3" path="res://scenes/objects/floor.tscn" id="1_bc5iu"]
 [ext_resource type="Script" uid="uid://cq0sr3c11v4wd" path="res://scripts/environment.gd" id="1_d5dl1"]
+<<<<<<< HEAD:scenes/environment.tscn
 [ext_resource type="PackedScene" uid="uid://crdfgci1ewd7r" path="res://scenes/objects/silhouette.tscn" id="4_hlc4h"]
 [ext_resource type="PackedScene" uid="uid://bsrrd8x3w8jm1" path="res://scenes/objects/wall.tscn" id="6_yw8f4"]
 [ext_resource type="PackedScene" uid="uid://7oijiowfiod7" path="res://scenes/objects/bigplant.tscn" id="7_jtak5"]
@@ -71,6 +72,14 @@ shader_parameter/grayscale_mix = 1.0
 
 [node name="Environment" type="Node3D" unique_id=1852985595 node_paths=PackedStringArray("limit_left", "limit_right")]
 transform = Transform3D(0.99999064, 0.0020808566, -0.0037912927, -0.0020815257, 0.99999785, -0.00017272872, 0.0037909253, 0.00018061064, 0.9999928, 0, 0, 0)
+=======
+[ext_resource type="PackedScene" uid="uid://dluvc51jn4g87" path="res://scenes/objects/table.tscn" id="2_fm4en"]
+[ext_resource type="Script" uid="uid://dj6cgyrtfq0u7" path="res://scripts/swap_world.gd" id="4_hlc4h"]
+
+[sub_resource type="Environment" id="Environment_y44tv"]
+
+[node name="Environment" type="Node3D" unique_id=1852985595 node_paths=PackedStringArray("limit_left", "limit_right")]
+>>>>>>> player:game-jam-project/scenes/environment.tscn
 script = ExtResource("1_d5dl1")
 limit_left = NodePath("LimitLeft")
 limit_right = NodePath("LimitRight")
@@ -79,6 +88,7 @@ limit_right = NodePath("LimitRight")
 environment = SubResource("Environment_y44tv")
 
 [node name="Floor" parent="." unique_id=1793124290 instance=ExtResource("1_bc5iu")]
+<<<<<<< HEAD:scenes/environment.tscn
 transform = Transform3D(0.714294, -8.1308826e-10, -1.1641532e-09, 1.4221087e-09, 0.8103584, 1.891749e-10, 0, -1.4551915e-11, 0.8276545, 0.51643884, 0.0010746452, -0.0019579888)
 
 [node name="Living room" parent="." unique_id=627441045 instance=ExtResource("1_bc5iu")]
@@ -86,12 +96,21 @@ transform = Transform3D(1.3465232, -1.3415615e-09, -1.6298145e-09, 4.861704e-09,
 
 [node name="Corridor" parent="." unique_id=398258672 instance=ExtResource("1_bc5iu")]
 transform = Transform3D(0.25889444, -1.4242687e-09, -1.2223609e-09, 1.2483099e-09, 0.9976871, 5.0931703e-11, 5.820766e-10, 0, 0.19822097, 15.025251, 0.09642175, 2.057433)
+=======
+disable_mode = 1
+
+[node name="Table" parent="." unique_id=72821643 instance=ExtResource("2_fm4en")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, -0.24485254, 0)
+disable_mode = 1
+script = ExtResource("4_hlc4h")
+>>>>>>> player:game-jam-project/scenes/environment.tscn
 
 [node name="LimitLeft" type="Marker3D" parent="." unique_id=972738560]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 11)
 
 [node name="LimitRight" type="Marker3D" parent="." unique_id=804357763]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 11)
+<<<<<<< HEAD:scenes/environment.tscn
 
 [node name="Silhouette9" parent="." unique_id=602552750 instance=ExtResource("4_hlc4h")]
 transform = Transform3D(0.97137725, -1.2771579e-09, -7.450581e-09, 1.1790405e-08, 0.97137725, 2.764864e-10, -3.958121e-09, 5.820766e-11, 0.9713761, 27.32859, 1.6556801, -1.8745288)
@@ -269,3 +288,5 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
+=======
+>>>>>>> player:game-jam-project/scenes/environment.tscn

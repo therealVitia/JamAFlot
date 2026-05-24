@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://duekobo4emtxf"]
+
+[ext_resource type="Script" uid="uid://dj6cgyrtfq0u7" path="res://scripts/swap_world.gd" id="1_5kqhf"]
+
+[node name="swapWorld" type="Node" unique_id=394856900]
+script = ExtResource("1_5kqhf")
