@@ -25,7 +25,7 @@ agent_radius = 0.2
 script = ExtResource("1_wslke")
 
 [node name="Player" parent="." unique_id=1807533549 instance=ExtResource("1_paxxb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6710453, 8.1797695)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02267614, 0.23129535, 3.067041)
 
 [node name="Camera" parent="." unique_id=1114856204 node_paths=PackedStringArray("target", "env") instance=ExtResource("3_gldc4")]
 transform = Transform3D(1, 0, 0, 0, 0.92610127, 0.37727514, 0, -0.37727514, 0.92610127, 0.11177254, 5.2656074, 11.334476)
@@ -48,6 +48,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0065684, 1.1620398, -2.796
 
 [node name="DirectionalLight3D" parent="." unique_id=453814777 instance=ExtResource("6_2lpho")]
 transform = Transform3D(0.7477865, -0.30606925, 0.5891833, 0, 0.8874054, 0.46098986, -0.66393924, -0.344722, 0.6635898, 0, 4.439234, 0)
+visible = false
 light_energy = 4.647
 shadow_enabled = true
 
@@ -67,7 +68,7 @@ target = NodePath("../Player")
 environment = NodePath("../PathFinding/Environment")
 
 [node name="StartPosition" type="Marker3D" parent="." unique_id=1049031505]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2776556, 3.1439753)
 
 [node name="PauseMenu" parent="." unique_id=1122124873 instance=ExtResource("13_gw3fx")]
 layer = 2
