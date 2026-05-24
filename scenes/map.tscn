@@ -34,16 +34,16 @@ size = 4.277194
 target = NodePath("../Player")
 env = NodePath("../PathFinding/Environment")
 
-[node name="Collectible" parent="." unique_id=1709241768 instance=ExtResource("5_2lpho")]
+[node name="Collectible" parent="." unique_id=1709241768 groups=["collectible"] instance=ExtResource("5_2lpho")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.381952, 1.1620398, -2.796545)
 
-[node name="Collectible2" parent="." unique_id=487379545 instance=ExtResource("5_2lpho")]
+[node name="Collectible2" parent="." unique_id=487379545 groups=["collectible"] instance=ExtResource("5_2lpho")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.987978, 1.1620398, -2.796545)
 
-[node name="Collectible3" parent="." unique_id=1211090816 instance=ExtResource("5_2lpho")]
+[node name="Collectible3" parent="." unique_id=1211090816 groups=["collectible"] instance=ExtResource("5_2lpho")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9324207, 1.1620398, -2.796545)
 
-[node name="Collectible4" parent="." unique_id=715397446 instance=ExtResource("5_2lpho")]
+[node name="Collectible4" parent="." unique_id=715397446 groups=["collectible"] instance=ExtResource("5_2lpho")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0065684, 1.1620398, -2.796545)
 
 [node name="DirectionalLight3D" parent="." unique_id=453814777 instance=ExtResource("6_2lpho")]
@@ -51,8 +51,7 @@ transform = Transform3D(0.7477865, -0.30606925, 0.5891833, 0, 0.8874054, 0.46098
 light_energy = 4.647
 shadow_enabled = true
 
-[node name="hideManager" parent="." unique_id=1758502476 node_paths=PackedStringArray("color_rect", "player", "camera") instance=ExtResource("4_0cso3")]
-color_rect = NodePath("")
+[node name="hideManager" parent="." unique_id=1758502476 node_paths=PackedStringArray("player", "camera") instance=ExtResource("4_0cso3")]
 player = NodePath("../Player")
 camera = NodePath("../Camera")
 
