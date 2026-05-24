@@ -1,0 +1,211 @@
+[gd_scene format=3 uid="uid://cvt10ps3h5ei0"]
+
+[ext_resource type="Script" uid="uid://dxhq8c5bn56lq" path="res://scripts/sound/sound_slider.gd" id="1_l4ffv"]
+[ext_resource type="Script" uid="uid://c8t10bbarleeg" path="res://scripts/ui/check_button.gd" id="2_hhwow"]
+[ext_resource type="Script" uid="uid://ceh25go0d3u" path="res://scenes/ui/keybind.gd" id="3_wby6m"]
+
+[node name="Options" type="VBoxContainer" unique_id=1493536454]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -212.75
+offset_top = -206.0
+offset_right = 212.75
+offset_bottom = 206.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleLabel" type="Label" parent="." unique_id=1013617906]
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "OPTIONS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Space" type="Label" parent="." unique_id=631762441]
+layout_mode = 2
+
+[node name="Volume" type="Label" parent="." unique_id=1025362422]
+layout_mode = 2
+text = "Volume"
+
+[node name="SoundContainer" type="HBoxContainer" parent="." unique_id=622757173]
+layout_mode = 2
+theme_override_constants/separation = 57
+alignment = 1
+
+[node name="LabelVolume" type="VBoxContainer" parent="SoundContainer" unique_id=1577027464]
+layout_mode = 2
+alignment = 1
+
+[node name="MasterSoundLabel" type="Label" parent="SoundContainer/LabelVolume" unique_id=318112772]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "General :"
+horizontal_alignment = 2
+
+[node name="MusicSoundLabel" type="Label" parent="SoundContainer/LabelVolume" unique_id=1619369908]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Music :"
+horizontal_alignment = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SoundContainer" unique_id=1778815028]
+layout_mode = 2
+alignment = 1
+
+[node name="MasterSoundSlider" type="HSlider" parent="SoundContainer/VBoxContainer" unique_id=90946681]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("1_l4ffv")
+audio_bus_name = "Music"
+
+[node name="MusicSoundSlider" type="HSlider" parent="SoundContainer/VBoxContainer" unique_id=1841615886]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("1_l4ffv")
+audio_bus_name = "Master"
+
+[node name="MusicSoundContainer2" type="HBoxContainer" parent="." unique_id=11414132]
+layout_mode = 2
+theme_override_constants/separation = 57
+alignment = 1
+
+[node name="Display" type="Label" parent="." unique_id=438439703]
+layout_mode = 2
+text = "
+Display"
+
+[node name="SoundContainer2" type="HBoxContainer" parent="." unique_id=1160414015]
+layout_mode = 2
+theme_override_constants/separation = 57
+alignment = 1
+
+[node name="LabelVolume" type="VBoxContainer" parent="SoundContainer2" unique_id=1379603491]
+layout_mode = 2
+alignment = 1
+
+[node name="FullscreenLabel" type="Label" parent="SoundContainer2/LabelVolume" unique_id=1230166198]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Fullscreen :"
+horizontal_alignment = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SoundContainer2" unique_id=1914807200]
+layout_mode = 2
+alignment = 1
+
+[node name="CheckButton" type="CheckButton" parent="SoundContainer2/VBoxContainer" unique_id=715534132]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+button_pressed = true
+script = ExtResource("2_hhwow")
+
+[node name="Keybind" type="Label" parent="." unique_id=2038828624]
+layout_mode = 2
+text = "
+Keybind"
+
+[node name="LabelVolume" type="VBoxContainer" parent="." unique_id=271091215]
+layout_mode = 2
+alignment = 1
+
+[node name="Keybind" type="HBoxContainer" parent="LabelVolume" unique_id=610331147 groups=["hotkey_button"]]
+layout_mode = 2
+theme_override_constants/separation = 57
+script = ExtResource("3_wby6m")
+
+[node name="Label" type="Label" parent="LabelVolume/Keybind" unique_id=584645288]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Forward :"
+horizontal_alignment = 2
+
+[node name="Button" type="Button" parent="LabelVolume/Keybind" unique_id=215196038]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+toggle_mode = true
+text = "Z"
+
+[node name="Keybind2" type="HBoxContainer" parent="LabelVolume" unique_id=1948641779 groups=["hotkey_button"]]
+layout_mode = 2
+theme_override_constants/separation = 57
+script = ExtResource("3_wby6m")
+action_name = "move_backward"
+
+[node name="Label" type="Label" parent="LabelVolume/Keybind2" unique_id=973597152]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Backward :"
+horizontal_alignment = 2
+
+[node name="Button" type="Button" parent="LabelVolume/Keybind2" unique_id=504503119]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+toggle_mode = true
+text = "S"
+
+[node name="Keybind3" type="HBoxContainer" parent="LabelVolume" unique_id=1167149736 groups=["hotkey_button"]]
+layout_mode = 2
+theme_override_constants/separation = 57
+script = ExtResource("3_wby6m")
+action_name = "move_left"
+
+[node name="Label" type="Label" parent="LabelVolume/Keybind3" unique_id=122061504]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Left :"
+horizontal_alignment = 2
+
+[node name="Button" type="Button" parent="LabelVolume/Keybind3" unique_id=937587485]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+toggle_mode = true
+text = "A"
+
+[node name="Keybind4" type="HBoxContainer" parent="LabelVolume" unique_id=1056335686 groups=["hotkey_button"]]
+layout_mode = 2
+theme_override_constants/separation = 57
+script = ExtResource("3_wby6m")
+action_name = "move_right"
+
+[node name="Label" type="Label" parent="LabelVolume/Keybind4" unique_id=1729681991]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Right :"
+horizontal_alignment = 2
+
+[node name="Button" type="Button" parent="LabelVolume/Keybind4" unique_id=1973444249]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+toggle_mode = true
+text = "D"
+
+[connection signal="value_changed" from="SoundContainer/VBoxContainer/MasterSoundSlider" to="SoundContainer/VBoxContainer/MasterSoundSlider" method="_on_value_changed"]
+[connection signal="value_changed" from="SoundContainer/VBoxContainer/MusicSoundSlider" to="SoundContainer/VBoxContainer/MusicSoundSlider" method="_on_value_changed"]
+[connection signal="toggled" from="SoundContainer2/VBoxContainer/CheckButton" to="SoundContainer2/VBoxContainer/CheckButton" method="_on_toggled"]
+[connection signal="pressed" from="LabelVolume/Keybind/Button" to="LabelVolume/Keybind" method="_on_button_pressed"]
+[connection signal="toggled" from="LabelVolume/Keybind/Button" to="LabelVolume/Keybind" method="_on_button_toggled"]
+[connection signal="pressed" from="LabelVolume/Keybind2/Button" to="LabelVolume/Keybind2" method="_on_button_pressed"]
+[connection signal="toggled" from="LabelVolume/Keybind2/Button" to="LabelVolume/Keybind2" method="_on_button_toggled"]
+[connection signal="pressed" from="LabelVolume/Keybind3/Button" to="LabelVolume/Keybind3" method="_on_button_pressed"]
+[connection signal="toggled" from="LabelVolume/Keybind3/Button" to="LabelVolume/Keybind3" method="_on_button_toggled"]
+[connection signal="pressed" from="LabelVolume/Keybind4/Button" to="LabelVolume/Keybind4" method="_on_button_pressed"]
+[connection signal="toggled" from="LabelVolume/Keybind4/Button" to="LabelVolume/Keybind4" method="_on_button_toggled"]
