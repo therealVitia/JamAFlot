@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://qybsspqidml1"]
+
+[node name="Label3D" type="Label3D" unique_id=426257219]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.016164541, 0)
+text = "Test"

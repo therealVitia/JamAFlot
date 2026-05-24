@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://b8w2m1utlbyp1"]
+
+[ext_resource type="Script" uid="uid://dj6cgyrtfq0u7" path="res://scripts/swap_world.gd" id="1_e1470"]
+[ext_resource type="PackedScene" uid="uid://cuu2jaukol7pe" path="res://assets/StaticMeshes/Accessoirs/SM_BouteilleSombre.fbx" id="2_e1470"]
+[ext_resource type="PackedScene" uid="uid://b1vn6hwhua3o0" path="res://assets/StaticMeshes/Accessoirs/SM_BouteilleRose.fbx" id="3_r5lcw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lk3f2"]
+size = Vector3(1.5645142, 1.7695313, 3.5699463)
+
+[node name="Canape" type="StaticBody3D" unique_id=1681190710]
+transform = Transform3D(1.4949996, -2.0204425e-09, 0, 2.6820999e-09, 1.4949993, 5.820766e-11, -1.3969839e-09, 1.1641532e-10, 1.495, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1415376956]
+transform = Transform3D(0.21797343, 6.436174e-09, -2.176958e-09, 6.231886e-09, 0.22528118, 1.1061748e-12, -6.242358e-09, 2.5570537e-10, 0.076015934, 0.00826019, 0.22713022, 0.0012386652)
+shape = SubResource("BoxShape3D_lk3f2")
+
+[node name="Canape" type="Node3D" parent="." unique_id=1441938802]
+script = ExtResource("1_e1470")
+
+[node name="SM_BouteilleSombre" parent="Canape" unique_id=959928696 instance=ExtResource("2_e1470")]
+
+[node name="SM_BouteilleRose" parent="Canape" unique_id=918980519 instance=ExtResource("3_r5lcw")]
