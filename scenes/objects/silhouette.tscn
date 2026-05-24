@@ -33,7 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://dimv2knfyg1vj" path="res://assets/NPCshadow/NPC ombres_0013.png" id="16_imaac"]
 [ext_resource type="Texture2D" uid="uid://c6n5ttxeuts6h" path="res://assets/npc4/NPC_4_0000.png" id="17_olkn4"]
 [ext_resource type="Texture2D" uid="uid://cw4dpttsc5s3a" path="res://assets/NPCshadow/NPC ombres_0012.png" id="17_ooly1"]
-[ext_resource type="PackedScene" uid="uid://qybsspqidml1" path="res://scenes/ui/speech_bubble.tscn" id="34_uhdhe"]
+[ext_resource type="PackedScene" path="res://scenes/ui/speech_bubble.tscn" id="34_uhdhe"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_oddtq"]
 animations = [{
