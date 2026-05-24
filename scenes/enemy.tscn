@@ -1,18 +1,120 @@
 [gd_scene format=3 uid="uid://8hjwhnb0l4sv"]
 
-[ext_resource type="Texture2D" uid="uid://bef2s6ct3plih" path="res://icon.svg" id="2_md0e3"]
+[ext_resource type="Texture2D" uid="uid://c8bo72nxpoj83" path="res://resources/fakeshadow/Ombre_0001.png" id="1_g0wcc"]
+[ext_resource type="Texture2D" uid="uid://ck2rh2pppshh1" path="res://resources/fakeshadow/Ombre_0002.png" id="2_s1ycm"]
+[ext_resource type="Texture2D" uid="uid://bkmgxxxpe6ifg" path="res://resources/fakeshadow/Ombre_0003.png" id="3_shcg2"]
+[ext_resource type="Texture2D" uid="uid://bbsd5mpdapt4a" path="res://resources/fakeshadow/Ombre_0004.png" id="4_ile5s"]
+[ext_resource type="Texture2D" uid="uid://bbcqbma8rv2tc" path="res://resources/fakeshadow/Ombre_0005.png" id="5_1x4g4"]
+[ext_resource type="Texture2D" uid="uid://7nyrd0uu0tvs" path="res://resources/fakeshadow/Ombre_0006.png" id="6_2pwtc"]
+[ext_resource type="Texture2D" uid="uid://bx85htkfd3qdc" path="res://resources/fakeshadow/Ombre_0007.png" id="7_rogs8"]
+[ext_resource type="Texture2D" uid="uid://bwuur6balgmds" path="res://resources/fakeshadow/Ombre_0008.png" id="8_wrm80"]
+[ext_resource type="Texture2D" uid="uid://xkacvftw4dw4" path="res://resources/fakeshadow/Ombre_0010.png" id="9_6awcb"]
+[ext_resource type="Texture2D" uid="uid://c1dfvftv6dwg1" path="res://resources/fakeshadow/Ombre_0011.png" id="10_wjec0"]
+[ext_resource type="Texture2D" uid="uid://beaqeedmoapj3" path="res://resources/fakeshadow/Ombre_0012.png" id="11_i4rgx"]
+[ext_resource type="Texture2D" uid="uid://dh4l0h1brvlv1" path="res://resources/fakeshadow/Ombre_0013.png" id="12_2mchx"]
+[ext_resource type="Texture2D" uid="uid://bn3jhlkyjqt3c" path="res://resources/fakeshadow/Ombre_0014.png" id="13_t3vcr"]
+[ext_resource type="Texture2D" uid="uid://cv05grgqkndkj" path="res://resources/fakeshadow/Ombre_0015.png" id="14_qaulx"]
+[ext_resource type="Texture2D" uid="uid://cmu7ls4dl8ug0" path="res://resources/fakeshadow/Ombre_0016.png" id="15_1f82d"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7p1mj"]
 radius = 0.6386719
 height = 2.595314
 
-[node name="Enemy" type="CharacterBody3D" unique_id=1062593944]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lioqc"]
+albedo_color = Color(0, 0, 0, 0.5882353)
 
-[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1890613078]
-texture = ExtResource("2_md0e3")
+[sub_resource type="CylinderMesh" id="CylinderMesh_0lg75"]
+material = SubResource("StandardMaterial3D_lioqc")
+height = 0.02
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lsnsy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_g0wcc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_s1ycm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_shcg2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ile5s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1x4g4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2pwtc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_rogs8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_wrm80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_wrm80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_6awcb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_wjec0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_i4rgx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_2mchx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_t3vcr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_qaulx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_1f82d")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Enemy" type="CharacterBody3D" unique_id=1062593944]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=325164495]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6849556, 0)
 shape = SubResource("CapsuleShape3D_7p1mj")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1608599799]
+
+[node name="HardShadow" type="MeshInstance3D" parent="." unique_id=937177905]
+visible = false
+mesh = SubResource("CylinderMesh_0lg75")
+
+[node name="fakeShadow" type="AnimatedSprite3D" parent="." unique_id=654573502]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.10788202, 0.9210067, 0)
+visible = false
+sprite_frames = SubResource("SpriteFrames_lsnsy")
+frame_progress = 0.5022461
+speed_scale = 2.0
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=87996242]
+visible = false
+
+[node name="realShadow" type="AnimatedSprite3D" parent="." unique_id=708039542]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.108888984, 1.0523224, 0)
+visible = false
+sprite_frames = SubResource("SpriteFrames_lsnsy")
+frame_progress = 0.9054014
+speed_scale = 2.0
+
+[node name="littleStep" type="AnimatedSprite3D" parent="." unique_id=861353847]
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, -0.012966275, 0.7277093, 0)
+visible = false
+sprite_frames = SubResource("SpriteFrames_lsnsy")
+frame_progress = 0.9054014
+speed_scale = 2.0
