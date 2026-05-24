@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://61pn36j0aol"]
 
+[ext_resource type="Script" uid="uid://dj6cgyrtfq0u7" path="res://scripts/swap_world.gd" id="1_b22u5"]
 [ext_resource type="PackedScene" uid="uid://5vflrjdnbl2a" path="res://assets/StaticMeshes/Mobilier/Lit.fbx" id="1_nhebn"]
 [ext_resource type="PackedScene" uid="uid://g517ao0p522h" path="res://assets/StaticMeshes/Mobilier/LitSombre.fbx" id="2_b22u5"]
 
@@ -8,13 +9,13 @@ size = Vector3(5.2966614, 2.1518555, 4.319336)
 
 [node name="Lit" type="StaticBody3D" unique_id=748282708]
 transform = Transform3D(0.9999996, -7.3725914e-11, -1.6298145e-09, 2.2853897e-09, 0.9999996, 1.4551915e-10, 0, 4.3655746e-11, 0.9999996, 0, 0, 0)
+script = ExtResource("1_b22u5")
 
-[node name="LitMesh" parent="." unique_id=2046224717 instance=ExtResource("1_nhebn")]
+[node name="MeshImagine" parent="." unique_id=367278043 instance=ExtResource("2_b22u5")]
+transform = Transform3D(-1.2990001, 1.9929304e-10, 1.7415734e-07, -4.848742e-11, 1.25, -2.910383e-11, -1.1362136e-07, 2.910383e-11, -1.9850003, 0, 0, 0)
+
+[node name="MeshWorld" parent="." unique_id=2046224717 instance=ExtResource("1_nhebn")]
 transform = Transform3D(-1.2990552, 0, 1.7351074e-07, 0, 1.250058, 0, -1.1356701e-07, 0, -1.9847316, 0, 0, 0)
-visible = false
-
-[node name="LitSombre" parent="." unique_id=367278043 instance=ExtResource("2_b22u5")]
-transform = Transform3D(-1.2990001, 1.9929303e-10, 1.7415732e-07, -4.8487436e-11, 1.2499999, -2.910383e-11, -1.13621354e-07, 2.910383e-11, -1.9850001, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1267228949]
 transform = Transform3D(1.0000095, 8.564177e-08, -8.568168e-08, 5.0836775e-09, 1, -1.4551915e-11, -1.2805685e-08, 8.527422e-09, 1, 0.05100012, 0.8771973, 4.7683716e-07)

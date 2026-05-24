@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://d155u3vfx7ukg" path="res://scenes/objects/pot_champi.tscn" id="11_dmsi2"]
 [ext_resource type="PackedScene" uid="uid://c4dchat426b1p" path="res://scenes/objects/pot_deux_boules.tscn" id="12_ofm7x"]
 [ext_resource type="PackedScene" uid="uid://dvyxmuxhdjfey" path="res://scenes/objects/pot_cactus.tscn" id="13_80s2q"]
+[ext_resource type="Script" uid="uid://baoi0agyicm3i" path="res://scripts/canvas_layer.gd" id="13_yyxhd"]
 [ext_resource type="Shader" uid="uid://cxo1rsfua8gjb" path="res://addons/postfx/shaders/dither.gdshader" id="14_yyxhd"]
 
 [sub_resource type="Environment" id="Environment_y44tv"]
@@ -92,45 +93,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 11)
 [node name="LimitRight" type="Marker3D" parent="." unique_id=804357763]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 11)
 
-[node name="Silhouette9" parent="." unique_id=602552750 instance=ExtResource("4_hlc4h")]
-transform = Transform3D(0.97137725, -1.2771579e-09, -7.450581e-09, 1.1790405e-08, 0.97137725, 2.764864e-10, -3.958121e-09, 5.820766e-11, 0.9713761, 27.32859, 1.6556801, -1.8745288)
-
-[node name="Silhouette10" parent="." unique_id=1140421442 instance=ExtResource("4_hlc4h")]
-transform = Transform3D(0.91656566, -1.0631766e-08, -2.2817403e-08, 3.3163985e-08, 0.91656643, 6.1118044e-10, -1.7462298e-08, 3.2014214e-10, 0.9165607, 23.628729, 1.5441438, -0.50302076)
-
-[node name="Silhouette10" parent="Silhouette10" unique_id=494274562 instance=ExtResource("4_hlc4h")]
-transform = Transform3D(0.9165653, -1.074261e-08, -2.3748726e-08, 3.2575542e-08, 0.91656655, 6.4028427e-10, -1.4901161e-08, 2.764864e-10, 0.9165607, -5.2396812, -0.14310896, 2.2302554)
-
-[node name="Silhouette10" parent="Silhouette10/Silhouette10" unique_id=361861284 instance=ExtResource("4_hlc4h")]
-transform = Transform3D(0.91656554, -1.0852773e-08, -2.3981556e-08, 3.175421e-08, 0.9165671, 6.8394e-10, -1.6763806e-08, 2.1827873e-10, 0.91656035, 1.0530949, -0.13006818, 1.8986706)
-
-[node name="Silhouette8" parent="." unique_id=1020653245 instance=ExtResource("4_hlc4h")]
-transform = Transform3D(0.9573745, -6.6730195e-09, -1.21071935e-08, 1.6404783e-08, 0.9573749, 3.0559022e-10, -6.2864274e-09, 1.891749e-10, 0.957372, 26.47293, 1.483038, -0.29240158)
-
-[node name="Silhouette5" parent="." unique_id=258864791 instance=ExtResource("4_hlc4h")]
-transform = Transform3D(0.9855853, 5.3449867e-10, -5.122274e-09, 6.3851644e-09, 0.9855849, 2.0372681e-10, -2.0954758e-09, 1.1641532e-10, 0.9855843, 22.812124, 1.5009294, -2.295886)
-
-[node name="Silhouette4" parent="." unique_id=114264773 instance=ExtResource("4_hlc4h")]
-transform = Transform3D(0.98558486, -1.6422064e-10, -3.259629e-09, 5.919219e-09, 0.9855849, 1.4551915e-10, -2.3283064e-09, 5.820766e-11, 0.9855845, 26.616756, 1.4456674, -3.5288448)
-
-[node name="Silhouette3" parent="." unique_id=1536247272 instance=ExtResource("4_hlc4h")]
-transform = Transform3D(0.98558444, -1.5613182e-09, -3.259629e-09, 5.9189915e-09, 0.9855849, 2.3283064e-10, -1.8626451e-09, 2.910383e-11, 0.9855843, 23.584415, 1.3777801, -3.6749249)
-
-[node name="Silhouette7" parent="." unique_id=335703074 instance=ExtResource("4_hlc4h")]
-transform = Transform3D(0.98558533, -8.6254204e-10, -2.7939677e-09, 2.8930458e-09, 0.9855852, 1.0186341e-10, -4.656613e-10, 5.820766e-11, 0.9855851, 8.811726, 1.537093, 3.57871)
-
-[node name="Silhouette" parent="Silhouette7" unique_id=1053018648 instance=ExtResource("4_hlc4h")]
-transform = Transform3D(1.0000001, 3.9244696e-10, -4.656613e-10, 1.8991386e-10, 1, 0, -4.656613e-10, 4.3655746e-11, 1, -0.3776474, 0.06284714, -1.483448)
-
-[node name="Silhouette6" parent="." unique_id=1419316198 instance=ExtResource("4_hlc4h")]
-transform = Transform3D(0.98558474, -1.5612613e-09, -2.7939677e-09, 4.755236e-09, 0.9855849, 2.4738256e-10, -6.9849193e-10, 4.3655746e-11, 0.9855846, 25.18325, 1.4856725, -4.517721)
-
-[node name="Silhouette" parent="." unique_id=607594126 instance=ExtResource("4_hlc4h")]
-transform = Transform3D(0.9855853, -1.0954864e-09, -1.8626451e-09, 2.6602152e-09, 0.9855852, 1.3096724e-10, -2.3283064e-10, 2.910383e-11, 0.98558515, 7.0520315, 1.4716805, 2.4181545)
-
-[node name="Silhouette2" parent="." unique_id=1801966865 instance=ExtResource("4_hlc4h")]
-transform = Transform3D(0.99999964, -7.3725914e-11, -1.3969839e-09, 2.052559e-09, 0.99999964, 1.3096724e-10, 0, 2.910383e-11, 0.99999964, 7.5139647, 1.5643481, 0.9234288)
-
 [node name="Wall2" parent="." unique_id=1557850575 instance=ExtResource("6_yw8f4")]
 transform = Transform3D(-0.18660067, -0.0034585288, 0.99827117, 0.0005814794, 1.9140791, 0.00224817, -4.666375, 0.021467578, -0.05998374, -7.9399314, 1.4817824, -0.25631943)
 
@@ -164,6 +126,58 @@ transform = Transform3D(1.9157274, -0.0006408152, 0.003790913, 0.0039863954, 0.3
 
 [node name="Wall7" parent="." unique_id=1492401203 instance=ExtResource("6_yw8f4")]
 transform = Transform3D(-0.010053902, -0.0007369082, 0.9685726, 0.00015845663, 0.28805363, 0.002067662, -1.2541133, 0.0039026106, -0.013404647, 7.979322, 0.39553964, 6.641228)
+
+[node name="npc" type="Node3D" parent="." unique_id=1017048332]
+transform = Transform3D(0.99999994, -7.361223e-11, -2.3283064e-10, 1.9014124e-10, 0.99999994, 1.4551915e-11, 0, 0, 0.99999994, 0, 0, 0)
+
+[node name="Silhouette9" parent="npc" unique_id=602552750 instance=ExtResource("4_hlc4h")]
+transform = Transform3D(0.9713772, -1.5100454e-09, -7.916242e-09, 1.2023236e-08, 0.9713772, 2.764864e-10, -3.958121e-09, 7.2759576e-11, 0.971376, 27.328588, 1.6556798, -1.8745286)
+type_shape = 1
+
+[node name="Silhouette10" parent="npc" unique_id=1140421442 instance=ExtResource("4_hlc4h")]
+transform = Transform3D(0.9165656, -1.06318225e-08, -2.3050234e-08, 3.3280344e-08, 0.9165664, 6.1118044e-10, -1.7695129e-08, 3.2014214e-10, 0.9165606, 23.628727, 1.5441436, -0.5030207)
+type_shape = 2
+
+[node name="Silhouette10" parent="npc/Silhouette10" unique_id=494274562 instance=ExtResource("4_hlc4h")]
+transform = Transform3D(0.9165653, -1.074261e-08, -2.3748726e-08, 3.2575542e-08, 0.91656655, 6.4028427e-10, -1.4901161e-08, 2.764864e-10, 0.9165607, -5.2396812, -0.14310896, 2.2302554)
+
+[node name="Silhouette10" parent="npc/Silhouette10/Silhouette10" unique_id=361861284 instance=ExtResource("4_hlc4h")]
+transform = Transform3D(0.91656554, -1.0852773e-08, -2.3981556e-08, 3.175421e-08, 0.9165671, 6.8394e-10, -1.6763806e-08, 2.1827873e-10, 0.91656035, 1.0530949, -0.13006818, 1.8986706)
+
+[node name="Silhouette8" parent="npc" unique_id=1020653245 instance=ExtResource("4_hlc4h")]
+transform = Transform3D(0.9573745, -7.1386808e-09, -1.2340024e-08, 1.6404783e-08, 0.9573749, 3.0559022e-10, -6.2864274e-09, 1.891749e-10, 0.9573719, 26.472929, 1.4830377, -0.29240155)
+type_shape = 3
+
+[node name="Silhouette5" parent="npc" unique_id=258864791 instance=ExtResource("4_hlc4h")]
+transform = Transform3D(0.9855852, 3.0166802e-10, -5.355105e-09, 6.3851644e-09, 0.9855849, 2.1827873e-10, -2.0954758e-09, 1.1641532e-10, 0.98558426, 22.81212, 1.5009292, -2.295886)
+type_shape = 4
+
+[node name="Silhouette4" parent="npc" unique_id=114264773 instance=ExtResource("4_hlc4h")]
+transform = Transform3D(0.9855848, -3.9705128e-10, -3.259629e-09, 5.919162e-09, 0.9855849, 1.6007107e-10, -2.3283064e-09, 5.820766e-11, 0.98558444, 26.616753, 1.4456673, -3.5288444)
+type_shape = 1
+
+[node name="Silhouette3" parent="npc" unique_id=1536247272 instance=ExtResource("4_hlc4h")]
+transform = Transform3D(0.9855844, -1.7941488e-09, -3.4924597e-09, 5.9189347e-09, 0.9855849, 2.4738256e-10, -1.8626451e-09, 2.910383e-11, 0.98558426, 23.584412, 1.37778, -3.6749246)
+type_shape = 2
+
+[node name="Silhouette7" parent="npc" unique_id=335703074 instance=ExtResource("4_hlc4h")]
+transform = Transform3D(0.9855853, -1.0953727e-09, -3.0267984e-09, 2.8930458e-09, 0.9855852, 1.0186341e-10, -4.656613e-10, 5.820766e-11, 0.98558503, 8.811725, 1.5370928, 3.5787098)
+type_shape = 3
+
+[node name="Silhouette" parent="npc/Silhouette7" unique_id=1053018648 instance=ExtResource("4_hlc4h")]
+transform = Transform3D(1.0000001, 3.9244696e-10, -4.656613e-10, 1.8991386e-10, 1, 0, -4.656613e-10, 4.3655746e-11, 1, -0.3776474, 0.06284714, -1.483448)
+
+[node name="Silhouette6" parent="npc" unique_id=1419316198 instance=ExtResource("4_hlc4h")]
+transform = Transform3D(0.9855847, -1.794092e-09, -2.7939677e-09, 4.7551794e-09, 0.9855849, 2.6193447e-10, -6.9849193e-10, 4.3655746e-11, 0.98558456, 25.183249, 1.4856724, -4.517721)
+type_shape = 4
+
+[node name="Silhouette" parent="npc" unique_id=607594126 instance=ExtResource("4_hlc4h")]
+transform = Transform3D(0.9855852, -1.328317e-09, -2.0954758e-09, 2.6602152e-09, 0.9855852, 1.3096724e-10, -2.3283064e-10, 2.910383e-11, 0.9855851, 7.052031, 1.4716805, 2.4181542)
+type_shape = 1
+
+[node name="Silhouette2" parent="npc" unique_id=1801966865 instance=ExtResource("4_hlc4h")]
+transform = Transform3D(0.9999996, -7.3725914e-11, -1.6298145e-09, 2.2853897e-09, 0.9999996, 1.4551915e-10, 0, 4.3655746e-11, 0.9999996, 7.5139647, 1.564348, 0.92342865)
+type_shape = 2
 
 [node name="Plant6" parent="." unique_id=1714886858 instance=ExtResource("9_a3oai")]
 transform = Transform3D(0.60165656, -0.0011885572, 0.0024120423, 0.0012519724, 0.5710016, 0.00011492188, -0.0022810767, -9.862394e-05, 0.6362629, 30.756191, 1.2862504, -5.529487)
@@ -221,6 +235,7 @@ transform = Transform3D(0.99999976, -1.3541808e-09, 1.379415e-19, 1.3541808e-09,
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=429751564]
 transform = Transform3D(0.99985427, 0.016598225, 0.0039644977, -0.0170602, 0.9666415, 0.25556397, 0.00040965877, -0.2555944, 0.96678394, 0.8330617, 4.246221, 9.867719)
 light_color = Color(0.87600714, 0.8760071, 0, 1)
+transform = Transform3D(0.9999786, -0.0013701357, -0.0063978992, 0.0061329207, -0.14443764, 0.9894948, -0.0022798409, -0.98951286, -0.14442617, -4.613254, 7.7056704, 4.1000295)
 light_energy = 1.5
 light_indirect_energy = 1.6
 shadow_enabled = true
@@ -255,6 +270,7 @@ spot_angle_attenuation = 9.189583
 
 [node name="Postprocessing" type="CanvasLayer" parent="." unique_id=1523721853]
 visible = false
+script = ExtResource("13_yyxhd")
 
 [node name="ColorRect" type="ColorRect" parent="Postprocessing" unique_id=582895576]
 visible = false

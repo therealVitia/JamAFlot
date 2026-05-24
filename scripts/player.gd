@@ -5,7 +5,7 @@ signal hit
 
 @onready var sprite: AnimatedSprite3D = $AnimatedSprite3D
 const grav = -9.81
-const SPEED = 5.0
+const SPEED = 3.0
 const JUMP_VELOCITY = 4.5
 
 func _ready() -> void:
@@ -24,7 +24,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
-		sprite.pause()
+		sprite.play("idle")
 	
 	if direction.x != 0:
 		sprite.flip_h = direction.x < 0
