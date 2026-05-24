@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cb0ur3vdf28xq"]
+
+[ext_resource type="Texture2D" path="./icon.svg" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://b3se0ako6c2sq" path="res://scripts/player.gd" id="1_g2els"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u8vuu"]
+size = Vector3(1.2697172, 1.2597046, 0.36157227)
+
+[node name="Player" type="CharacterBody3D" unique_id=1807533549]
+axis_lock_angular_x = true
+axis_lock_angular_z = true
+script = ExtResource("1_g2els")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1248617402]
+texture = ExtResource("1_3vyb7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1948726737]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1402576687]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0068650097, 0.0018615723, 0.01965332)
+shape = SubResource("BoxShape3D_u8vuu")

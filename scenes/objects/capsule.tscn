@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://k4xp2mjvgsc"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_c054p"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_lwvlf"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_45sre"]
+vertex_color_is_srgb = true
+albedo_color = Color(0.5110552, 0.33930007, 0.89999086, 1)
+
+[node name="Capsule" type="Node3D" unique_id=1429289837]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1856903893]
+shape = SubResource("CapsuleShape3D_c054p")
+debug_color = Color(0.6414157, 0.9551099, 0.8644037, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1848821552]
+mesh = SubResource("CapsuleMesh_lwvlf")
+surface_material_override/0 = SubResource("ORMMaterial3D_45sre")

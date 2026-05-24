@@ -1,0 +1,160 @@
+[gd_scene format=3 uid="uid://cb0ur3vdf28xq"]
+
+[ext_resource type="Script" uid="uid://b3se0ako6c2sq" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://ltjxefercdn5" path="res://assets/AnimSprites/Walk/Marche_0001.png" id="2_bf480"]
+[ext_resource type="Texture2D" uid="uid://cmu7ls4dl8ug0" path="res://resources/fakeshadow/Ombre_0016.png" id="2_qfm1y"]
+[ext_resource type="Texture2D" uid="uid://cv05grgqkndkj" path="res://resources/fakeshadow/Ombre_0015.png" id="3_fulsm"]
+[ext_resource type="Texture2D" uid="uid://wuudgndauvq6" path="res://assets/AnimSprites/Walk/Marche_0002.png" id="3_n0i7u"]
+[ext_resource type="Texture2D" uid="uid://bn3jhlkyjqt3c" path="res://resources/fakeshadow/Ombre_0014.png" id="4_4r5pv"]
+[ext_resource type="Texture2D" uid="uid://caw73fm14u754" path="res://assets/AnimSprites/Walk/Marche_0003.png" id="4_td1c5"]
+[ext_resource type="Texture2D" uid="uid://dh4l0h1brvlv1" path="res://resources/fakeshadow/Ombre_0013.png" id="5_60mlk"]
+[ext_resource type="Texture2D" uid="uid://cyac1l8c1iu76" path="res://assets/AnimSprites/Walk/Marche_0004.png" id="5_ey67o"]
+[ext_resource type="Texture2D" uid="uid://brty8nb7j4e2v" path="res://assets/AnimSprites/Walk/Marche_0005.png" id="6_e5w1o"]
+[ext_resource type="Texture2D" uid="uid://beaqeedmoapj3" path="res://resources/fakeshadow/Ombre_0012.png" id="6_i4ail"]
+[ext_resource type="Texture2D" uid="uid://c1dfvftv6dwg1" path="res://resources/fakeshadow/Ombre_0011.png" id="7_a38lo"]
+[ext_resource type="Texture2D" uid="uid://bybkyudirot4k" path="res://assets/AnimSprites/Walk/Marche_0006.png" id="7_menp8"]
+[ext_resource type="Texture2D" uid="uid://xkacvftw4dw4" path="res://resources/fakeshadow/Ombre_0010.png" id="8_4ni07"]
+[ext_resource type="Texture2D" uid="uid://co5fnnvvdrgyt" path="res://assets/AnimSprites/Walk/Marche_0007.png" id="8_345cn"]
+[ext_resource type="Texture2D" uid="uid://bq41mywwqnq0n" path="res://resources/fakeshadow/Ombre_0009.png" id="9_l71n6"]
+[ext_resource type="Texture2D" uid="uid://dvnb7gj6p2to8" path="res://assets/AnimSprites/Walk/Marche_0008.png" id="9_rcmex"]
+[ext_resource type="Texture2D" uid="uid://bwuur6balgmds" path="res://resources/fakeshadow/Ombre_0008.png" id="10_ke2ow"]
+[ext_resource type="Texture2D" uid="uid://bx85htkfd3qdc" path="res://resources/fakeshadow/Ombre_0007.png" id="11_ujl30"]
+[ext_resource type="Texture2D" uid="uid://7nyrd0uu0tvs" path="res://resources/fakeshadow/Ombre_0006.png" id="12_31cv2"]
+[ext_resource type="Texture2D" uid="uid://bbcqbma8rv2tc" path="res://resources/fakeshadow/Ombre_0005.png" id="13_pf23h"]
+[ext_resource type="Texture2D" uid="uid://bbsd5mpdapt4a" path="res://resources/fakeshadow/Ombre_0004.png" id="14_dt7fs"]
+[ext_resource type="Texture2D" uid="uid://bkmgxxxpe6ifg" path="res://resources/fakeshadow/Ombre_0003.png" id="15_wqfne"]
+[ext_resource type="Texture2D" uid="uid://ck2rh2pppshh1" path="res://resources/fakeshadow/Ombre_0002.png" id="16_wnwbv"]
+[ext_resource type="Texture2D" uid="uid://c8bo72nxpoj83" path="res://resources/fakeshadow/Ombre_0001.png" id="17_gl8cc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_md1ol"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("2_bf480")
+}, {
+"duration": 2.0,
+"texture": ExtResource("3_n0i7u")
+}, {
+"duration": 2.0,
+"texture": ExtResource("4_td1c5")
+}, {
+"duration": 2.0,
+"texture": ExtResource("5_ey67o")
+}, {
+"duration": 2.0,
+"texture": ExtResource("6_e5w1o")
+}, {
+"duration": 2.0,
+"texture": ExtResource("7_menp8")
+}, {
+"duration": 2.0,
+"texture": ExtResource("8_345cn")
+}, {
+"duration": 2.0,
+"texture": ExtResource("9_rcmex")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_gl8cc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_wnwbv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_wqfne")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_dt7fs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_pf23h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_31cv2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ujl30")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ke2ow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_l71n6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4ni07")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_a38lo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_i4ail")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_60mlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4r5pv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fulsm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_qfm1y")
+}],
+"loop": true,
+"name": &"enemy",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bf480"]
+radius = 0.42822266
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g2els"]
+size = Vector3(1.403, 2.4780273, 1.263208)
+
+[node name="Player" type="CharacterBody3D" unique_id=1807533549]
+axis_lock_angular_x = true
+axis_lock_angular_z = true
+script = ExtResource("1_g2els")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=759129]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.13990784, 0.9123713, -0.004543066)
+sprite_frames = SubResource("SpriteFrames_md1ol")
+animation = &"Walk"
+frame = 4
+frame_progress = 0.7032463
+speed_scale = 2.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1402576687]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0068650097, 0.71640015, 0.01965332)
+shape = SubResource("CapsuleShape3D_bf480")
+
+[node name="visibilityPoints" type="Node3D" parent="." unique_id=466537607]
+
+[node name="head" type="Marker3D" parent="visibilityPoints" unique_id=793826642]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.598862, 0)
+
+[node name="chest" type="Marker3D" parent="visibilityPoints" unique_id=1105968422]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.27269912, 0)
+
+[node name="feet" type="Marker3D" parent="visibilityPoints" unique_id=1354372695]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.6224295, 0)
+
+[node name="left" type="Marker3D" parent="visibilityPoints" unique_id=1058466620]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.60016, 0, 0)
+
+[node name="right" type="Marker3D" parent="visibilityPoints" unique_id=58850335]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.574396, 0, 0)
+
+[node name="DetectionZone" type="Area3D" parent="." unique_id=1722588231]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DetectionZone" unique_id=67293937]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.011077881, 0.7390137, 0.025036573)
+shape = SubResource("BoxShape3D_g2els")
+
+[connection signal="body_entered" from="DetectionZone" to="." method="_on_detection_zone_body_entered"]

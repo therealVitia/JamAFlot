@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dfkio0vgdlk05"]
+
+[ext_resource type="PackedScene" uid="uid://g517ao0p522h" path="res://assets/StaticMeshes/Mobilier/LitSombre.fbx" id="1_uabfh"]
+[ext_resource type="Material" uid="uid://bgydkevtpca8" path="res://addons/dither3d/materials/dither3d-cutout-default.tres" id="2_uabfh"]
+
+[node name="LitSombre" unique_id=367278043 instance=ExtResource("1_uabfh")]
+
+[node name="SM_LitSombre" parent="." index="0" unique_id=299779256]
+surface_material_override/1 = ExtResource("2_uabfh")
+surface_material_override/2 = ExtResource("2_uabfh")

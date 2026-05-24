@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://ct544gvy01nkd"]
+
+[ext_resource type="Script" uid="uid://bl4maggj1t623" path="res://scripts/collectible.gd" id="1_bkg8t"]
+[ext_resource type="Material" uid="uid://ic2frtbuhdgn" path="res://resources/particules_material_override.tres" id="2_1pg6c"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_bkg8t"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_ga2k0"]
+
+[node name="Collectible" type="Area3D" unique_id=1709241768]
+script = ExtResource("1_bkg8t")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=105071643]
+shape = SubResource("SphereShape3D_bkg8t")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=104502860]
+material_override = ExtResource("2_1pg6c")
+mesh = SubResource("SphereMesh_ga2k0")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
