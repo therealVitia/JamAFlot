@@ -55,10 +55,10 @@ axis_lock_angular_z = true
 script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=759129]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.13990784, 0.9123713, -0.004543066)
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.13990784, 1.6523246, -2.502731)
 sprite_frames = SubResource("SpriteFrames_md1ol")
 animation = &"walk"
-frame_progress = 0.55970746
+frame_progress = 0.92964035
 speed_scale = 2.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1402576687]
