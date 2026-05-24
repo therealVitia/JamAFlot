@@ -2,8 +2,6 @@
 
 [ext_resource type="Shader" uid="uid://jqrwa1d8fqbj" path="res://assets/shaders/BinbunGrass/src/shader/grass.gdshader" id="1_yhg1o"]
 [ext_resource type="Texture2D" uid="uid://di62ixsr75dl2" path="res://assets/shaders/BinbunGrass/src/palette/palette_01.tres" id="2_yhg1o"]
-[ext_resource type="Texture2D" uid="uid://dv6g2qxppq3ec" path="res://assets/shaders/BinbunGrass/src/texture/basic/grass_basic_atlas.png" id="3_2tyb0"]
-[ext_resource type="Texture2D" uid="uid://bqe52kvd1l838" path="res://assets/shaders/BinbunGrass/src/texture/basic/grass_basic_01.png" id="4_xnspy"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_1bvp3"]
 seed = 6
@@ -13,6 +11,12 @@ frequency = 0.008
 noise = SubResource("FastNoiseLite_1bvp3")
 seamless = true
 seamless_blend_skirt = 0.2
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m5ur3"]
+load_path = "res://.godot/imported/grass_basic_atlas.png-808da45e6864125cbb1db0fcb43dc922.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pncbn"]
+load_path = "res://.godot/imported/grass_basic_01.png-e99c3ac53003524f1a95a8fdaae2e7c1.s3tc.ctex"
 
 [sub_resource type="Gradient" id="Gradient_lquwl"]
 
@@ -32,14 +36,14 @@ seamless_blend_skirt = 0.2
 render_priority = 0
 shader = ExtResource("1_yhg1o")
 shader_parameter/billboard = false
-shader_parameter/shape_texture = ExtResource("4_xnspy")
-shader_parameter/shape_atlas = ExtResource("3_2tyb0")
-shader_parameter/use_atlas = true
+shader_parameter/shape_texture = SubResource("CompressedTexture2D_pncbn")
+shader_parameter/shape_atlas = SubResource("CompressedTexture2D_m5ur3")
+shader_parameter/use_atlas = false
 shader_parameter/noise_texture = SubResource("NoiseTexture2D_lquwl")
 shader_parameter/color_gradient = ExtResource("2_yhg1o")
 shader_parameter/random_variation = 0.0
 shader_parameter/wind_texture = SubResource("NoiseTexture2D_7mycd")
 shader_parameter/wind_velocity = Vector2(0, 0)
-shader_parameter/alpha_cut_start = 0.4
-shader_parameter/alpha_cut_end = 0.6
+shader_parameter/alpha_cut_start = 0.5000000074506
+shader_parameter/alpha_cut_end = 0.60000000894072
 shader_parameter/alpha_mode = 1

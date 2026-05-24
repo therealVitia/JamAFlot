@@ -51,8 +51,7 @@ transform = Transform3D(0.7477865, -0.30606925, 0.5891833, 0, 0.8874054, 0.46098
 light_energy = 4.647
 shadow_enabled = true
 
-[node name="hideManager" parent="." unique_id=1758502476 node_paths=PackedStringArray("color_rect", "player", "camera") instance=ExtResource("4_0cso3")]
-color_rect = NodePath("")
+[node name="hideManager" parent="." unique_id=1758502476 node_paths=PackedStringArray("player", "camera") instance=ExtResource("4_0cso3")]
 player = NodePath("../Player")
 camera = NodePath("../Camera")
 
