@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://croc4aswn2uw1" path="res://assets/StaticMeshes/PotsEtPlantes/sm_pot_1m_sombre.tscn" id="4_5h57o"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_375xh"]
-radius = 1.1875
+radius = 1.168457
 height = 3.5091248
 
 [node name="PotCactus" type="StaticBody3D" unique_id=427769546]
@@ -25,5 +25,5 @@ visible = false
 [node name="SM_Pot1MSombre" parent="." unique_id=2117784786 instance=ExtResource("4_5h57o")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1912986294]
-transform = Transform3D(1.0000095, 9.705491e-08, -9.709038e-08, 5.0836775e-09, 1, -1.4551915e-11, -1.2805685e-08, 9.662472e-09, 1, -1.66893e-06, 1.5855558, 1.66893e-06)
+transform = Transform3D(1.0000095, 9.705491e-08, -9.709038e-08, 5.083652e-09, 1, -1.4551797e-11, -1.2805685e-08, 9.662472e-09, 1, -1.66893e-06, 1.5855558, 1.66893e-06)
 shape = SubResource("CapsuleShape3D_375xh")
