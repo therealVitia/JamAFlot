@@ -7,6 +7,7 @@ var isWorld : bool = true
 
 func _ready() -> void:
 	AutoBus.swap.connect(_switch_music)
+	volume_db -= 20
 	stream = musicSafe
 	play(0.0)
 	

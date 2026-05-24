@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://cmu7ls4dl8ug0" path="res://resources/fakeshadow/Ombre_0016.png" id="15_1f82d"]
 [ext_resource type="Texture2D" uid="uid://baoe23r0mslng" path="res://assets/enemyfinal/marche ombre _0006.png" id="15_wrm80"]
 [ext_resource type="Texture2D" uid="uid://bxa6drmu4n8pa" path="res://assets/enemyfinal/marche ombre _0007.png" id="16_6awcb"]
+[ext_resource type="AudioStream" uid="uid://dyifu6ex7aj0o" path="res://assets/sound/ralenti.mp3" id="17_thsr5"]
 [ext_resource type="Texture2D" uid="uid://etpd5sophfco" path="res://assets/petons/pieds_0000.png" id="25_lsnsy"]
 [ext_resource type="Texture2D" uid="uid://cs3xnvglwuft2" path="res://assets/petons/pieds_0001.png" id="26_thsr5"]
 [ext_resource type="Texture2D" uid="uid://di03dtxafifmv" path="res://assets/petons/pieds_0003.png" id="27_ekh6n"]
@@ -186,6 +187,9 @@ speed_scale = 2.0
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=87996242]
 visible = false
+stream = ExtResource("17_thsr5")
+max_db = -3.414
+pitch_scale = 2.47
 
 [node name="realShadow" type="AnimatedSprite3D" parent="." unique_id=708039542]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.108888984, 1.0523224, 0)

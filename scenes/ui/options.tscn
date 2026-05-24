@@ -52,6 +52,12 @@ theme_override_font_sizes/font_size = 14
 text = "Music :"
 horizontal_alignment = 2
 
+[node name="MusicSoundLabel2" type="Label" parent="SoundContainer/LabelVolume" unique_id=1897276298]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "SFX :"
+horizontal_alignment = 2
+
 [node name="VBoxContainer" type="VBoxContainer" parent="SoundContainer" unique_id=1778815028]
 layout_mode = 2
 alignment = 1
@@ -74,6 +80,15 @@ step = 0.05
 value = 1.0
 script = ExtResource("1_l4ffv")
 audio_bus_name = "Master"
+
+[node name="MusicSoundSlider2" type="HSlider" parent="SoundContainer/VBoxContainer" unique_id=1185148709]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("1_l4ffv")
+audio_bus_name = "SFX"
 
 [node name="MusicSoundContainer2" type="HBoxContainer" parent="." unique_id=11414132]
 layout_mode = 2
@@ -200,6 +215,7 @@ text = "D"
 
 [connection signal="value_changed" from="SoundContainer/VBoxContainer/MasterSoundSlider" to="SoundContainer/VBoxContainer/MasterSoundSlider" method="_on_value_changed"]
 [connection signal="value_changed" from="SoundContainer/VBoxContainer/MusicSoundSlider" to="SoundContainer/VBoxContainer/MusicSoundSlider" method="_on_value_changed"]
+[connection signal="value_changed" from="SoundContainer/VBoxContainer/MusicSoundSlider2" to="SoundContainer/VBoxContainer/MusicSoundSlider2" method="_on_value_changed"]
 [connection signal="toggled" from="SoundContainer2/VBoxContainer/CheckButton" to="SoundContainer2/VBoxContainer/CheckButton" method="_on_toggled"]
 [connection signal="pressed" from="LabelVolume/Keybind/Button" to="LabelVolume/Keybind" method="_on_button_pressed"]
 [connection signal="toggled" from="LabelVolume/Keybind/Button" to="LabelVolume/Keybind" method="_on_button_toggled"]

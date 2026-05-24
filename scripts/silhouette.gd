@@ -44,6 +44,8 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.name == "Player" and type_voice != 0 and isWorld:
 		$Label3D.show()
 		message()
+	if body.name == "Player":
+		AutoBus.contact.emit()
 
 func _on_area_3d_body_exited(body: Node3D) -> void:
 	if body.name == "Player":

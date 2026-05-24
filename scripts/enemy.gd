@@ -46,6 +46,7 @@ func _enable_enemy() -> void:
 	navigation_agent.avoidance_enabled = true
 	set_physics_process(true)
 	_set_form(current_collectible_count)
+	audio_little_step.play(0.0)
 
 func _disable_enemy() -> void:
 	collision.disabled = true
@@ -56,6 +57,8 @@ func _disable_enemy() -> void:
 	fake_shadow.visible = false
 	real_shadow.visible = false
 	little_step.visible = false
+	audio_little_step.stop()
+
 
 
 func _on_collectible_found() -> void:
